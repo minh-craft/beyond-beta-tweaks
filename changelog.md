@@ -1,3 +1,11 @@
+## v0.36.0
+
+### Added
+
+- Added new rotten leather texture, created by Glorious Emperor Creeper https://www.youtube.com/@Emperor_Creeper
+
+---
+
 ## v0.35.0
 
 ### contributed by [@mahmudindev](https://github.com/mahmudindev)

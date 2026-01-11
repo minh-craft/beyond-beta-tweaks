@@ -16,7 +16,7 @@ See [changelog](changelog.md) for full list of features.
 
 
 ### Assets
-- Rotten flesh texture from https://www.curseforge.com/minecraft/mc-mods/fleshz by [@Globox_Z](https://github.com/Globox1997)
+- Rotten leather texture created by Glorious Emperor Creeper https://www.youtube.com/@Emperor_Creeper
 - Kristoffer Zetterstrand paintings https://zetterstrand.com/works/ adapted by https://www.youtube.com/@Mongster83
     - https://www.reddit.com/r/GoldenAgeMinecraft/comments/1i5fnh0/i_made_a_bunch_of_new_paintings_based_off/
 
