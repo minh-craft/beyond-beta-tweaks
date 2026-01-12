@@ -19,6 +19,7 @@
     "entity.CreeperMixin",
     "entity.EyeOfEnderMixin",
     "entity.FoxMixin",
+    "entity.FoxPerchAndSearchGoalMixin",
     "entity.GiantMixin",
     "entity.GoatAiMixin",
     "entity.GoatMixin",
