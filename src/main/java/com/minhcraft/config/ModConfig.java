@@ -130,4 +130,9 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static int monsterMobCapTheEnd = 70;
 
+    @Entry(isSlider = true, min=0F, max=0.175F, precision = 1000)
+    public static float donkeyMovementSpeed = 0.14F;
+
+    @Entry(isSlider = true, min=0d, max=0.3375d, precision = 1000)
+    public static double horseMovementSpeed = 0.16;
 }

@@ -1,3 +1,14 @@
+## v0.37.0
+
+### Added
+
+- Disable randomized attributes for horses and donkeys
+  - Set horse and donkey health to 10 hearts
+  - Set jump strength to 0.5 for donkeys and 0.6 for horses
+  - Add config option to set horse and donkey movement speed
+
+---
+
 ## v0.36.0
 
 ### Added
