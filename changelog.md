@@ -1,3 +1,18 @@
+## v0.38.0
+
+### Added
+
+- Shovels now convert grass/dirt into coarse dirt instead of paths
+- Add config option to adjust end gateway teleport distance
+- Add config option to adjust boat water friction
+
+### Changed
+
+- Re-added skeleton horse trap
+  - Now with skeletons no longer spawning with enchanted gear
+
+---
+
 ## v0.37.0
 
 ### Added

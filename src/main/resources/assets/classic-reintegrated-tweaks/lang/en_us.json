@@ -67,11 +67,15 @@
   "classic-reintegrated-tweaks.midnightconfig.regularGoatMaximumRamWaitTimeSeconds": "Regular Goat Maximum Ram Wait Time in Seconds",
   "classic-reintegrated-tweaks.midnightconfig.screamingGoatMinimumRamWaitTimeSeconds": "Screaming Goat Minimum Ram Wait Time in Seconds",
   "classic-reintegrated-tweaks.midnightconfig.screamingGoatMaximumRamWaitTimeSeconds": "Screaming Goat Maximum Ram Wait Time in Seconds",
-  "classic-reintegrated-tweaks.midnightconfig.boatMaxSlipperiness": "Max Boat Slipperiness",
+  "classic-reintegrated-tweaks.midnightconfig.boatMaxGroundSlipperiness": "Boat Max Ground Slipperiness",
   "classic-reintegrated-tweaks.midnightconfig.enderpearlTeleportDamage": "Enderpearl Teleport Damage",
   "classic-reintegrated-tweaks.midnightconfig.ambientWaterMobCap": "Ambient Water Mob Cap",
   "classic-reintegrated-tweaks.midnightconfig.monsterMobCapOverworld": "Monster Mob Cap Overworld",
   "classic-reintegrated-tweaks.midnightconfig.monsterMobCapNether": "Monster Mob Cap Nether",
-  "classic-reintegrated-tweaks.midnightconfig.monsterMobCapTheEnd": "Monster Mob Cap The End"
+  "classic-reintegrated-tweaks.midnightconfig.monsterMobCapTheEnd": "Monster Mob Cap The End",
+  "classic-reintegrated-tweaks.midnightconfig.donkeyMovementSpeed": "Donkey Movement Speed",
+  "classic-reintegrated-tweaks.midnightconfig.horseMovementSpeed": "Horse Movement Speed",
+  "classic-reintegrated-tweaks.midnightconfig.endGatewayTeleportDistance": "End Gateway Teleport Distance",
+  "classic-reintegrated-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness"
 
 }

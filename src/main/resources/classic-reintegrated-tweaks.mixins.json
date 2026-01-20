@@ -29,6 +29,7 @@
     "entity.OcelotMixin",
     "entity.ShulkerMixin",
     "entity.SilverfishMergeWithStoneGoalMixin",
+    "entity.SkeletonTrapGoalMixin",
     "entity.SpawnPlacementsMixin",
     "entity.SpiderAttackGoalMixin",
     "entity.StrayMixin",
@@ -40,9 +41,9 @@
     "item.EnchantmentHelperMixin",
     "item.EnchantmentsMixin",
     "item.RepairItemRecipeMixin",
+    "item.ShovelItemMixin",
     "item.SwordItemMixin",
     "nostalgic_tweaks_compat.LightingHelperMixin",
-    "server.ServerLevelMixin",
     "world.CanyonWorldCarverMixin",
     "world.EndDragonFightMixin",
     "world.LocalMobCapCalculatorMixin",
@@ -50,7 +51,8 @@
     "world.NaturalSpawnerSpawnStateMixin",
     "world.ServerChunkCacheMixin",
     "world.SpikeFeatureMixin",
-    "world.SurfaceSystemMixin"
+    "world.SurfaceSystemMixin",
+    "world.TheEndGatewayBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

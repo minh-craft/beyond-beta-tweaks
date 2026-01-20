@@ -112,8 +112,11 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=1, max=300)
     public static int screamingGoatMaximumRamWaitTimeSeconds = 15;
 
-    @Entry(isSlider = true, min=0.0, max=1.0)
-    public static double boatMaxSlipperiness = 0.9;
+    @Entry(isSlider = true, min=0.0, max=1.0, precision = 1000)
+    public static double boatMaxGroundSlipperiness = 0.9;
+
+    @Entry(isSlider = true, min=0.0F, max=0.9F, precision = 1000)
+    public static float boatWaterSlipperiness = 0.9F;
 
     @Entry(min=0.0F, max=5.0)
     public static float enderpearlTeleportDamage = 2.0F;
@@ -135,4 +138,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0d, max=0.3375d, precision = 1000)
     public static double horseMovementSpeed = 0.16;
+
+    @Entry(isSlider = true, min=512.0, max=1024.0, precision = 1)
+    public static double endGatewayTeleportDistance = 1024.0;
 }
