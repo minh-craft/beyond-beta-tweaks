@@ -85,6 +85,9 @@ dependencies {
 	// Archery Expansion Compatibility
 	modImplementation "maven.modrinth:archery-expansion:$project.archery_expansion_version"
 
+	// Better Climbing Compatibility
+	modImplementation "maven.modrinth:better-climbing:$project.better_climbing_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

@@ -5,6 +5,7 @@
   "mixins": [
     "arrow_module.AbstractArrowMixin",
     "arrow_module.CrossbowItemMixin",
+    "better_climbing_compat.LivingEntityMixinSquared",
     "block.AnvilBlockMixin",
     "block.BlocksMixin",
     "block.CakeBlockMixin",

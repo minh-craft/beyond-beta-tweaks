@@ -1,3 +1,11 @@
+## v0.39.0
+
+### Added
+
+- Modified climbing speed in https://modrinth.com/mod/better-climbing/ mod
+
+---
+
 ## v0.38.0
 
 ### Added
