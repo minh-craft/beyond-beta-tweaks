@@ -3,6 +3,9 @@
 Various tweaks for the Beyond Beta modpack.
 See [changelog](changelog.md) for full list of features.
 
+### Dev note:
+When running the mod in the IDE, time doesn't pass for some reason. This isn't a problem when the mod is compiled. I've narrowed this down to including the owo lib dependency in build.gradle, needed for True Darkness compatibility. I don't really know why though or how to fix it. 
+
 ## Credits
 ### Contributions
 - Contributed by [@Partonetrain](https://github.com/Partonetrain/)
