@@ -6,6 +6,8 @@
     "arrow_module.AbstractArrowMixin",
     "arrow_module.CrossbowItemMixin",
     "better_climbing_compat.LivingEntityMixinSquared",
+    "better_recipe_book_compat.BetterRecipeBookMixin",
+    "better_recipe_book_compat.MouseScrollHandlerMixinSquared",
     "betterdays_compat.ServerEventListenerMixin",
     "betterdays_compat.TimeServiceManagerMixin",
     "betterdays_compat.TimeServiceMixin",
@@ -62,7 +64,9 @@
     "defaultRequire": 1
   },
   "client": [
+    "accessors.AbstractContainerScreenAccessor",
     "archery_exp_compat.GuiMixinSquared",
+    "better_recipe_book_compat.BrewingRecipeBookComponentMixin",
     "client.ClientRecipeBookMixin",
     "client.GameRendererMixin",
     "client.LightTextureMixin",

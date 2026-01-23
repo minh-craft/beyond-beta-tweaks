@@ -99,6 +99,11 @@ dependencies {
 	modImplementation group: 'technology.roughness.whitenoise', name: "whitenoise-${minecraft_version}-fabric", version: "${whitenoise_range}"
 	modImplementation group: 'technology.roughness.whitenoise', name: "whitenoise-${minecraft_version}-fabric", version: "${whitenoise_version}"
 
+	// Better Recipe Book Compatibility
+	modImplementation "maven.modrinth:brb:$project.brb_version"
+	modRuntimeOnly "maven.modrinth:cloth-config:11.1.136+fabric"
+	modRuntimeOnly "maven.modrinth:bundle-backportish:1.0.1+mc1.20.1"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

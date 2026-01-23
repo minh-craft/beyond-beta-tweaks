@@ -1,3 +1,13 @@
+## v0.41.0
+
+### Added
+
+- Port Better Recipe Book changes from fork https://github.com/minh-craft/BetterRecipeBook
+  - Remove lingering potion tab
+  - Disable recipe book scrolling when hovering over bundle (contributed by [@Leclowndu93150](https://github.com/Leclowndu93150))
+
+---
+
 ## v0.40.0
 
 ### Added
