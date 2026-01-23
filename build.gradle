@@ -54,6 +54,12 @@ repositories {
 		name = "Wisp Forest"
 		url = "https://maven.wispforest.io"
 	}
+
+	// Better Days Compat
+	maven {
+		name = 'WhiteNoise' // Library for wendall911 mods
+		url = 'https://raw.githubusercontent.com/wendall911/maven/main/'
+	}
 }
 
 dependencies {
@@ -87,6 +93,11 @@ dependencies {
 
 	// Better Climbing Compatibility
 	modImplementation "maven.modrinth:better-climbing:$project.better_climbing_version"
+
+	// Better Days Compatability
+	modImplementation "maven.modrinth:betterdays:$project.better_days_version"
+	modImplementation group: 'technology.roughness.whitenoise', name: "whitenoise-${minecraft_version}-fabric", version: "${whitenoise_range}"
+	modImplementation group: 'technology.roughness.whitenoise', name: "whitenoise-${minecraft_version}-fabric", version: "${whitenoise_version}"
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")

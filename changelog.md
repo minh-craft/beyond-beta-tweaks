@@ -1,3 +1,13 @@
+## v0.40.0
+
+### Added
+
+- Port Better Days adjustments from fork https://github.com/minh-craft/BetterDays/pull/1
+  - Changed earliest allowed sleep time to just before midnight
+  - Changed wake up time to early sunrise
+
+---
+
 ## v0.39.0
 
 ### Added
