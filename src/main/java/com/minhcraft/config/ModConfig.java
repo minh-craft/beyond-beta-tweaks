@@ -141,4 +141,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=512.0, max=1024.0, precision = 1)
     public static double endGatewayTeleportDistance = 1024.0;
+
+    @Entry
+    public static boolean disableMelancholicHungerFoodRegenerationSpeedTooltip = true;
 }

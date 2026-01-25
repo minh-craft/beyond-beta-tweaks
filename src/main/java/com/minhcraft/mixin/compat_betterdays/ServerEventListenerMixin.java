@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.betterdays_compat;
+package com.minhcraft.mixin.compat_betterdays;
 
 import betterdays.event.ServerEventListener;
 import betterdays.message.BetterDaysMessages;

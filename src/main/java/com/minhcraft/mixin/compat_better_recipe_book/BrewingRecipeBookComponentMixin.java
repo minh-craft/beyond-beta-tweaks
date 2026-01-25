@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.better_recipe_book_compat;
+package com.minhcraft.mixin.compat_better_recipe_book;
 
 import marsh.town.brb.BetterRecipeBook;
 import marsh.town.brb.brewingstand.BrewableResult;

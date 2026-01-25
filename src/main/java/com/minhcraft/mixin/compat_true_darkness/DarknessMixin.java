@@ -1,9 +1,8 @@
-package com.minhcraft.mixin.true_darkness_compat;
+package com.minhcraft.mixin.compat_true_darkness;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.minhcraft.config.ModConfig;
 import grondag.darkness.Darkness;
-import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

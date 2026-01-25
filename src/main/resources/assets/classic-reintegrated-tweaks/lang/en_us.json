@@ -76,6 +76,6 @@
   "classic-reintegrated-tweaks.midnightconfig.donkeyMovementSpeed": "Donkey Movement Speed",
   "classic-reintegrated-tweaks.midnightconfig.horseMovementSpeed": "Horse Movement Speed",
   "classic-reintegrated-tweaks.midnightconfig.endGatewayTeleportDistance": "End Gateway Teleport Distance",
-  "classic-reintegrated-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness"
-
+  "classic-reintegrated-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness",
+  "classic-reintegrated-tweaks.midnightconfig.disableMelancholicHungerFoodRegenerationSpeedTooltip": "Disable Melancholic Hunger Food Regeneration Speed Tooltip"
 }

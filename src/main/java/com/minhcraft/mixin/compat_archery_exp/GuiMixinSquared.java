@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.archery_exp_compat;
+package com.minhcraft.mixin.compat_archery_exp;
 
 import com.bawnorton.mixinsquared.TargetHandler;
 import com.minhcraft.config.ModConfig;

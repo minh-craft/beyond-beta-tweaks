@@ -5,12 +5,6 @@
   "mixins": [
     "arrow_module.AbstractArrowMixin",
     "arrow_module.CrossbowItemMixin",
-    "better_climbing_compat.LivingEntityMixinSquared",
-    "better_recipe_book_compat.BetterRecipeBookMixin",
-    "better_recipe_book_compat.MouseScrollHandlerMixinSquared",
-    "betterdays_compat.ServerEventListenerMixin",
-    "betterdays_compat.TimeServiceManagerMixin",
-    "betterdays_compat.TimeServiceMixin",
     "block.AnvilBlockMixin",
     "block.BlocksMixin",
     "block.CakeBlockMixin",
@@ -18,6 +12,14 @@
     "block.MudBlockMixin",
     "block.PointedDripstoneBlockMixin",
     "block.TallGrassBlockMixin",
+    "compat_better_climbing.LivingEntityMixinSquared",
+    "compat_better_recipe_book.BetterRecipeBookMixin",
+    "compat_better_recipe_book.MouseScrollHandlerMixinSquared",
+    "compat_betterdays.ServerEventListenerMixin",
+    "compat_betterdays.TimeServiceManagerMixin",
+    "compat_betterdays.TimeServiceMixin",
+    "compat_melancholic_hunger.FoodItemTooltipsMixin",
+    "compat_nostalgic_tweaks.LightingHelperMixin",
     "entity.AbstractChestedHorseMixin",
     "entity.AbstractHorseMixin",
     "entity.AbstractSkeletonMixin",
@@ -50,7 +52,6 @@
     "item.RepairItemRecipeMixin",
     "item.ShovelItemMixin",
     "item.SwordItemMixin",
-    "nostalgic_tweaks_compat.LightingHelperMixin",
     "world.CanyonWorldCarverMixin",
     "world.EndDragonFightMixin",
     "world.LocalMobCapCalculatorMixin",
@@ -66,8 +67,6 @@
   },
   "client": [
     "accessors.AbstractContainerScreenAccessor",
-    "archery_exp_compat.GuiMixinSquared",
-    "better_recipe_book_compat.BrewingRecipeBookComponentMixin",
     "client.ClientRecipeBookMixin",
     "client.GameRendererMixin",
     "client.LightTextureMixin",
@@ -75,6 +74,8 @@
     "client.RecipeBookCategoriesMixin",
     "client.RecipeBookComponentMixin",
     "client.RecipeButtonMixin",
-    "true_darkness_compat.DarknessMixin"
+    "compat_archery_exp.GuiMixinSquared",
+    "compat_better_recipe_book.BrewingRecipeBookComponentMixin",
+    "compat_true_darkness.DarknessMixin"
   ]
 }

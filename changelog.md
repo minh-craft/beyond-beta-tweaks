@@ -1,3 +1,11 @@
+## v0.43.0
+
+### Added
+
+- Added config option to disable Melancholic Hunger's food regeneration tooltip
+
+---
+
 ## v0.42.0
 
 ### Added
