@@ -1,5 +1,6 @@
 package com.minhcraft.mixin.block;
 
+import antigers.melancholic_hunger.components.PlayerComponents;
 import com.minhcraft.config.ModConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -9,6 +10,8 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.CakeBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,10 +22,15 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+
 import static net.minecraft.world.level.block.CakeBlock.BITES;
 
 @Mixin(CakeBlock.class)
 public abstract class CakeBlockMixin {
+
+    @Unique
+    private static final FoodProperties CAKE_FOOD_PROPERTIES = new FoodProperties.Builder().nutrition(2).saturationMod(10F).build();
+
 
     @Unique
     private static final int CAKE_ABSORPTION_DURATION = 24000; // 20:00 minutes
@@ -57,7 +65,7 @@ public abstract class CakeBlockMixin {
                 level.playSound(player, player.blockPosition(), SoundEvents.PLAYER_BURP, SoundSource.PLAYERS, 1.0F, 1.0F);
             } else {
                 player.awardStat(Stats.EAT_CAKE_SLICE);
-                player.getFoodData().eat(2, 0.1F);
+                PlayerComponents.HEALTH_REGENERATION.get(player).eat(Items.CAKE.getDefaultInstance(), CAKE_FOOD_PROPERTIES);
                 level.playSound(player, player.blockPosition(), SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1.0F, 1.0F);
 
             }

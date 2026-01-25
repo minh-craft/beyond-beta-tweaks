@@ -1,3 +1,12 @@
+## v0.42.0
+
+### Added
+
+- Added compatibility for cake overeating feature with https://modrinth.com/mod/melancholic_hunger by @antigers
+- Backport absorption effect being removed once absorption hearts are gone fix from 1.20.2
+
+---
+
 ## v0.41.0
 
 ### Added

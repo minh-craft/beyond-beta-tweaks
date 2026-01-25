@@ -31,6 +31,7 @@
     "entity.HoglinMixin",
     "entity.HuskMixin",
     "entity.MobCategoryMixin",
+    "entity.MobEffectInstanceMixin",
     "entity.MobMixin",
     "entity.OcelotMixin",
     "entity.ShulkerMixin",
