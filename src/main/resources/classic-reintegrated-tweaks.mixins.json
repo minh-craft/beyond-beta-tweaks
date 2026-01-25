@@ -15,6 +15,7 @@
     "block.BlocksMixin",
     "block.CakeBlockMixin",
     "block.CauldronBlockMixin",
+    "item.BlockItemLadderMixin",
     "block.MudBlockMixin",
     "block.PointedDripstoneBlockMixin",
     "block.TallGrassBlockMixin",

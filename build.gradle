@@ -55,6 +55,10 @@ repositories {
 		url = "https://maven.wispforest.io"
 	}
 
+    maven {
+        url = "https://cursemaven.com"
+    }
+
 	// Better Days Compat
 	maven {
 		name = 'WhiteNoise' // Library for wendall911 mods
@@ -103,6 +107,7 @@ dependencies {
 	modImplementation "maven.modrinth:brb:$project.brb_version"
 	modRuntimeOnly "maven.modrinth:cloth-config:11.1.136+fabric"
 	modRuntimeOnly "maven.modrinth:bundle-backportish:1.0.1+mc1.20.1"
+    modImplementation "curse.maven:architectury-api-419699:5137936"
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")

@@ -141,4 +141,10 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=512.0, max=1024.0, precision = 1)
     public static double endGatewayTeleportDistance = 1024.0;
+
+    @Entry
+    public static boolean enableScaffoldingLikeLadderPlacement = true;
+
+    @Entry(isSlider = true, min=1, max=256)
+    public static int ladderScaffoldingMaxDistance = 64;
 }
