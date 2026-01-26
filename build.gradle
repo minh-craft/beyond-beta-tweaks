@@ -115,6 +115,9 @@ dependencies {
 	// For Config Options
 	modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version}")
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+    modImplementation "curse.maven:supplementaries-412082:7431872"
+    modImplementation "curse.maven:selene-499980:7494448"
 }
 
 processResources {
