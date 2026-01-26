@@ -69,16 +69,18 @@ public abstract class FormattingToolbarMixin {
             this.y = targetY;
 
             Formatting pendingFormatting = ScholarFormattingState.getPendingFormatting();
+            if (pendingFormatting == null) {
+                pendingFormatting = getTextBox().getEditor().getFormattingAtCursor();
+                ScholarFormattingState.setPendingFormatting(pendingFormatting);
+            }
             for (FormattingToolbar.FormattingButton button : buttons) {
                 if (button.formatting() == Formatting.RESET) continue;
                 boolean highlighted = false;
-                if (pendingFormatting != null) {
-                    Formatting.Type type = button.formatting();
-                    if (type.isColor()) {
-                        highlighted = type.equals(pendingFormatting.color());
-                    } else if (type.isFormat()) {
-                        highlighted = pendingFormatting.format().contains((Formatting.Format) type);
-                    }
+                Formatting.Type type = button.formatting();
+                if (type.isColor()) {
+                    highlighted = type.equals(pendingFormatting.color());
+                } else if (type.isFormat()) {
+                    highlighted = pendingFormatting.format().contains((Formatting.Format) type);
                 }
                 ((FormattingButtonAccessor) button).setHighlighted(highlighted);
             }
