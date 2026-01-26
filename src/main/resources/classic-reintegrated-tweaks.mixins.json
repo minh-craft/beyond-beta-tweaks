@@ -4,6 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "arrow_module.AbstractArrowMixin",
+    "inventory.CartographyTableMenuMixin",
+    "inventory.CartographyTableMenuSlotMixin",
     "arrow_module.CrossbowItemMixin",
     "better_climbing_compat.LivingEntityMixinSquared",
     "better_recipe_book_compat.BetterRecipeBookMixin",
@@ -68,6 +70,7 @@
   },
   "client": [
     "accessors.AbstractContainerScreenAccessor",
+    "client.CartographyTableScreenMixin",
     "archery_exp_compat.GuiMixinSquared",
     "better_recipe_book_compat.BrewingRecipeBookComponentMixin",
     "client.ClientRecipeBookMixin",
