@@ -147,4 +147,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=1, max=256)
     public static int ladderScaffoldingMaxDistance = 64;
+
+    @Entry
+    public static boolean alwaysShowScholarFormattingToolbar = true;
 }

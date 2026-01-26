@@ -118,6 +118,9 @@ dependencies {
 
     modImplementation "curse.maven:supplementaries-412082:7431872"
     modImplementation "curse.maven:selene-499980:7494448"
+
+    modImplementation "curse.maven:scholar-961802:7396149"
+    modImplementation "curse.maven:forge-config-api-port-547434:7260491"
 }
 
 processResources {

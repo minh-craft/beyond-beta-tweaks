@@ -77,6 +77,8 @@
     "client.RecipeBookCategoriesMixin",
     "client.RecipeBookComponentMixin",
     "client.RecipeButtonMixin",
+    "scholar_compat.FormattingToolbarMixin",
+    "scholar_compat.SpreadBookEditScreenAccessor",
     "true_darkness_compat.DarknessMixin"
   ]
 }
