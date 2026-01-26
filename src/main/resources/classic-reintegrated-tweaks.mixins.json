@@ -80,8 +80,11 @@
     "client.RecipeBookCategoriesMixin",
     "client.RecipeBookComponentMixin",
     "client.RecipeButtonMixin",
+    "scholar_compat.FormattedStringEditorMixin",
+    "scholar_compat.FormattingButtonAccessor",
     "scholar_compat.FormattingToolbarMixin",
     "scholar_compat.SpreadBookEditScreenAccessor",
+    "scholar_compat.SpreadBookEditScreenMixin",
     "true_darkness_compat.DarknessMixin"
   ]
 }

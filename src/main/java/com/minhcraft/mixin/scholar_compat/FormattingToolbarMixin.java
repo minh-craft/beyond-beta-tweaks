@@ -1,9 +1,11 @@
 package com.minhcraft.mixin.scholar_compat;
 
 import com.minhcraft.config.ModConfig;
+import com.minhcraft.util.ScholarFormattingState;
 import io.github.mortuusars.scholar.client.gui.screen.edit.SpreadBookEditScreen;
 import io.github.mortuusars.scholar.client.gui.widget.textbox.TextBox;
 import io.github.mortuusars.scholar.client.gui.widget.textbox.display.FormattingToolbar;
+import io.github.mortuusars.scholar.client.gui.widget.textbox.text.Formatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,20 +15,25 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.List;
+
 @Mixin(FormattingToolbar.class)
 public abstract class FormattingToolbarMixin {
 
-    @Shadow
+    @Shadow(remap = false)
     protected int x;
 
-    @Shadow
+    @Shadow(remap = false)
     protected int y;
 
-    @Shadow
+    @Shadow(remap = false)
     public abstract TextBox getTextBox();
 
-    @Shadow
+    @Shadow(remap = false)
     public abstract int getHeight();
+
+    @Shadow(remap = false)
+    protected List<FormattingToolbar.FormattingButton> buttons;
 
     @Inject(method = "shouldShow", at = @At("RETURN"), cancellable = true, remap = false)
     private void alwaysShowWhenFocused(CallbackInfoReturnable<Boolean> cir) {
@@ -38,7 +45,7 @@ public abstract class FormattingToolbarMixin {
     }
 
     @Inject(method = "update", at = @At("TAIL"), remap = false)
-    private void repositionWhenNotSelecting(CallbackInfo ci) {
+    private void updateButtonHighlightsAndPosition(CallbackInfo ci) {
         if (!ModConfig.alwaysShowScholarFormattingToolbar) {
             return;
         }
@@ -60,6 +67,21 @@ public abstract class FormattingToolbarMixin {
 
             this.x = targetX;
             this.y = targetY;
+
+            Formatting pendingFormatting = ScholarFormattingState.getPendingFormatting();
+            for (FormattingToolbar.FormattingButton button : buttons) {
+                if (button.formatting() == Formatting.RESET) continue;
+                boolean highlighted = false;
+                if (pendingFormatting != null) {
+                    Formatting.Type type = button.formatting();
+                    if (type.isColor()) {
+                        highlighted = type.equals(pendingFormatting.color());
+                    } else if (type.isFormat()) {
+                        highlighted = pendingFormatting.format().contains((Formatting.Format) type);
+                    }
+                }
+                ((FormattingButtonAccessor) button).setHighlighted(highlighted);
+            }
         }
     }
 }
