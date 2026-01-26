@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.CartographyTableMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -26,23 +27,13 @@ public abstract class CartographyTableScreenMixin extends AbstractContainerScree
             method = "renderBg",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z",
-                    ordinal = 2
+                    target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"
             )
     )
-    private boolean redirectGlassPaneCheck(ItemStack stack, Item item) {
-        return GlassHelper.isGlassPaneOrBlock(stack);
-    }
-
-    @Redirect(
-            method = "renderBg",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z",
-                    ordinal = 3
-            )
-    )
-    private boolean redirectGlassPaneCheckForLocked(ItemStack stack, Item item) {
-        return GlassHelper.isGlassPaneOrBlock(stack);
+    private boolean redirectAllGlassPaneChecks(ItemStack stack, Item item) {
+        if (item == Items.GLASS_PANE) {
+            return GlassHelper.isGlassPaneOrBlock(stack);
+        }
+        return stack.is(item);
     }
 }
