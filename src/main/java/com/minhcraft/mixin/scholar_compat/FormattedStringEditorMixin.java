@@ -33,7 +33,7 @@ public abstract class FormattedStringEditorMixin {
         return Formatting.EMPTY;
     }
 
-    @Inject(method = "applyFormatting", at = @At("TAIL"), remap = false)
+    @Inject(method = "applyFormatting", at = @At("HEAD"), cancellable = true, remap = false)
     private void storePendingFormatting(Formatting formatting, CallbackInfo ci) {
         if (!isSelecting()) {
             if (formatting == Formatting.EMPTY) {
@@ -45,6 +45,7 @@ public abstract class FormattedStringEditorMixin {
                 }
                 ScholarFormattingState.setPendingFormatting(current.flip(formatting));
             }
+            ci.cancel();
         }
     }
 
