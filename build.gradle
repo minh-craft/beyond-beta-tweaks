@@ -145,7 +145,7 @@ processResources {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/classic-reintegrated-tweaks.accesswidener")
+	accessWidenerPath = file("src/main/resources/beyond-beta-tweaks.accesswidener")
 }
 
 tasks.withType(JavaCompile).configureEach {

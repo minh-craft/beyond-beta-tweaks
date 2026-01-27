@@ -1,28 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "classic-reintegrated-tweaks",
+	"id": "beyond-beta-tweaks",
 	"version": "${version}",
-	"name": "Classic Reintegrated Tweaks",
-	"description": "Custom tweaks mod for the Classic Reintegrated Modpack",
+	"name": "Beyond Beta Tweaks",
+	"description": "Custom tweaks mod for the Beyond Beta Modpack",
 	"authors": [
-		"minh-craft"
+		"https://github.com/minh-craft",
+		"https://github.com/Leclowndu93150",
+		"https://github.com/Partonetrain",
+		"https://github.com/mahmudindev"
 	],
 	"contact": {
 		"homepage": "https://github.com/minh-craft/classic-reintegrated-tweaks",
 		"sources": "https://github.com/minh-craft/classic-reintegrated-tweaks"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/classic-reintegrated-tweaks/icon.png",
+	"license": "CC-BY-NC-SA-4.0",
+	"icon": "assets/beyond-beta-tweaks/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.minhcraft.ClassicReintegratedTweaks"
+			"com.minhcraft.beyondbetatweaks.BeyondBetaTweaks"
 		]
 	},
 	"mixins": [
-		"classic-reintegrated-tweaks.mixins.json"
+		"beyond-beta-tweaks.mixins.json"
 	],
-	"accessWidener" : "classic-reintegrated-tweaks.accesswidener",
+	"accessWidener" : "beyond-beta-tweaks.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.20.1",

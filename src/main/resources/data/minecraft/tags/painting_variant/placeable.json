@@ -1,18 +1,18 @@
 {
   "replace": false,
   "values": [
-    "classic-reintegrated-tweaks:artist_and_kebab",
-    "classic-reintegrated-tweaks:cactus_bird",
-    "classic-reintegrated-tweaks:chocolate_grinder",
-    "classic-reintegrated-tweaks:de_chateau",
-    "classic-reintegrated-tweaks:drop",
-    "classic-reintegrated-tweaks:easel",
-    "classic-reintegrated-tweaks:fog",
-    "classic-reintegrated-tweaks:kebab",
-    "classic-reintegrated-tweaks:pergola",
-    "classic-reintegrated-tweaks:self_portrait",
-    "classic-reintegrated-tweaks:spawn",
-    "classic-reintegrated-tweaks:sunset_average",
-    "classic-reintegrated-tweaks:tergo"
+    "beyond-beta-tweaks:artist_and_kebab",
+    "beyond-beta-tweaks:cactus_bird",
+    "beyond-beta-tweaks:chocolate_grinder",
+    "beyond-beta-tweaks:de_chateau",
+    "beyond-beta-tweaks:drop",
+    "beyond-beta-tweaks:easel",
+    "beyond-beta-tweaks:fog",
+    "beyond-beta-tweaks:kebab",
+    "beyond-beta-tweaks:pergola",
+    "beyond-beta-tweaks:self_portrait",
+    "beyond-beta-tweaks:spawn",
+    "beyond-beta-tweaks:sunset_average",
+    "beyond-beta-tweaks:tergo"
   ]
 }

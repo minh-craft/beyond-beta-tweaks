@@ -1,3 +1,11 @@
+## v0.45.0
+
+### Changed
+- Renamed mod to Beyond Beta Tweaks
+- Update mod logo
+
+---
+
 ## v0.44.1
 
 ### Changed
