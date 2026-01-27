@@ -1,3 +1,10 @@
+## v0.45.2
+
+### Changed
+- Update mod default config values
+
+---
+
 ## v0.45.1
 
 ### Changed
