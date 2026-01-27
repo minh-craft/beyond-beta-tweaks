@@ -12,7 +12,7 @@ public abstract class LightTextureMixin {
     // Override forceBrightLightmap lerp value, which is only used by the End dimension
     // This allows darkening or brightening the lightmap of the end
     @ModifyConstant(method = "updateLightTexture", constant = @Constant(floatValue = 0.25F))
-    private float overrideForceBrightLightmapLerp(float lightmapLerp) {
+    private float beyond_beta_tweaks$overrideForceBrightLightmapLerp(float lightmapLerp) {
         return lightmapLerp * ModConfig.endDimensionLightMapBrightnessModifier;
     }
 }

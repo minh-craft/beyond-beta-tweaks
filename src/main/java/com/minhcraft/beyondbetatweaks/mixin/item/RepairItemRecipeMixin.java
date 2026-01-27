@@ -14,7 +14,7 @@ public abstract class RepairItemRecipeMixin {
     @ModifyArg(
             method = "assemble(Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;",
             at = @At(value = "INVOKE", target = "Ljava/util/stream/Stream;filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;"), index = 0)
-    private <T> Predicate<? super T> test(Predicate<? super T> predicate) {
+    private <T> Predicate<? super T> beyond_beta_tweaks$retainEnchantmentRepairing(Predicate<? super T> predicate) {
         return (enchantment) -> true;
     }
 }

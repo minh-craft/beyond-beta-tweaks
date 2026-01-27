@@ -23,12 +23,12 @@ public abstract class SpreadBookEditScreenMixin {
     protected InteractionHand hand;
 
     @Inject(method = "<init>", at = @At("TAIL"), remap = false)
-    private void loadFormattingStateOnInit(CallbackInfo ci) {
+    private void beyond_beta_tweaks$loadFormattingStateOnInit(CallbackInfo ci) {
         ScholarFormattingState.loadFromBook(bookStack);
     }
 
     @Inject(method = "onClose", at = @At("HEAD"), remap = true)
-    private void saveFormattingStateOnClose(CallbackInfo ci) {
+    private void beyond_beta_tweaks$saveFormattingStateOnClose(CallbackInfo ci) {
         ScholarFormattingState.saveToServer(hand);
     }
 }

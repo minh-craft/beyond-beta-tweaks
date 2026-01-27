@@ -25,7 +25,7 @@ public abstract class ServerChunkCacheMixin {
                     target = "Lnet/minecraft/world/level/NaturalSpawner;createState(ILjava/lang/Iterable;Lnet/minecraft/world/level/NaturalSpawner$ChunkGetter;Lnet/minecraft/world/level/LocalMobCapCalculator;)Lnet/minecraft/world/level/NaturalSpawner$SpawnState;"
             )
     )
-    private NaturalSpawner.SpawnState tickChunksNaturalSpawner(int spawnableChunkCount, Iterable<Entity> entities, NaturalSpawner.ChunkGetter chunkGetter, LocalMobCapCalculator calculator, Operation<NaturalSpawner.SpawnState> original) {
+    private NaturalSpawner.SpawnState beyond_beta_tweaks$tickChunksNaturalSpawner(int spawnableChunkCount, Iterable<Entity> entities, NaturalSpawner.ChunkGetter chunkGetter, LocalMobCapCalculator calculator, Operation<NaturalSpawner.SpawnState> original) {
         ((ILocalMobCapCalculator) calculator).beyond_beta_tweaks$setDimension(this.level.dimension());
 
         NaturalSpawner.SpawnState spawnState = original.call(spawnableChunkCount, entities, chunkGetter, calculator);

@@ -26,14 +26,14 @@ public class RecipeButtonMixin {
     private RecipeBookMenu<?> menu;
 
     @Inject(method = "getOrderedRecipes", at = @At("HEAD"), cancellable = true)
-    private void onlyShowCraftableWhenCycling(CallbackInfoReturnable<List<Recipe<?>>> cir) {
+    private void beyond_beta_tweaks$onlyShowCraftableWhenCycling(CallbackInfoReturnable<List<Recipe<?>>> cir) {
         if (this.collection.hasCraftable()) {
             cir.setReturnValue(this.collection.getDisplayRecipes(true));
         }
     }
 
     @Inject(method = "isOnlyOption", at = @At("HEAD"), cancellable = true)
-    private void checkAllRecipesForOverlay(CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$checkAllRecipesForOverlay(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(this.collection.getRecipes(this.book.isFiltering(this.menu)).size() <= 1);
     }
 }

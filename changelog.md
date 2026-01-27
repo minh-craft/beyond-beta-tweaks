@@ -1,3 +1,11 @@
+## v0.45.1
+
+### Changed
+- Backend code cleanup
+  - Use consistent mixin naming convention
+
+---
+
 ## v0.45.0
 
 ### Changed

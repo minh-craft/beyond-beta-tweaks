@@ -15,7 +15,7 @@ public abstract class CartographyTableMenuSlotMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void mayPlace(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$mayPlace(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (GlassHelper.isGlassPaneOrBlock(stack)) {
             cir.setReturnValue(true);
         }

@@ -19,7 +19,7 @@ public abstract class RecipeBookComponentMixin {
     )
     // Makes craftable recipes show up first in the recipe book
     // Final sorting: craftable, recipe book category, recipe custom sorting, recipe id
-    private void updateCollection(boolean resetPageNumber, CallbackInfo ci, @Local(ordinal = 1) List<RecipeCollection> list2) {
+    private void beyond_beta_tweaks$updateCollection(boolean resetPageNumber, CallbackInfo ci, @Local(ordinal = 1) List<RecipeCollection> list2) {
         list2.sort((collection1, collection2) -> {
             boolean craftable1 = collection1.hasCraftable();
             boolean craftable2 = collection2.hasCraftable();

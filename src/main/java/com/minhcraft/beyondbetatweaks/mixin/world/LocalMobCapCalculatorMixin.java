@@ -24,7 +24,7 @@ public abstract class LocalMobCapCalculatorMixin implements ILocalMobCapCalculat
                     target = "Lnet/minecraft/world/level/LocalMobCapCalculator$MobCounts;add(Lnet/minecraft/world/entity/MobCategory;)V"
             )
     )
-    private void addMobCounts(LocalMobCapCalculator.MobCounts instance, MobCategory category, Operation<Void> original) {
+    private void beyond_beta_tweaks$addMobCounts(LocalMobCapCalculator.MobCounts instance, MobCategory category, Operation<Void> original) {
         ((ILocalMobCapCalculatorMobCounts) instance).beyond_beta_tweaks$setDimension(this.dimension);
 
         original.call(instance, category);

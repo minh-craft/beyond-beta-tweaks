@@ -18,7 +18,7 @@ public abstract class HoglinMixin {
                     target = "Lnet/minecraft/util/RandomSource;nextFloat()F"
             )
     )
-    private float disableBabyHoglinOdds(float nextFloat)
+    private float beyond_beta_tweaks$disableBabyHoglinOdds(float nextFloat)
     {
         return 1.0F;
     }

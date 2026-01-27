@@ -13,7 +13,7 @@ public abstract class GameRendererMixin {
 
     // Allow modifying how bright night vision is
     @Inject(method = "getNightVisionScale", at = @At("RETURN"), cancellable = true)
-    private static void modifyNightVisionScale(LivingEntity livingEntity, float nanoTime, CallbackInfoReturnable<Float> cir) {
+    private static void beyond_beta_tweaks$modifyNightVisionScale(LivingEntity livingEntity, float nanoTime, CallbackInfoReturnable<Float> cir) {
         cir.setReturnValue(cir.getReturnValue() * ModConfig.nightVisionModifier);
     }
 }

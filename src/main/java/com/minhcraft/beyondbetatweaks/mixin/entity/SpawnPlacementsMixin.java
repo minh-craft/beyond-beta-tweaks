@@ -19,7 +19,7 @@ public abstract class SpawnPlacementsMixin {
             ),
             index = 3
     )
-    private static SpawnPlacements.SpawnPredicate<? extends Monster> test(SpawnPlacements.SpawnPredicate<? extends Monster> decoratorPredicate) {
+    private static SpawnPlacements.SpawnPredicate<? extends Monster> beyond_beta_tweaks$modifyGiantSpawnRules(SpawnPlacements.SpawnPredicate<? extends Monster> decoratorPredicate) {
         return GiantSpawnRules::checkGiantSpawnRules;
     }
 }

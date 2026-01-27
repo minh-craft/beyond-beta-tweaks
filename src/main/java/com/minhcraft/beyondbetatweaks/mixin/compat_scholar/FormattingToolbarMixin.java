@@ -57,7 +57,7 @@ public abstract class FormattingToolbarMixin {
             int targetY;
 
             if (currentScreen instanceof SpreadBookEditScreen) {
-                TextBox leftTextBox = ((SpreadBookEditScreenAccessor) currentScreen).getLeftPageTextBox();
+                TextBox leftTextBox = ((SpreadBookEditScreenAccessor) currentScreen).beyond_beta_tweaks$getLeftPageTextBox();
                 targetX = leftTextBox.getX();
                 targetY = leftTextBox.getY() - leftTextBox.getFont().lineHeight - getHeight();
             } else {
@@ -82,7 +82,7 @@ public abstract class FormattingToolbarMixin {
                 } else if (type.isFormat()) {
                     highlighted = pendingFormatting.format().contains((Formatting.Format) type);
                 }
-                ((FormattingButtonAccessor) button).setHighlighted(highlighted);
+                ((FormattingButtonAccessor) button).beyond_beta_tweaks$setHighlighted(highlighted);
             }
         }
     }

@@ -13,5 +13,5 @@ public interface RecipeBookCategoriesAccessor {
 
     @Accessor("itemIcons")
     @Mutable
-    void setItemIcons(List<ItemStack> itemIcons);
+    void beyond_beta_tweaks$setItemIcons(List<ItemStack> itemIcons);
 }

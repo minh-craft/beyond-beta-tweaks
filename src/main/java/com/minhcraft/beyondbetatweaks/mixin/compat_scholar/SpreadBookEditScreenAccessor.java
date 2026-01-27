@@ -8,5 +8,5 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(SpreadBookEditScreen.class)
 public interface SpreadBookEditScreenAccessor {
     @Accessor(value = "leftPageTextBox", remap = false)
-    TextBox getLeftPageTextBox();
+    TextBox beyond_beta_tweaks$getLeftPageTextBox();
 }

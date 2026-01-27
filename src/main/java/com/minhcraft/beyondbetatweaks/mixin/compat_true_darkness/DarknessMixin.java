@@ -31,7 +31,7 @@ public abstract class DarknessMixin {
     @ModifyArg(method = "skyFactor",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;lerp(FFF)F"),
             index = 1)
-    private static float overrideBrightnessPercentage(float brightnessPercentage, @Local(argsOnly = true) Level world) {
+    private static float beyond_beta_tweaks$overrideBrightnessPercentage(float brightnessPercentage, @Local(argsOnly = true) Level world) {
         return CUSTOM_MOON_BRIGHTNESS_BY_PHASE[world.getMoonPhase()];
     }
 
@@ -41,7 +41,7 @@ public abstract class DarknessMixin {
     @Redirect(
             method = "updateLuminance",
             at = @At(value = "INVOKE", target = "Ljava/lang/Double;floatValue()F"))
-    private static float modifyGammaSettings(Double instance) {
+    private static float beyond_beta_tweaks$modifyGammaSettings(Double instance) {
         return instance.floatValue() * ModConfig.scaleTrueDarknessGamma;
     }
 
@@ -53,7 +53,7 @@ public abstract class DarknessMixin {
             at = @At("RETURN"),
             cancellable = true,
             remap = false)
-    private static void overrideLuminance(float r, float g, float b, CallbackInfoReturnable<Float> cir) {
+    private static void beyond_beta_tweaks$overrideLuminance(float r, float g, float b, CallbackInfoReturnable<Float> cir) {
         cir.setReturnValue(Math.max(ModConfig.trueDarknessMinimumLightLevel, cir.getReturnValue()));
         cir.cancel();
     }

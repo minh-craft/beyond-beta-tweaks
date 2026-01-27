@@ -38,7 +38,7 @@ public abstract class EnchantmentHelperMixin {
             cancellable = true
     )
     // Allow swift sneak bonus to be cumulative from different equipped armor pieces
-    private static void getSneakingSpeedBonus(LivingEntity entity, CallbackInfoReturnable<Float> cir) {
+    private static void beyond_beta_tweaks$getSneakingSpeedBonus(LivingEntity entity, CallbackInfoReturnable<Float> cir) {
         cir.setReturnValue(getEnchantmentLevelCumulative(Enchantments.SWIFT_SNEAK, entity) * 0.15F);
         cir.cancel();
     }

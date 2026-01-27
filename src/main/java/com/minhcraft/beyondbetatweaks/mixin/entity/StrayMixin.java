@@ -25,7 +25,7 @@ public abstract class StrayMixin extends AbstractSkeleton {
             cancellable = true
     )
     // Make strays not shoot slow effect arrows
-    private void getArrow(ItemStack arrowStack, float velocity, CallbackInfoReturnable<AbstractArrow> cir) {
+    private void beyond_beta_tweaks$disableStraySlowArrow(ItemStack arrowStack, float velocity, CallbackInfoReturnable<AbstractArrow> cir) {
         if (ModConfig.disableStraySlowArrows) {
             cir.setReturnValue(super.getArrow(arrowStack, velocity));
             cir.cancel();

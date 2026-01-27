@@ -25,7 +25,7 @@ public abstract class ClientRecipeBookMixin {
             at = @At(value = "INVOKE", target = "Ljava/util/Map;forEach(Ljava/util/function/BiConsumer;)V", ordinal = 0)
     )
     // Initial version of sort fix copied from Debugify mod https://github.com/isXander/Debugify/commit/fb207eacfc7a82cb23715a34a0ab78026642eb45#diff-c405d19a3af549943ad29679da9386026fea6fede7a3321a1ea11141c9aaf98a
-    private void sortRecipes(Map<RecipeBookCategories, List<List<Recipe<?>>>> map, BiConsumer<RecipeBookCategories, List<List<Recipe<?>>>> action) {
+    private void beyond_beta_tweaks$sortRecipes(Map<RecipeBookCategories, List<List<Recipe<?>>>> map, BiConsumer<RecipeBookCategories, List<List<Recipe<?>>>> action) {
         map.entrySet().stream().map(entry -> Map.entry(entry.getKey(), entry.getValue()
                 .stream()
                 .sorted((o1, o2) -> {

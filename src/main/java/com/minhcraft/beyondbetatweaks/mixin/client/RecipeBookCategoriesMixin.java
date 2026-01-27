@@ -14,11 +14,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class RecipeBookCategoriesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
-    private static void modifyItemIcons(CallbackInfo ci) {
+    private static void beyond_beta_tweaks$modifyItemIcons(CallbackInfo ci) {
         ((RecipeBookCategoriesAccessor) (Object) RecipeBookCategories.CRAFTING_MISC)
-                .setItemIcons(ImmutableList.of(new ItemStack(Blocks.BREWING_STAND), new ItemStack(Items.APPLE)));
+                .beyond_beta_tweaks$setItemIcons(ImmutableList.of(new ItemStack(Blocks.BREWING_STAND), new ItemStack(Items.APPLE)));
 
         ((RecipeBookCategoriesAccessor) (Object) RecipeBookCategories.FURNACE_MISC)
-                .setItemIcons(ImmutableList.of(new ItemStack(Items.LAVA_BUCKET), new ItemStack(Items.IRON_INGOT)));
+                .beyond_beta_tweaks$setItemIcons(ImmutableList.of(new ItemStack(Items.LAVA_BUCKET), new ItemStack(Items.IRON_INGOT)));
     }
 }

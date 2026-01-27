@@ -30,7 +30,7 @@ public abstract class ZombieMixin extends Monster {
             method = "convertsInWater",
             at = @At("HEAD"),
             cancellable = true)
-    private void convertsInWater(CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$disableZombieConvertsInWater(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(false);
         cir.cancel();
     }

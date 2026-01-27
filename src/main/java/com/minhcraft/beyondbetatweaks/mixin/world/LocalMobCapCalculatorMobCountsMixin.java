@@ -24,7 +24,7 @@ public abstract class LocalMobCapCalculatorMobCountsMixin implements ILocalMobCa
                     target = "Lnet/minecraft/world/entity/MobCategory;getMaxInstancesPerChunk()I"
             )
     )
-    private int canSpawnGetMaxInstancesPerChunk(MobCategory instance, Operation<Integer> original) {
+    private int beyond_beta_tweaks$canSpawnGetMaxInstancesPerChunk(MobCategory instance, Operation<Integer> original) {
         if (instance == MobCategory.MONSTER) {
             if (this.dimension == Level.OVERWORLD) {
                 return ModConfig.monsterMobCapOverworld;

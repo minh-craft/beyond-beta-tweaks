@@ -33,7 +33,7 @@ public abstract class EndDragonFightMixin {
     private ObjectArrayList<Integer> gateways;
 
     @Inject(method = "spawnNewGateway()V", at=@At("HEAD"), cancellable = true)
-    private void spawnOnlyFourGateways(CallbackInfo ci){
+    private void beyond_beta_tweaks$spawnOnlyFourGateways(CallbackInfo ci){
 
         //BeyondBetaTweaks.LOGGER.info("spawnOnlyFourGateways called");
         EndDragonFight self = (EndDragonFight) (Object) this; //self-cast to access members and methods. IDE may not like this, but it works

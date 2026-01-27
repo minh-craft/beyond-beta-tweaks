@@ -43,7 +43,7 @@ public abstract class CartographyTableMenuMixin extends AbstractContainerMenu {
             locals = LocalCapture.CAPTURE_FAILEXCEPTION,
             cancellable = true
     )
-    private void onQuickMoveStack(Player player, int index, CallbackInfoReturnable<ItemStack> cir, ItemStack itemStack, Slot slot, ItemStack itemStack2) {
+    private void beyond_beta_tweaks$onQuickMoveStack(Player player, int index, CallbackInfoReturnable<ItemStack> cir, ItemStack itemStack, Slot slot, ItemStack itemStack2) {
         if (GlassHelper.isGlassPaneOrBlock(itemStack2) && !itemStack2.is(Items.GLASS_PANE)) {
             if (!this.moveItemStackTo(itemStack2, 1, 2, false)) {
                 cir.setReturnValue(ItemStack.EMPTY);
@@ -76,7 +76,7 @@ public abstract class CartographyTableMenuMixin extends AbstractContainerMenu {
             locals = LocalCapture.CAPTURE_FAILEXCEPTION,
             cancellable = true
     )
-    private void onSetupResultSlot(ItemStack mapStack, ItemStack firstSlotStack, ItemStack resultSlotStack, Level level, BlockPos blockPos, CallbackInfo ci, MapItemSavedData mapItemSavedData) {
+    private void beyond_beta_tweaks$onSetupResultSlot(ItemStack mapStack, ItemStack firstSlotStack, ItemStack resultSlotStack, Level level, BlockPos blockPos, CallbackInfo ci, MapItemSavedData mapItemSavedData) {
         if (GlassHelper.isGlassPaneOrBlock(firstSlotStack) && !firstSlotStack.is(Items.GLASS_PANE) && !mapItemSavedData.locked) {
             ItemStack newMap = mapStack.copyWithCount(1);
             newMap.getOrCreateTag().putBoolean("map_to_lock", true);

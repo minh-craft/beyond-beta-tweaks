@@ -35,7 +35,7 @@ public abstract class EnchantmentsMixin {
             )
     )
     // change swift sneak to be enchantable on all armor slots, not just leggings
-    private static Enchantment swiftSneakOverride(String identifier, Enchantment enchantment, Operation<Enchantment> original) {
+    private static Enchantment beyond_beta_tweaks$swiftSneakOverride(String identifier, Enchantment enchantment, Operation<Enchantment> original) {
         return register("swift_sneak", new SwiftSneakEnchantment(Enchantment.Rarity.VERY_RARE, ARMOR_SLOTS));
     }
 }

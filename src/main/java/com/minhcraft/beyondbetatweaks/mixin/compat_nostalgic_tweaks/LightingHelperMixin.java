@@ -13,7 +13,7 @@ public class LightingHelperMixin {
     // Lower value makes nighttime brighter
     // Affects Nostalgic Tweak's round robin lighting
     @ModifyConstant(method = "getCombinedLight", constant = @Constant(intValue = 11), remap = false)
-    private static int overrideMaximumLightLevelSubtraction(int constant) {
+    private static int beyond_beta_tweaks$overrideMaximumLightLevelSubtraction(int constant) {
         return ModConfig.roundRobinMaximumDeductedLightLevel;
     }
 }

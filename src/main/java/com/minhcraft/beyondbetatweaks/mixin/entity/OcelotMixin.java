@@ -20,26 +20,26 @@ public abstract class OcelotMixin {
     @ModifyArg(
             method = "mobInteract",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/util/RandomSource;nextInt(I)I"), index = 0)
-    private int injected(int x) {
+    private int beyond_beta_tweaks$setOcelotTameChance(int x) {
         return 2;
     }
 
     // Ocelots don't need to be in a tempted state to be tamed
     @Redirect(method = "mobInteract", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/Ocelot$OcelotTemptGoal;isRunning()Z"))
-    private boolean injected(Ocelot.OcelotTemptGoal instance) {
+    private boolean beyond_beta_tweaks$loosenTameCondition(Ocelot.OcelotTemptGoal instance) {
         return true;
     }
 
     // Ocelots don't need to be in a specific distance to be tamed
     @ModifyConstant(method = "mobInteract", constant = @Constant(doubleValue = 9.0))
-    private double modifyTameDistance(double constant) {
+    private double beyond_beta_tweaks$modifyTameDistance(double constant) {
         return 25.0;
     }
 
     // Copy of Partonetrain's ocelot to cat conversion code from https://github.com/Partonetrain/trains_tweaks
     // The code is an updated version of https://modrinth.com/mod/ocelotfix
     @Inject(method = "mobInteract", at = @At("RETURN"))
-    private void trains_tweaks$mobInteract(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
+    private void beyond_beta_tweaks$mobInteract(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
         Ocelot ocelot = (Ocelot)(Object)this;
         if(ocelot.isTrusting())
         {
@@ -63,7 +63,7 @@ public abstract class OcelotMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void reassessTrustingGoals(CallbackInfo ci) {
+    private void beyond_beta_tweaks$reassessTrustingGoals(CallbackInfo ci) {
         if (ModConfig.disableOcelotAvoidingPlayer) {
             ci.cancel();
         }
@@ -71,7 +71,7 @@ public abstract class OcelotMixin {
 
     // adjust ocelot avoid distance
     @ModifyConstant(method = "reassessTrustingGoals", constant = @Constant(floatValue = 16.0f))
-    private float modifyAvoidMaxDistance(float constant) {
+    private float beyond_beta_tweaks$modifyAvoidMaxDistance(float constant) {
         return ModConfig.ocelotAvoidMaxDistance;
     }
 }

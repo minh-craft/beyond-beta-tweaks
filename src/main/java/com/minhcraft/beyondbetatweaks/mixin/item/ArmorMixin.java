@@ -14,7 +14,7 @@ public abstract class ArmorMixin {
     // Disable enchantment glint on enchanted armor
     // Code copied from https://github.com/jmb05/LessGlintyThings
     @Inject(method = "isFoil", at = @At("HEAD"), cancellable = true)
-    private void hasGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$disableEnchantedArmorGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (stack.getItem() instanceof Equipable) {
             cir.setReturnValue(false);
         }

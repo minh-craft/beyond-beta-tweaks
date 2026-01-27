@@ -38,7 +38,7 @@ public abstract class MouseScrollHandlerMixinSquared {
     )
     private void beyond_beta_tweaks$disableRecipeBookScrollingWhenHoveringBundle(long window, double arg1, double vertical, CallbackInfo ci, CallbackInfo ci2) {
         if (BetterRecipeBook.queuedScroll == 0 && BetterRecipeBook.config.scrolling.enableScrolling) {
-            if (betterRecipeBook$isHoveringBundle()) {
+            if (beyond_beta_tweaks$$isHoveringBundle()) {
                 ci2.cancel();
                 return;
             }
@@ -51,7 +51,7 @@ public abstract class MouseScrollHandlerMixinSquared {
     }
 
     @Unique
-    private boolean betterRecipeBook$isHoveringBundle() {
+    private boolean beyond_beta_tweaks$$isHoveringBundle() {
         if (!(minecraft.screen instanceof AbstractContainerScreen<?> containerScreen)) {
             return false;
         }

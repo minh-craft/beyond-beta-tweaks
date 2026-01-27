@@ -48,11 +48,11 @@ public class CanyonWorldCarverMixin {
 
     @SuppressWarnings("ConstantValue")
     @Inject(method = "carveBlock", at = @At("HEAD"), cancellable = true)
-    private void onlyDryIfExposed(CarvingContext context, CarverConfiguration config, ChunkAccess chunk,
-                                  Function<BlockPos, Holder<Biome>> biomeGetter, CarvingMask carvingMask,
-                                  BlockPos.MutableBlockPos pos, BlockPos.MutableBlockPos checkPos,
-                                  Aquifer aquifer, MutableBoolean reachedSurface,
-                                  CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$onlyDryIfExposed(CarvingContext context, CarverConfiguration config, ChunkAccess chunk,
+                                                     Function<BlockPos, Holder<Biome>> biomeGetter, CarvingMask carvingMask,
+                                                     BlockPos.MutableBlockPos pos, BlockPos.MutableBlockPos checkPos,
+                                                     Aquifer aquifer, MutableBoolean reachedSurface,
+                                                     CallbackInfoReturnable<Boolean> cir) {
         if (!((Object) this instanceof CanyonWorldCarver)) {
             IS_EXPOSED.set(false);
             return;
@@ -73,7 +73,7 @@ public class CanyonWorldCarverMixin {
 
     @SuppressWarnings("ConstantValue")
     @Inject(method = "getCarveState", at = @At("HEAD"), cancellable = true)
-    private void forceAirIfExposed(CarvingContext context, CarverConfiguration config, BlockPos pos, Aquifer aquifer, CallbackInfoReturnable<BlockState> cir) {
+    private void beyond_beta_tweaks$forceAirIfExposed(CarvingContext context, CarverConfiguration config, BlockPos pos, Aquifer aquifer, CallbackInfoReturnable<BlockState> cir) {
         if (!((Object) this instanceof CanyonWorldCarver)) {
             return;
         }

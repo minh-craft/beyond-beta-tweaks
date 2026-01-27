@@ -20,7 +20,7 @@ public abstract class MobCategoryMixin {
             method = "getMaxInstancesPerChunk",
             at = @At("RETURN")
     )
-    private int nt_monster_spawn$modifyMaxInstancesPerChunk(int maxInstancesPerChunk)
+    private int beyond_beta_tweaks$modifyWaterAmbientMobCap(int maxInstancesPerChunk)
     {
         if (this.name.equals(MobCategory.WATER_AMBIENT.getName())) {
             return ModConfig.ambientWaterMobCap;

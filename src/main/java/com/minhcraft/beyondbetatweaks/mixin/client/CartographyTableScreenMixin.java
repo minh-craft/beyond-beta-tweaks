@@ -30,7 +30,7 @@ public abstract class CartographyTableScreenMixin extends AbstractContainerScree
                     target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"
             )
     )
-    private boolean redirectAllGlassPaneChecks(ItemStack stack, Item item) {
+    private boolean beyond_beta_tweaks$redirectAllGlassPaneChecks(ItemStack stack, Item item) {
         if (item == Items.GLASS_PANE) {
             return GlassHelper.isGlassPaneOrBlock(stack);
         }

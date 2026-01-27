@@ -23,7 +23,7 @@ public abstract class AbstractSkeletonMixin extends Monster {
             method = "registerGoals",
             at = @At("HEAD")
     )
-    private void registerGoals(CallbackInfo ci) {
+    private void beyond_beta_tweaks$registerGoals(CallbackInfo ci) {
         this.goalSelector.addGoal(1, new FloatGoal(this));
     }
 
@@ -31,7 +31,7 @@ public abstract class AbstractSkeletonMixin extends Monster {
             method = "performRangedAttack",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/projectile/AbstractArrow;shoot(DDDFF)V")
     )
-    private void performRangedAttack(AbstractArrow instance, double x, double y, double z, float velocity, float inaccuracy) {
+    private void beyond_beta_tweaks$performRangedAttack(AbstractArrow instance, double x, double y, double z, float velocity, float inaccuracy) {
         instance.shoot(x, y, z, velocity - ModConfig.skeletonArrowVelocityDecrease, inaccuracy);
     }
 }

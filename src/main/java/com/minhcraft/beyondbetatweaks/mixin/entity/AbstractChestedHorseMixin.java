@@ -21,7 +21,7 @@ public abstract class AbstractChestedHorseMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private static void test(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
+    private static void beyond_beta_tweaks$overrideHorseAttributes(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
         cir.setReturnValue(
                 createBaseHorseAttributes()
                         .add(Attributes.MOVEMENT_SPEED, ModConfig.donkeyMovementSpeed)

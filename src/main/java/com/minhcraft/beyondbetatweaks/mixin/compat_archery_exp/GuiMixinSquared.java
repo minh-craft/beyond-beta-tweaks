@@ -37,7 +37,7 @@ public abstract class GuiMixinSquared {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void removeArcheryExpArrowCrosshair(GuiGraphics drawContext, CallbackInfo ci, CallbackInfo ciSquared) {
+    private void beyond_beta_tweaks$removeArcheryExpArrowCrosshair(GuiGraphics drawContext, CallbackInfo ci, CallbackInfo ciSquared) {
         ciSquared.cancel();
 
         if (ModConfig.disableArcheryExpansionArrowGui) {

@@ -24,7 +24,7 @@ public abstract class NaturalSpawnerSpawnStateMixin implements INaturalSpawnerSp
                     target = "Lnet/minecraft/world/entity/MobCategory;getMaxInstancesPerChunk()I"
             )
     )
-    private int canSpawnForCategoryGetMaxInstancesPerChunk(MobCategory instance, Operation<Integer> original) {
+    private int beyond_beta_tweaks$canSpawnForCategoryGetMaxInstancesPerChunk(MobCategory instance, Operation<Integer> original) {
         if (instance == MobCategory.MONSTER) {
             if (this.dimension == Level.OVERWORLD) {
                 return ModConfig.monsterMobCapOverworld;

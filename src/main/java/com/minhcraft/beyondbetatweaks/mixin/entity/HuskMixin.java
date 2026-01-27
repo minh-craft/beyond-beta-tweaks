@@ -22,7 +22,7 @@ public abstract class HuskMixin extends Monster {
             cancellable = true
     )
     // Make husks burn in daylight
-    private void isSunSensitive(CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$isSunSensitive(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(true);
         cir.cancel();
     }
@@ -33,7 +33,7 @@ public abstract class HuskMixin extends Monster {
             cancellable = true
     )
     // Disable drowned conversion
-    private void convertsInWater(CallbackInfoReturnable<Boolean> cir) {
+    private void beyond_beta_tweaks$convertsInWater(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(false);
         cir.cancel();
     }

@@ -7,5 +7,5 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(FormattingToolbar.FormattingButton.class)
 public interface FormattingButtonAccessor {
     @Accessor(value = "highlighted", remap = false)
-    void setHighlighted(boolean highlighted);
+    void beyond_beta_tweaks$setHighlighted(boolean highlighted);
 }
