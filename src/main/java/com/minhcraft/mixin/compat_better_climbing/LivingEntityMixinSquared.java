@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.better_climbing_compat;
+package com.minhcraft.mixin.compat_better_climbing;
 
 import com.bawnorton.mixinsquared.TargetHandler;
 import net.minecraft.world.entity.LivingEntity;

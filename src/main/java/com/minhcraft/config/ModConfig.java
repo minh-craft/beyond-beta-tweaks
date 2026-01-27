@@ -150,4 +150,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static boolean alwaysShowScholarFormattingToolbar = true;
+  
+    @Entry
+    public static boolean disableMelancholicHungerFoodRegenerationSpeedTooltip = true;
 }

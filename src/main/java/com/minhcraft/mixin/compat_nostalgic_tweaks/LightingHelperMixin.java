@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.nostalgic_tweaks_compat;
+package com.minhcraft.mixin.compat_nostalgic_tweaks;
 
 import com.minhcraft.config.ModConfig;
 import mod.adrenix.nostalgic.helper.candy.light.LightingHelper;

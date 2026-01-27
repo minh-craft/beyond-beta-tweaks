@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.betterdays_compat;
+package com.minhcraft.mixin.compat_betterdays;
 
 import betterdays.config.ConfigHandler;
 import betterdays.time.Time;

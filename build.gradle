@@ -64,6 +64,12 @@ repositories {
 		name = 'WhiteNoise' // Library for wendall911 mods
 		url = 'https://raw.githubusercontent.com/wendall911/maven/main/'
 	}
+
+	// Melancholic Hunger Compat
+	maven {
+		name = "Ladysnake Mods"
+		url = 'https://maven.ladysnake.org/releases'
+	}
 }
 
 dependencies {
@@ -108,6 +114,13 @@ dependencies {
 	modRuntimeOnly "maven.modrinth:cloth-config:11.1.136+fabric"
 	modRuntimeOnly "maven.modrinth:bundle-backportish:1.0.1+mc1.20.1"
     modImplementation "curse.maven:architectury-api-419699:5137936"
+
+	// Melancholic Hunger Compatibility
+	modImplementation "maven.modrinth:melancholic_hunger:$project.melancholic_hunger_version"
+	// Cardinal Components API
+	include (modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.CCA_version}")
+	include (modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.CCA_version}")
+
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
