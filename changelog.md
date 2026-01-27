@@ -4,11 +4,11 @@
 
 ### Added
 
-- Scholar mod now always displays the editing toolbar, not just when text is selected.
+- Scholar mod now always displays the editing toolbar when writing books, not just when text is selected.
 - Scaffolding-like placement for ladders. Can now place ladders at a configurable distance away from the base ladder. 
 - Can now shift fall through Supplementaries rope if there is a rope underneath
 - Giants now spawn smoke particles when despawning in the sunlight
-- Cartography table now 
+- Cartography table now accepts glass blocks in place of glass panes for locking maps
 
 ---
 
