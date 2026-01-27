@@ -1,3 +1,17 @@
+## v0.44.0
+
+### contributed by [@Leclowndu93150](https://github.com/Leclowndu93150)
+
+### Added
+
+- Scholar mod now always displays the editing toolbar, not just when text is selected.
+- Scaffolding-like placement for ladders. Can now place ladders at a configurable distance away from the base ladder. 
+- Can now shift fall through Supplementaries rope if there is a rope underneath
+- Giants now spawn smoke particles when despawning in the sunlight
+- Cartography table now 
+
+---
+
 ## v0.43.0
 
 ### Added
