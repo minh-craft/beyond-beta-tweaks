@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.scholar_compat;
+package com.minhcraft.mixin.compat_scholar;
 
 import com.minhcraft.config.ModConfig;
 import com.minhcraft.util.ScholarFormattingState;

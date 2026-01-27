@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.supplementaries_compat;
+package com.minhcraft.mixin.compat_supplementaries;
 
 import com.minhcraft.interfaces.IRopeDescentTracker;
 import net.mehvahdjukaar.supplementaries.common.block.blocks.RopeBlock;

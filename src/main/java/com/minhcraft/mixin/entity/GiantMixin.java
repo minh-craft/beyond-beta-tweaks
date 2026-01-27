@@ -117,15 +117,15 @@ public abstract class GiantMixin extends Monster {
 
             serverLevel.sendParticles(ParticleTypes.LARGE_SMOKE,
                     x, y + height / 2, z,
-                    80, width / 2, height / 2, width / 2, 0.05);
+                    40, width / 2, height / 2, width / 2, 0.05);
 
             serverLevel.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE,
                     x, y + height / 2, z,
-                    30, width / 2, height / 3, width / 2, 0.02);
+                    15, width / 2, height / 3, width / 2, 0.02);
 
             serverLevel.sendParticles(ParticleTypes.POOF,
                     x, y + 1, z,
-                    40, width / 2, 0.5, width / 2, 0.1);
+                    20, width / 2, 0.5, width / 2, 0.1);
         }
     }
 

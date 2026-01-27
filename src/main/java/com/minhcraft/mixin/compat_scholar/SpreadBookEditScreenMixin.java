@@ -1,4 +1,4 @@
-package com.minhcraft.mixin.scholar_compat;
+package com.minhcraft.mixin.compat_scholar;
 
 import com.minhcraft.util.ScholarFormattingState;
 import io.github.mortuusars.scholar.client.gui.screen.edit.SpreadBookEditScreen;

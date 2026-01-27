@@ -1,3 +1,11 @@
+## v0.44.1
+
+### Changed
+
+- Halved the amount of smoke particles from giant despawning
+
+---
+
 ## v0.44.0
 
 ### contributed by [@Leclowndu93150](https://github.com/Leclowndu93150)
