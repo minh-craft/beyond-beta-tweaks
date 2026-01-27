@@ -143,5 +143,14 @@ public class ModConfig extends MidnightConfig {
     public static double endGatewayTeleportDistance = 1024.0;
 
     @Entry
+    public static boolean enableScaffoldingLikeLadderPlacement = true;
+
+    @Entry(isSlider = true, min=1, max=256)
+    public static int ladderScaffoldingMaxDistance = 64;
+
+    @Entry
+    public static boolean alwaysShowScholarFormattingToolbar = true;
+  
+    @Entry
     public static boolean disableMelancholicHungerFoodRegenerationSpeedTooltip = true;
 }

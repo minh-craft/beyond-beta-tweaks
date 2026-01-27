@@ -77,5 +77,7 @@
   "classic-reintegrated-tweaks.midnightconfig.horseMovementSpeed": "Horse Movement Speed",
   "classic-reintegrated-tweaks.midnightconfig.endGatewayTeleportDistance": "End Gateway Teleport Distance",
   "classic-reintegrated-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness",
+  "classic-reintegrated-tweaks.midnightconfig.enableScaffoldingLikeLadderPlacement": "Enable Scaffolding-Like Ladder Placement",
+  "classic-reintegrated-tweaks.midnightconfig.ladderScaffoldingMaxDistance": "Ladder Scaffolding Max Distance",
   "classic-reintegrated-tweaks.midnightconfig.disableMelancholicHungerFoodRegenerationSpeedTooltip": "Disable Melancholic Hunger Food Regeneration Speed Tooltip"
 }

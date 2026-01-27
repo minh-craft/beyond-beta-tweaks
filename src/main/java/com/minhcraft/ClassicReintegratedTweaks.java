@@ -2,6 +2,7 @@ package com.minhcraft;
 
 import com.minhcraft.config.ModConfig;
 import com.minhcraft.config.RecipeCustomSortingConfigLoader;
+import com.minhcraft.network.ModNetworking;
 import com.minhcraft.register.ModItems;
 import com.minhcraft.register.ModRegistry;
 import com.minhcraft.register.ModSounds;
@@ -31,6 +32,7 @@ public class ClassicReintegratedTweaks implements ModInitializer {
 		ModSounds.init();
 		ModItems.init();
 		ModRegistry.init();
+		ModNetworking.registerServerReceivers();
 		RecipeCustomSortingConfigLoader.loadConfig();
 		MidnightConfig.init(MOD_ID, ModConfig.class);
 	}

@@ -4,6 +4,8 @@ import com.minhcraft.config.ModConfig;
 import com.minhcraft.entity.GiantAttackGoal;
 import com.minhcraft.register.ModSounds;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
@@ -96,11 +98,35 @@ public abstract class GiantMixin extends Monster {
         {
             if (this.level().canSeeSky(this.blockPosition()) && this.random.nextFloat() * 40.0F < 1.0F) {
                 this.playSound(ModSounds.GIANT_HURT, 1.6F, 0.8F);
+                spawnDespawnSmokeParticles();
                 this.discard();
             }
         }
 
         super.customServerAiStep();
+    }
+
+    @Unique
+    private void spawnDespawnSmokeParticles() {
+        if (this.level() instanceof ServerLevel serverLevel) {
+            double x = this.getX();
+            double y = this.getY();
+            double z = this.getZ();
+            float width = this.getBbWidth();
+            float height = this.getBbHeight();
+
+            serverLevel.sendParticles(ParticleTypes.LARGE_SMOKE,
+                    x, y + height / 2, z,
+                    80, width / 2, height / 2, width / 2, 0.05);
+
+            serverLevel.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE,
+                    x, y + height / 2, z,
+                    30, width / 2, height / 3, width / 2, 0.02);
+
+            serverLevel.sendParticles(ParticleTypes.POOF,
+                    x, y + 1, z,
+                    40, width / 2, 0.5, width / 2, 0.1);
+        }
     }
 
     // Set giant attributes

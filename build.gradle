@@ -55,6 +55,10 @@ repositories {
 		url = "https://maven.wispforest.io"
 	}
 
+    maven {
+        url = "https://cursemaven.com"
+    }
+
 	// Better Days Compat
 	maven {
 		name = 'WhiteNoise' // Library for wendall911 mods
@@ -109,6 +113,7 @@ dependencies {
 	modImplementation "maven.modrinth:brb:$project.brb_version"
 	modRuntimeOnly "maven.modrinth:cloth-config:11.1.136+fabric"
 	modRuntimeOnly "maven.modrinth:bundle-backportish:1.0.1+mc1.20.1"
+    modImplementation "curse.maven:architectury-api-419699:5137936"
 
 	// Melancholic Hunger Compatibility
 	modImplementation "maven.modrinth:melancholic_hunger:$project.melancholic_hunger_version"
@@ -123,6 +128,12 @@ dependencies {
 	// For Config Options
 	modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version}")
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+    modImplementation "curse.maven:supplementaries-412082:7431872"
+    modImplementation "curse.maven:selene-499980:7494448"
+
+    modImplementation "curse.maven:scholar-961802:7396149"
+    modImplementation "curse.maven:forge-config-api-port-547434:7260491"
 }
 
 processResources {
