@@ -3,3 +3,4 @@ accessible class net/minecraft/world/entity/animal/Ocelot$OcelotTemptGoal
 accessible method net/minecraft/world/entity/animal/Ocelot isTrusting ()Z
 accessible method net/minecraft/world/level/dimension/end/EndDragonFight spawnNewGateway (Lnet/minecraft/core/BlockPos;)V
 accessible class net/minecraft/world/level/LocalMobCapCalculator$MobCounts
+accessible class net/minecraft/client/gui/screens/worldselection/SwitchGrid

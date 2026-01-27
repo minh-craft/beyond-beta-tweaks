@@ -1,3 +1,10 @@
+## v0.46.0
+
+### Added
+- Disabled world preset selector - code from https://github.com/ChaoticTrials/DefaultWorldType by [@ChaoticTrials](https://github.com/ChaoticTrials)
+
+---
+
 ## v0.45.2
 
 ### Changed

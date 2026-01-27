@@ -34,3 +34,4 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Ambient water mob cap code adapted from https://github.com/Nostalgica-Reverie/Nostalgic-Tweaks by [@Adrenix](https://github.com/Adrenix/)
 - Boat slipperiness cap code adapted from https://modrinth.com/mod/ice-boat-nerf by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Shulker farm disable code from https://github.com/pajicadvance/misctweaks by [@pajicadvance](https://github.com/pajicadvance)
+- World preset disable code from https://github.com/ChaoticTrials/DefaultWorldType by [@ChaoticTrials](https://github.com/ChaoticTrials)
