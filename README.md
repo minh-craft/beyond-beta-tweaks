@@ -14,12 +14,17 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
     - Make ravines only spawn as waterlogged in areas where they are directly below water
     - Update recipe book icons
     - Updated recipe book to only scroll through craftable items in within a recipe group if at least one item is craftable
+    - Scholar mod now always displays the editing toolbar when writing books, not just when text is selected.
+    - Scaffolding-like placement for ladders. Can now place ladders at a configurable distance away from the base ladder. 
+    - Can now shift fall through Supplementaries rope if there is a rope underneath
+    - Giants now spawn smoke particles when despawning in the sunlight
+    - Cartography table now accepts glass blocks in place of glass panes for locking maps
 - Contributed by [@mahmudindev](https://github.com/mahmudindev)
   - Added per-dimension monster mob cap configuration options
 
 
 ### Assets
-- Rotten leather texture created by Glorious Emperor Creeper https://www.youtube.com/@Emperor_Creeper
+- Rotten leather texture created by @Glorious Emperor Creeper https://www.youtube.com/@Emperor_Creeper
 - Kristoffer Zetterstrand paintings https://zetterstrand.com/works/ adapted by https://www.youtube.com/@Mongster83
     - https://www.reddit.com/r/GoldenAgeMinecraft/comments/1i5fnh0/i_made_a_bunch_of_new_paintings_based_off/
 
