@@ -1,3 +1,10 @@
+## v0.47.0
+
+### Added
+- Added beta caves from https://codeberg.org/Nostalgica-Reverie/moderner-beta by @icanttellyou and @b3spectacled and @BlueStaggo
+
+---
+
 ## v0.46.0
 
 ### Added

@@ -35,3 +35,4 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Boat slipperiness cap code adapted from https://modrinth.com/mod/ice-boat-nerf by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Shulker farm disable code from https://github.com/pajicadvance/misctweaks by [@pajicadvance](https://github.com/pajicadvance)
 - World preset disable code from https://github.com/ChaoticTrials/DefaultWorldType by [@ChaoticTrials](https://github.com/ChaoticTrials)
+- Beta cave code from https://codeberg.org/Nostalgica-Reverie/moderner-beta by [@icanttellyou](https://github.com/forkiesassds) and [@b3spectacled](https://github.com/b3spectacled) and [@BlueStaggo](https://github.com/BlueStaggo)

@@ -6,6 +6,7 @@ import com.minhcraft.beyondbetatweaks.network.ModNetworking;
 import com.minhcraft.beyondbetatweaks.register.ModItems;
 import com.minhcraft.beyondbetatweaks.register.ModRegistry;
 import com.minhcraft.beyondbetatweaks.register.ModSounds;
+import com.minhcraft.beyondbetatweaks.world.BeyondBetaCarvers;
 import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 
@@ -32,6 +33,8 @@ public class BeyondBetaTweaks implements ModInitializer {
 		ModSounds.init();
 		ModItems.init();
 		ModRegistry.init();
+		BeyondBetaCarvers.register();
+
 		ModNetworking.registerServerReceivers();
 		RecipeCustomSortingConfigLoader.loadConfig();
 		MidnightConfig.init(MOD_ID, ModConfig.class);
