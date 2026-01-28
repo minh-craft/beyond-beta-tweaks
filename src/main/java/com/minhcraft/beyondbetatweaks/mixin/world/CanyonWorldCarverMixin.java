@@ -32,6 +32,30 @@ public class CanyonWorldCarverMixin {
         BlockPos.MutableBlockPos checkPos = new BlockPos.MutableBlockPos();
         int maxY = context.getMinGenY() + context.getGenDepth() - 1;
 
+//        checkPos.set(pos.getX()+1, pos.getY(), pos.getZ());
+//        BlockState stateXPlus2 = chunk.getBlockState(checkPos);
+//        if (stateXPlus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX()-1, pos.getY(), pos.getZ());
+//        BlockState stateXMinus2 = chunk.getBlockState(checkPos);
+//        if (stateXMinus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX(), pos.getY(), pos.getZ()+1);
+//        BlockState stateZPlus2 = chunk.getBlockState(checkPos);
+//        if (stateZPlus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX(), pos.getY(), pos.getZ()-1);
+//        BlockState stateZMinus2 = chunk.getBlockState(checkPos);
+//        if (stateZMinus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+
         for (int y = pos.getY() + 1; y <= maxY; y++) {
             checkPos.set(pos.getX(), y, pos.getZ());
             BlockState state = chunk.getBlockState(checkPos);

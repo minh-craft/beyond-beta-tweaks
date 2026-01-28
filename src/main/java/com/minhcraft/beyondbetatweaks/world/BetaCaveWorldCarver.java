@@ -21,14 +21,68 @@ import net.minecraft.world.level.levelgen.carver.CarverConfiguration;
 import net.minecraft.world.level.levelgen.carver.CarvingContext;
 import net.minecraft.world.level.levelgen.carver.WorldCarver;
 import org.apache.commons.lang3.mutable.MutableBoolean;
+import org.spongepowered.asm.mixin.Unique;
 
 import java.util.function.Function;
 
-// All beta cave code here is from https://codeberg.org/Nostalgica-Reverie/moderner-beta by @icanttellyou and @b3spectacled and @BlueStaggo
+// Base beta cave code is from https://codeberg.org/Nostalgica-Reverie/moderner-beta by @icanttellyou and @b3spectacled and @BlueStaggo
 public class BetaCaveWorldCarver extends WorldCarver<BetaCaveCarverConfiguration> {
 
     public BetaCaveWorldCarver(Codec<BetaCaveCarverConfiguration> caveCodec) {
         super(caveCodec);
+    }
+
+    @Unique
+    private static final ThreadLocal<Boolean> IS_EXPOSED = ThreadLocal.withInitial(() -> false);
+
+    @Unique
+    private static boolean isExposedToAir(ChunkAccess chunk, BlockPos pos, CarvingContext context) {
+        BlockPos.MutableBlockPos checkPos = new BlockPos.MutableBlockPos();
+        int maxY = context.getMinGenY() + context.getGenDepth() - 1;
+
+//        checkPos.set(pos.getX()+2, pos.getY(), pos.getZ());
+//        BlockState stateXPlus2 = chunk.getBlockState(checkPos);
+//        if (stateXPlus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX()-2, pos.getY(), pos.getZ());
+//        BlockState stateXMinus2 = chunk.getBlockState(checkPos);
+//        if (stateXMinus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX(), pos.getY(), pos.getZ()+2);
+//        BlockState stateZPlus2 = chunk.getBlockState(checkPos);
+//        if (stateZPlus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+//
+//        checkPos.set(pos.getX(), pos.getY(), pos.getZ()-2);
+//        BlockState stateZMinus2 = chunk.getBlockState(checkPos);
+//        if (stateZMinus2.is(Blocks.WATER)) {
+//            return false;
+//        }
+
+
+
+        for (int y = pos.getY() + 1; y <= maxY; y++) {
+            checkPos.set(pos.getX(), y, pos.getZ());
+            BlockState state = chunk.getBlockState(checkPos);
+
+            if (state.isAir()) {
+                continue;
+            }
+            if (state.is(Blocks.WATER)) {
+                return false;
+            } else {
+                return true;
+            }
+//            if (!state.is(Blocks.WATER)) {
+//                return true;
+//            }
+        }
+        return true;
     }
 
     @Override
@@ -392,6 +446,17 @@ public class BetaCaveWorldCarver extends WorldCarver<BetaCaveCarverConfiguration
             Aquifer aquiferSampler,
             MutableBoolean replacedGrassy
     ) {
+
+        boolean exposed = isExposedToAir(chunk, pos, context);
+        IS_EXPOSED.set(exposed);
+
+        if (exposed) {
+            BlockState currentState = chunk.getBlockState(pos);
+            if (currentState.is(Blocks.WATER)) {
+                return false;
+            }
+        }
+
         boolean useSurfaceRules = config.useSurfaceRules.orElse(false);
         if (useSurfaceRules) {
             return super.carveBlock(context, config, chunk, posToBiome, carvingMask, pos, tmp, aquiferSampler, replacedGrassy);
@@ -432,28 +497,37 @@ public class BetaCaveWorldCarver extends WorldCarver<BetaCaveCarverConfiguration
     }
 
     private BlockState getCarveState(CarvingContext context, BetaCaveCarverConfiguration config, BlockPos pos, Aquifer aquiferSampler) {
-        if (pos.getY() <= config.lavaLevel.resolveY(context)) {
-            return Blocks.LAVA.defaultBlockState();
-        }
+        if (IS_EXPOSED.get()) {
+            if (pos.getY() <= config.lavaLevel.resolveY(context)) {
+                return Blocks.LAVA.defaultBlockState();
+            }
 
-        boolean useAquifers = config.useAquifers.orElse(false);
-
-        if (!useAquifers) {
             return Blocks.AIR.defaultBlockState();
         }
+        return Blocks.WATER.defaultBlockState();
 
-        // TODO: Produces too many flooded caves, re-visit this later.
-
-        int x = pos.getX();
-        int y = pos.getY();
-        int z = pos.getZ();
-        BlockState state = aquiferSampler.computeSubstance(new DensityFunction.SinglePointContext(x, y, z), 0.0);
-
-        if (state == null) {
-            return isDebugEnabled(config) ? config.debugSettings.getBarrierState() : null;
-        }
-
-        return isDebugEnabled(config) ? getDebugState(config, state) : state;
+//        if (pos.getY() <= config.lavaLevel.resolveY(context)) {
+//            return Blocks.LAVA.defaultBlockState();
+//        }
+//
+//        boolean useAquifers = config.useAquifers.orElse(false);
+//
+//        if (!useAquifers) {
+//            return Blocks.AIR.defaultBlockState();
+//        }
+//
+//        // TODO: Produces too many flooded caves, re-visit this later.
+//
+//        int x = pos.getX();
+//        int y = pos.getY();
+//        int z = pos.getZ();
+//        BlockState state = aquiferSampler.computeSubstance(new DensityFunction.SinglePointContext(x, y, z), 0.0);
+//
+//        if (state == null) {
+//            return isDebugEnabled(config) ? config.debugSettings.getBarrierState() : null;
+//        }
+//
+//        return isDebugEnabled(config) ? getDebugState(config, state) : state;
     }
 
     private boolean canCarveBranch(
