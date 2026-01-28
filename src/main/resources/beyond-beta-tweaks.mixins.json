@@ -65,7 +65,8 @@
     "world.ServerChunkCacheMixin",
     "world.SpikeFeatureMixin",
     "world.SurfaceSystemMixin",
-    "world.TheEndGatewayBlockEntityMixin"
+    "world.TheEndGatewayBlockEntityMixin",
+    "world.WorldCarverMixin"
   ],
   "injectors": {
     "defaultRequire": 1
