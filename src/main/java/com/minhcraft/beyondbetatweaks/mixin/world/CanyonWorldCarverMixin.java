@@ -69,6 +69,12 @@ public class CanyonWorldCarverMixin {
         if (currentState.is(Blocks.WATER)) {
             cir.setReturnValue(false);
         }
+
+        // don't carve below y=2
+        if (pos.getY() < 3) {
+            cir.setReturnValue(false);
+            return;
+        }
     }
 
     @SuppressWarnings("ConstantValue")
