@@ -1,3 +1,11 @@
+## v0.48.0
+
+### Added
+- Moved cave aquifers below y=0
+- Limit canyon carvers to above y=2
+
+---
+
 ## v0.47.0
 
 ### Added
