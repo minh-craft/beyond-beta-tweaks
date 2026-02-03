@@ -121,6 +121,8 @@ dependencies {
 	include (modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.CCA_version}")
 	include (modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.CCA_version}")
 
+	// Spyglass Improvements Compatibility
+	modImplementation "maven.modrinth:spyglass-improvements:$project.spyglass_improvements_version"
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")

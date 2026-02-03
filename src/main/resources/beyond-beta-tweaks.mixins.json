@@ -20,6 +20,7 @@
     "compat_betterdays.TimeServiceMixin",
     "compat_melancholic_hunger.FoodItemTooltipsMixin",
     "compat_nostalgic_tweaks.LightingHelperMixin",
+    "compat_spyglass_improvements.SpyglassImprovementsClientMixin",
     "compat_supplementaries.LivingEntityRopeMixin",
     "compat_supplementaries.RopeBlockMixin",
     "entity.AbstractChestedHorseMixin",

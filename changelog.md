@@ -1,3 +1,10 @@
+## v0.49.0
+
+### Added
+- Added new default halfway zoom level for Spyglass Improvements mod
+
+---
+
 ## v0.48.0
 
 ### Added
