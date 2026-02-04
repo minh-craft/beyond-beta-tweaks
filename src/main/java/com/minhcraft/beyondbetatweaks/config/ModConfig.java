@@ -153,4 +153,7 @@ public class ModConfig extends MidnightConfig {
   
     @Entry
     public static boolean disableMelancholicHungerFoodRegenerationSpeedTooltip = true;
+
+    @Entry(isSlider = true, min=0.1F, max=1.0F)
+    public static float spyglassDefaultZoom = 0.3F;
 }

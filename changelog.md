@@ -1,3 +1,10 @@
+## v0.49.1
+
+### Changed
+- Changed default spyglass zoom level to be configurable
+
+---
+
 ## v0.49.0
 
 ### Added

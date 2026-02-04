@@ -79,5 +79,6 @@
   "beyond-beta-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness",
   "beyond-beta-tweaks.midnightconfig.enableScaffoldingLikeLadderPlacement": "Enable Scaffolding-Like Ladder Placement",
   "beyond-beta-tweaks.midnightconfig.ladderScaffoldingMaxDistance": "Ladder Scaffolding Max Distance",
-  "beyond-beta-tweaks.midnightconfig.disableMelancholicHungerFoodRegenerationSpeedTooltip": "Disable Melancholic Hunger Food Regeneration Speed Tooltip"
+  "beyond-beta-tweaks.midnightconfig.disableMelancholicHungerFoodRegenerationSpeedTooltip": "Disable Melancholic Hunger Food Regeneration Speed Tooltip",
+  "beyond-beta-tweaks.midnightconfig.spyglassDefaultZoom": "Spyglass Default Zoom"
 }
