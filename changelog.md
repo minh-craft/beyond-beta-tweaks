@@ -1,3 +1,10 @@
+## v0.51.0
+
+### Added
+- Rabbits don't take fall damage tweak from https://modrinth.com/datapack/rabbits-dont-take-fall-damage by @dragon3025
+
+---
+
 ## v0.50.0
 
 ### Added

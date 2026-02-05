@@ -36,3 +36,4 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Shulker farm disable code from https://github.com/pajicadvance/misctweaks by [@pajicadvance](https://github.com/pajicadvance)
 - World preset disable code from https://github.com/ChaoticTrials/DefaultWorldType by [@ChaoticTrials](https://github.com/ChaoticTrials)
 - Beta cave code from https://codeberg.org/Nostalgica-Reverie/moderner-beta by [@icanttellyou](https://github.com/forkiesassds) and [@b3spectacled](https://github.com/b3spectacled) and [@BlueStaggo](https://github.com/BlueStaggo)
+- Rabbits don't take fall damage tweak from https://modrinth.com/datapack/rabbits-dont-take-fall-damage by @dragon3025
