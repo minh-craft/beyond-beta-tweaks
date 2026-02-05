@@ -1,3 +1,11 @@
+## v0.52.0
+
+### Added
+- Piglin Brutes are now neutral, with the same aggression settings as Piglins
+- Piglins and Piglin Brutes only anger when the player isn't wearing gold, when attacked, or when breaking gold-related blocks around them, chests and containers don't trigger aggression anymore
+
+---
+
 ## v0.51.0
 
 ### Added
