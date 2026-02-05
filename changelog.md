@@ -1,3 +1,13 @@
+## v0.50.0
+
+### Added
+- Disabled mixin from Diversity which seemed to be causing lag according to spark
+
+### Changed
+- Backend class renaming
+
+---
+
 ## v0.49.1
 
 ### Changed

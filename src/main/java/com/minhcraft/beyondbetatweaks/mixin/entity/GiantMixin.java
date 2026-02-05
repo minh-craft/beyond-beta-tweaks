@@ -2,7 +2,7 @@ package com.minhcraft.beyondbetatweaks.mixin.entity;
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import com.minhcraft.beyondbetatweaks.entity.GiantAttackGoal;
-import com.minhcraft.beyondbetatweaks.register.ModSounds;
+import com.minhcraft.beyondbetatweaks.register.BeyondBetaSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -40,17 +40,17 @@ public abstract class GiantMixin extends Monster {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return ModSounds.GIANT_AMBIENT;
+        return BeyondBetaSounds.GIANT_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
-        return ModSounds.GIANT_HURT;
+        return BeyondBetaSounds.GIANT_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return ModSounds.GIANT_DEATH;
+        return BeyondBetaSounds.GIANT_DEATH;
     }
 
     @Unique
@@ -97,7 +97,7 @@ public abstract class GiantMixin extends Monster {
                 && this.level().getSkyDarken() < ModConfig.giantDespawnWhenSkyDarkenLessThan) // isDay checks for < 4
         {
             if (this.level().canSeeSky(this.blockPosition()) && this.random.nextFloat() * 40.0F < 1.0F) {
-                this.playSound(ModSounds.GIANT_HURT, 1.6F, 0.8F);
+                this.playSound(BeyondBetaSounds.GIANT_HURT, 1.6F, 0.8F);
                 spawnDespawnSmokeParticles();
                 this.discard();
             }

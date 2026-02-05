@@ -19,6 +19,9 @@
 	"entrypoints": {
 		"main": [
 			"com.minhcraft.beyondbetatweaks.BeyondBetaTweaks"
+		],
+		"mixinsquared": [
+			"com.minhcraft.beyondbetatweaks.register.BeyondBetaMixinCanceller"
 		]
 	},
 	"mixins": [

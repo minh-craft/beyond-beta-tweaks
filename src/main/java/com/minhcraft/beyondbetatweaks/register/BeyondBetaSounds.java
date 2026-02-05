@@ -5,7 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 
-public class ModSounds {
+public class BeyondBetaSounds {
 
     public static SoundEvent GIANT_DEATH = register("entity.giant.death");
     public static SoundEvent GIANT_HURT = register("entity.giant.hurt");

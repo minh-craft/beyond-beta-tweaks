@@ -8,7 +8,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 
-public class ModItems {
+public class BeyondBetaItems {
 
     public static final Item ROTTEN_LEATHER = Registry.register(
             BuiltInRegistries.ITEM,

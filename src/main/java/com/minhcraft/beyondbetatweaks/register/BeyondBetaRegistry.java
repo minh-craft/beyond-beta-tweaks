@@ -5,7 +5,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 
-public class ModRegistry {
+public class BeyondBetaRegistry {
     public static void init() {
 
         // Register new paintings
