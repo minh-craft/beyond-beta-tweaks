@@ -58,6 +58,8 @@
   "beyond-beta-tweaks.midnightconfig.trueDarknessMinimumLightLevel": "True Darkness Minimum Light Level",
   "beyond-beta-tweaks.midnightconfig.roundRobinMaximumDeductedLightLevel": "Round Robin Maximum Deducted Light Level",
   "beyond-beta-tweaks.midnightconfig.scaleTrueDarknessGamma": "Scale True Darkness Gamma",
+  "beyond-beta-tweaks.midnightconfig.enableDynamicLightBrightnessAffectBlockLight": "Enable Dynamic Light Brightness Affect Block Light",
+  "beyond-beta-tweaks.midnightconfig.dynamicLightBrightnessBlockLightScale": "Dynamic Light Brightness Block Light Scale",
   "beyond-beta-tweaks.midnightconfig.crossbowShootingPower": "Crossbow Shooting Power",
   "beyond-beta-tweaks.midnightconfig.crossbowChargeDuration": "Crossbow Charge Duration",
   "beyond-beta-tweaks.midnightconfig.crossbowArrowBaseDamage": "Crossbow Arrow Base Damage",

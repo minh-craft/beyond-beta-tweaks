@@ -1,3 +1,10 @@
+## v0.53.1
+
+### Added
+- Added lang entries for new config values
+
+---
+
 ## v0.53.0
 
 ### Added
