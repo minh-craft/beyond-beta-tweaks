@@ -14,6 +14,8 @@ import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 public class BeyondBetaTweaks implements ModInitializer {
 	public static final String MOD_ID = "beyond-beta-tweaks";
 
@@ -21,6 +23,10 @@ public class BeyondBetaTweaks implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    // For responsive knockback feature from https://github.com/Revvilo/responsive-knockback by @Revvilo
+	public static final Runnable DO_NOTHING = () -> {};
+	public static final AtomicReference<Runnable> TRACKER_TICK = new AtomicReference<>(DO_NOTHING);
 
 
 	@Override

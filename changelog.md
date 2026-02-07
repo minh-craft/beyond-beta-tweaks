@@ -1,3 +1,10 @@
+## v0.54.0
+
+### Added
+- Add responsive knockback feature from https://github.com/Revvilo/responsive-knockback by @Revvilo
+
+---
+
 ## v0.53.1
 
 ### Added

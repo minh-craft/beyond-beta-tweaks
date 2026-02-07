@@ -60,6 +60,8 @@
     "feature.piglin_rework.PiglinBruteMixin",
     "feature.piglin_rework.PiglinBruteSpecificSensorMixin",
     "feature.piglin_rework.ShulkerBoxBlockMixin",
+    "feature.responsive_knockback.ServerChunkCacheMixin",
+    "feature.responsive_knockback.ServerLevelMixin",
     "inventory.CartographyTableMenuMixin",
     "inventory.CartographyTableMenuSlotMixin",
     "item.ArmorMixin",
