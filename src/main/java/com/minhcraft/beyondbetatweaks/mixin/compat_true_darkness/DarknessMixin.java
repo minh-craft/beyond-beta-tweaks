@@ -42,7 +42,11 @@ public abstract class DarknessMixin {
             method = "updateLuminance",
             at = @At(value = "INVOKE", target = "Ljava/lang/Double;floatValue()F"))
     private static float beyond_beta_tweaks$modifyGammaSettings(Double instance) {
-        return instance.floatValue() * ModConfig.scaleTrueDarknessGamma;
+        // dampen effect of gamma above default setting so that 1.0 gamma = 0.66 gamma and 0.5 gamma = 0.5 gamma
+        float gamma = (instance.floatValue() > 0.5F)
+                ? (((instance.floatValue() - 0.5F) / 3.0F) + 0.5F)
+                : instance.floatValue();
+        return gamma * ModConfig.scaleTrueDarknessGamma;
     }
 
 

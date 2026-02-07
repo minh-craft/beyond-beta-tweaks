@@ -82,8 +82,14 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=0, max=11)
     public static int roundRobinMaximumDeductedLightLevel = 8;
 
-    @Entry(isSlider = true, min=1.0F, max=3.0F)
+    @Entry(isSlider = true, min=1.0F, max=4.0F)
     public static float scaleTrueDarknessGamma = 3.0F;
+
+    @Entry
+    public static boolean enableDynamicLightBrightnessAffectBlockLight = true;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float dynamicLightBrightnessBlockLightScale = 0.15F;
 
     @Entry(isSlider = true, min=1.0F, max=10.0F)
     public static float crossbowShootingPower = 4.59F;

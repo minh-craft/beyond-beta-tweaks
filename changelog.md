@@ -1,3 +1,11 @@
+## v0.53.0
+
+### Added
+- Brightness settings above default brightness have dampened effectiveness
+- Added config option to make it so that Dynamic Light Brightness from Nostalgic Tweaks allows gamma to affect blocklight
+
+---
+
 ## v0.52.0
 
 ### Added
