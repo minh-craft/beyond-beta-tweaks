@@ -36,7 +36,11 @@ public abstract class LightTextureHelperMixin {
             }
 
             // decrease effect of gamma at lower block light levels
-            gammaSetting = Mth.lerp(i / 15.0, 0, gammaSetting);
+            if (ModConfig.dynamicLightBrightnessBlockLightGammaReductionSquared) {
+                gammaSetting = Mth.lerp(Mth.square(i / 15.0), 0, gammaSetting);
+            } else {
+                gammaSetting = Mth.lerp(i / 15.0, 0, gammaSetting);
+            }
 
             float maxBrightness = getLightmapBrightness(15, true) - 0.05F;
             float shiftBrightness = lightmapBrightness + (float) (ModConfig.dynamicLightBrightnessBlockLightScale * gammaSetting);

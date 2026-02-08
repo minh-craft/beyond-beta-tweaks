@@ -88,6 +88,9 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static boolean enableDynamicLightBrightnessAffectBlockLight = true;
 
+    @Entry
+    public static boolean dynamicLightBrightnessBlockLightGammaReductionSquared = true;
+
     @Entry(isSlider = true, min=0.0F, max=1.0F)
     public static float dynamicLightBrightnessBlockLightScale = 0.15F;
 

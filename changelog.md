@@ -1,3 +1,10 @@
+## v0.55.1
+
+### Changed
+- Added config option to have Dynamic Light Brightness affecting blocklight reduction calculation be squared for steeper fall off with lower block light values
+
+---
+
 ## v0.55.0
 
 ### Changed
