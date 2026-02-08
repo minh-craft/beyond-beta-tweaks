@@ -1,3 +1,11 @@
+## v0.55.0
+
+### Changed
+- Brightness settings above 40% are now dampened, instead of above 50%
+- Dynamic Light Brightness affecting blocklight now decreases in effect the lower the blocklight
+
+---
+
 ## v0.54.0
 
 ### Added
