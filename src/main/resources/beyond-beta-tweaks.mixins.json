@@ -49,6 +49,7 @@
     "entity.ThrownEnderpearlMixin",
     "entity.ZombieAttackGoalMixin",
     "entity.ZombieMixin",
+    "feature.moon_phase_affect_cloud_color.CloudLayersMixin",
     "feature.piglin_rework.BarrelBlockMixin",
     "feature.piglin_rework.ChestBlockMixin",
     "feature.piglin_rework.ChestBoatMixin",
@@ -104,6 +105,7 @@
     "compat_scholar.FormattingToolbarMixin",
     "compat_scholar.SpreadBookEditScreenAccessor",
     "compat_scholar.SpreadBookEditScreenMixin",
-    "compat_true_darkness.DarknessMixin"
+    "compat_true_darkness.DarknessMixin",
+    "feature.moon_phase_affect_cloud_color.LevelRendererMixin"
   ]
 }

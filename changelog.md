@@ -1,3 +1,10 @@
+## v0.56.0
+
+### Added
+- Moon phase can affect cloud color at nighttime
+
+---
+
 ## v0.55.1
 
 ### Changed

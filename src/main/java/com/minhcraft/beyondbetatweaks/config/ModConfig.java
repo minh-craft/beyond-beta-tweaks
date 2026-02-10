@@ -165,4 +165,13 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0.1F, max=1.0F)
     public static float spyglassDefaultZoom = 0.3F;
+
+    @Entry
+    public static boolean enableMoonPhaseAffectCloudColor = true;
+
+    @Entry(isSlider = true, min=0.0F, max=0.3F, precision = 1000)
+    public static float whitenedCloudFullMoonBrightness = 0.14F;
+
+    @Entry(isSlider = true, min=0.0F, max=0.3F, precision = 1000)
+    public static float whitenedCloudNewMoonBrightness = 0.03F;
 }

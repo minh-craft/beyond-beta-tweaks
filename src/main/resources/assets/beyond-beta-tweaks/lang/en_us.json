@@ -84,5 +84,9 @@
   "beyond-beta-tweaks.midnightconfig.ladderScaffoldingMaxDistance": "Ladder Scaffolding Max Distance",
   "beyond-beta-tweaks.midnightconfig.alwaysShowScholarFormattingToolbar": "Always Show Scholar Formatting Toolbar",
   "beyond-beta-tweaks.midnightconfig.disableMelancholicHungerFoodRegenerationSpeedTooltip": "Disable Melancholic Hunger Food Regeneration Speed Tooltip",
-  "beyond-beta-tweaks.midnightconfig.spyglassDefaultZoom": "Spyglass Default Zoom"
+  "beyond-beta-tweaks.midnightconfig.spyglassDefaultZoom": "Spyglass Default Zoom",
+  "beyond-beta-tweaks.midnightconfig.enableMoonPhaseAffectCloudColor": "Enable Moon Phase Affect Cloud Color",
+  "beyond-beta-tweaks.midnightconfig.whitenedCloudFullMoonBrightness": "Whitened Cloud Full Moon Brightness",
+  "beyond-beta-tweaks.midnightconfig.whitenedCloudNewMoonBrightness": "Whitened Cloud New Moon Brightness"
+
 }

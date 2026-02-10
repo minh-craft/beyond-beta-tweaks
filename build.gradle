@@ -124,6 +124,9 @@ dependencies {
 	// Spyglass Improvements Compatibility
 	modImplementation "maven.modrinth:spyglass-improvements:$project.spyglass_improvements_version"
 
+	// Cloud Layers Compatibility
+	modImplementation "maven.modrinth:cloud-layers:$project.cloud_layers_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 
