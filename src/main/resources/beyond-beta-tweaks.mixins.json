@@ -50,6 +50,7 @@
     "entity.ZombieAttackGoalMixin",
     "entity.ZombieMixin",
     "feature.moon_phase_affect_cloud_color.CloudLayersMixin",
+    "feature.moon_phase_affect_fog_color.FogManagerMixin",
     "feature.piglin_rework.BarrelBlockMixin",
     "feature.piglin_rework.ChestBlockMixin",
     "feature.piglin_rework.ChestBoatMixin",

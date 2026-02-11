@@ -127,6 +127,9 @@ dependencies {
 	// Cloud Layers Compatibility
 	modImplementation "maven.modrinth:cloud-layers:$project.cloud_layers_version"
 
+	// Fog Compatibility
+	modImplementation "maven.modrinth:fog:$project.fog_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

@@ -1,7 +1,18 @@
+## v0.57.0
+
+### Added
+- Moon phase can affect fog color at nighttime (dependent on Fog mod https://modrinth.com/mod/fog/)
+  - Add config values for fog color at night at full moon and at new moon
+- Adjust Fog's raininess effect so that it's smoothly lerped
+- Fixes issue where Fog's underground fog effect on fog start value is never removed after returning above-ground
+
+---
+
 ## v0.56.0
 
 ### Added
 - Moon phase can affect cloud color at nighttime
+  - Add config values for cloud color at night at full moon and at new moon
 
 ---
 

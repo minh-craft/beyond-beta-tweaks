@@ -174,4 +174,13 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0.0F, max=0.3F, precision = 1000)
     public static float whitenedCloudNewMoonBrightness = 0.03F;
+
+    @Entry
+    public static boolean enableMoonPhaseAffectFogColor = true;
+
+    @Entry
+    public static String nightFogColorFullMoon = "#010F19";
+
+    @Entry
+    public static String nightFogColorNewMoon = "#000000";
 }
