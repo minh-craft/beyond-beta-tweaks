@@ -1,7 +1,18 @@
+## v0.59.0
+
+### Added
+- Added config for animal respawning interval to old animal spawns from Nostalgic Tweaks. Animals respawning can be configured to only happen at certain tick intervals instead of at every tick.
+- Added config for making respawning animals persistent.
+
+### Changed
+- Fixed issues with running mod locally - Fog mod needs to be manually included
+
+---
+
 ## v0.58.0
 
 ### Added
-- Added disable crawling feature from https://github.com/AzaleaCatgirl99/Nostalgic-Tweaks-Renewed?tab=readme-ov-file by @AzaleaCatgirl99
+- Added disable crawling feature from https://github.com/AzaleaCatgirl99/Nostalgic-Tweaks-Renewed by @AzaleaCatgirl99
 
 ### Changed
 - Fixed issues with running mod locally - Fog mod is compileOnly now

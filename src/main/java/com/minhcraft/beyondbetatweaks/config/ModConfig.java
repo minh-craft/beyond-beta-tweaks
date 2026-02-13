@@ -186,4 +186,11 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static boolean disableCrawling = true;
+
+    @Entry(min=0, max=10000)
+    public static int oldAnimalRespawnTickInterval = 1200;
+
+    @Entry
+    public static boolean makeRespawningAnimalsPersistent = true;
+
 }

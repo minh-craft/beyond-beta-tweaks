@@ -91,5 +91,8 @@
   "beyond-beta-tweaks.midnightconfig.enableMoonPhaseAffectFogColor": "Enable Moon Phase Affect Fog Color",
   "beyond-beta-tweaks.midnightconfig.nightFogColorFullMoon": "Night Fog Color Full Moon",
   "beyond-beta-tweaks.midnightconfig.nightFogColorNewMoon": "Night Fog Color New Moon",
-  "beyond-beta-tweaks.midnightconfig.disableCrawling": "Disable Crawling"
+  "beyond-beta-tweaks.midnightconfig.disableCrawling": "Disable Crawling",
+  "beyond-beta-tweaks.midnightconfig.oldAnimalRespawnTickInterval": "Old Animal Respawn Tick Interval",
+  "beyond-beta-tweaks.midnightconfig.makeRespawningAnimalsPersistent": "Make Respawning Animals Persistent"
+
 }

@@ -63,6 +63,8 @@
     "feature.piglin_rework.PiglinBruteMixin",
     "feature.piglin_rework.PiglinBruteSpecificSensorMixin",
     "feature.piglin_rework.ShulkerBoxBlockMixin",
+    "feature.respawning_animals.AnimalMixinSquared",
+    "feature.respawning_animals.AnimalSpawnHelperMixin",
     "feature.responsive_knockback.ServerChunkCacheMixin",
     "feature.responsive_knockback.ServerLevelMixin",
     "inventory.CartographyTableMenuMixin",
