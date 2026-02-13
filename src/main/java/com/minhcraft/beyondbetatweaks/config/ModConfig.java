@@ -183,4 +183,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static String nightFogColorNewMoon = "#000000";
+
+    @Entry
+    public static boolean disableCrawling = true;
 }

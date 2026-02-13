@@ -13,7 +13,7 @@ import java.util.function.BooleanSupplier;
 @Mixin(ServerLevel.class)
 public abstract class ServerLevelMixin {
     @Inject(method = "tick", at = @At("TAIL"))
-    public void runSyncDelayed(BooleanSupplier hasTimeLeft, CallbackInfo ci) {
+    public void beyond_beta_tweaks$runSyncDelayed(BooleanSupplier hasTimeLeft, CallbackInfo ci) {
         BeyondBetaTweaks.TRACKER_TICK.getAndSet(BeyondBetaTweaks.DO_NOTHING).run();
     }
 }

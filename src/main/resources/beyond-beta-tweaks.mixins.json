@@ -40,6 +40,7 @@
     "entity.MobEffectInstanceMixin",
     "entity.MobMixin",
     "entity.OcelotMixin",
+    "entity.PlayerMixin",
     "entity.ShulkerMixin",
     "entity.SilverfishMergeWithStoneGoalMixin",
     "entity.SkeletonTrapGoalMixin",

@@ -1,3 +1,13 @@
+## v0.58.0
+
+### Added
+- Added disable crawling feature from https://github.com/AzaleaCatgirl99/Nostalgic-Tweaks-Renewed?tab=readme-ov-file by @AzaleaCatgirl99
+
+### Changed
+- Fixed issues with running mod locally - Fog mod is compileOnly now
+
+---
+
 ## v0.57.0
 
 ### Added

@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class ServerChunkCacheMixin {
 
     @WrapOperation(method = "tickChunks", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ChunkMap;tick()V"))
-    private void removeCall(ChunkMap instance, Operation<Void> original) {
+    private void beyond_beta_tweaks$removeCall(ChunkMap instance, Operation<Void> original) {
         BeyondBetaTweaks.TRACKER_TICK.set(() -> original.call(instance));
     }
 }

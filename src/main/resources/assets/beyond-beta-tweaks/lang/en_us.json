@@ -87,6 +87,9 @@
   "beyond-beta-tweaks.midnightconfig.spyglassDefaultZoom": "Spyglass Default Zoom",
   "beyond-beta-tweaks.midnightconfig.enableMoonPhaseAffectCloudColor": "Enable Moon Phase Affect Cloud Color",
   "beyond-beta-tweaks.midnightconfig.whitenedCloudFullMoonBrightness": "Whitened Cloud Full Moon Brightness",
-  "beyond-beta-tweaks.midnightconfig.whitenedCloudNewMoonBrightness": "Whitened Cloud New Moon Brightness"
-
+  "beyond-beta-tweaks.midnightconfig.whitenedCloudNewMoonBrightness": "Whitened Cloud New Moon Brightness",
+  "beyond-beta-tweaks.midnightconfig.enableMoonPhaseAffectFogColor": "Enable Moon Phase Affect Fog Color",
+  "beyond-beta-tweaks.midnightconfig.nightFogColorFullMoon": "Night Fog Color Full Moon",
+  "beyond-beta-tweaks.midnightconfig.nightFogColorNewMoon": "Night Fog Color New Moon",
+  "beyond-beta-tweaks.midnightconfig.disableCrawling": "Disable Crawling"
 }
