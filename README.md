@@ -38,4 +38,8 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Beta cave code from https://codeberg.org/Nostalgica-Reverie/moderner-beta by [@icanttellyou](https://github.com/forkiesassds) and [@b3spectacled](https://github.com/b3spectacled) and [@BlueStaggo](https://github.com/BlueStaggo)
 - Rabbits don't take fall damage tweak from https://modrinth.com/datapack/rabbits-dont-take-fall-damage by @dragon3025
 - Responsive knockback code from https://github.com/Revvilo/responsive-knockback by @Revvilo
-- Disable crawling code from https://github.com/AzaleaCatgirl99/Nostalgic-Tweaks-Renewed by @AzaleaCatgirl99
+- Disable crawling code from https://github.com/AzaleaCatgirl99/Nostalgic-Tweaks-Renewed by [@AzaleaCatgirl99](https://github.com/AzaleaCatgirl99)
+- Animal breeding cooldown and baby grow up time code adapted from https://github.com/antio789/customspeed by [@antio789](https://github.com/antio789)
+- Spawn eggs instead of chicken code adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
+- Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
+

@@ -187,10 +187,37 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static boolean disableCrawling = true;
 
-    @Entry(min=0, max=10000)
+    @Entry(min=0)
     public static int oldAnimalRespawnTickInterval = 1200;
 
     @Entry
     public static boolean makeRespawningAnimalsPersistent = true;
+
+    @Entry(min=1)
+    public static int animalBreedingCooldownInSeconds = 60 * 20 * 3;
+
+    @Entry(min=1)
+    public static int chickenLayEggsCooldownInSeconds = 60 * 19;
+
+    @Entry(min=1)
+    public static int babyAnimalGrowUpTimeInSeconds = 60 * 20 *3;
+
+    @Entry(isSlider = true, min=1, max=8)
+    public static int maxEggsPerLay = 3;
+
+    @Entry(isSlider = true, min=1, max=8)
+    public static int maxFeathersPerShed=3;
+
+    @Entry(min=1)
+    public static int chickenShedFeathersWaitBaseTimeInSeconds = 60 * 4;
+
+    @Entry(min=1)
+    public static int chickenShedFeathersWaitMaxAdditionalTimeInSeconds = 60 * 4;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float chickenFromEggChance = 0.33F;
+
+    @Entry
+    public static String pigLitterSizing = "50:1,30:2,20:3";
 
 }

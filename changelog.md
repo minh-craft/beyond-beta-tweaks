@@ -1,3 +1,13 @@
+## v0.60.0
+
+### Added
+- Add config for animal breeding cooldown and baby grow up time, adapted from https://github.com/antio789/customspeed by [@antio789](https://github.com/antio789)
+- Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
+- Chickens drop eggs instead of creating babies when breeding, adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
+- Chickens shed feathers occasionally instead of laying eggs, timing is configurable
+
+---
+
 ## v0.59.0
 
 ### Added

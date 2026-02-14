@@ -2,6 +2,7 @@
   "subtitles.entity.giant.ambient": "Giant groans",
   "subtitles.entity.giant.death": "Giant dies",
   "subtitles.entity.giant.hurt": "Giant hurts",
+  "subtitles.entity.chicken.shed_feathers": "Chicken sheds feathers",
   "painting.beyond-beta-tweaks.artist_and_kebab.author": "Kristoffer Zetterstrand",
   "painting.beyond-beta-tweaks.artist_and_kebab.title": "Artist and Kebab",
   "painting.beyond-beta-tweaks.cactus_bird.author": "Kristoffer Zetterstrand",
@@ -93,6 +94,15 @@
   "beyond-beta-tweaks.midnightconfig.nightFogColorNewMoon": "Night Fog Color New Moon",
   "beyond-beta-tweaks.midnightconfig.disableCrawling": "Disable Crawling",
   "beyond-beta-tweaks.midnightconfig.oldAnimalRespawnTickInterval": "Old Animal Respawn Tick Interval",
-  "beyond-beta-tweaks.midnightconfig.makeRespawningAnimalsPersistent": "Make Respawning Animals Persistent"
+  "beyond-beta-tweaks.midnightconfig.makeRespawningAnimalsPersistent": "Make Respawning Animals Persistent",
+  "beyond-beta-tweaks.midnightconfig.animalBreedingCooldownInSeconds": "Animal Breeding Cooldown In Seconds",
+  "beyond-beta-tweaks.midnightconfig.chickenLayEggsCooldownInSeconds": "Chicken Lay Eggs Cooldown In Seconds",
+  "beyond-beta-tweaks.midnightconfig.babyAnimalGrowUpTimeInSeconds": "Baby Animal Grow Up Time In Seconds",
+  "beyond-beta-tweaks.midnightconfig.maxEggsPerLay": "Max Eggs Per Lay",
+  "beyond-beta-tweaks.midnightconfig.maxFeathersPerShed": "Max Feathers Per Shed",
+  "beyond-beta-tweaks.midnightconfig.chickenShedFeathersWaitBaseTimeInSeconds": "Chicken Shed Feathers Wait Base Time In Seconds",
+  "beyond-beta-tweaks.midnightconfig.chickenShedFeathersWaitMaxAdditionalTimeInSeconds": "Chicken Shed Feathers Wait Max Additional Time In Seconds",
+  "beyond-beta-tweaks.midnightconfig.chickenFromEggChance": "Chicken From Egg Chance",
+  "beyond-beta-tweaks.midnightconfig.pigLitterSizing": "Pig Litter Sizing"
 
 }

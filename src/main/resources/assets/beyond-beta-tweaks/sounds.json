@@ -20,5 +20,15 @@
       {"name": "mob/zombie/hurt2", "volume": 1.15, "pitch": 0.65}
     ],
     "subtitle": "subtitles.entity.giant.hurt"
+  },
+  "entity.chicken.shed_feathers": {
+    "replace": "true",
+    "sounds": [
+      "minecraft:mob/parrot/fly1",
+      "minecraft:mob/parrot/fly2",
+      "minecraft:mob/parrot/fly3",
+      "minecraft:mob/parrot/fly4"
+    ],
+    "subtitle": "subtitles.entity.chicken.shed_feathers"
   }
 }
