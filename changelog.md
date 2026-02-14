@@ -1,3 +1,12 @@
+## v0.61.0
+
+### Added
+- Hardcode bred donkeys and horses to be the same as parents. Mules have donkey stats with horse jumping height.
+- Disable feeding baby animals to speed up growth.
+- Add config option to ensure that baby hoglin model has shrunken head, even with custom JEM model.
+
+---
+
 ## v0.60.0
 
 ### Added

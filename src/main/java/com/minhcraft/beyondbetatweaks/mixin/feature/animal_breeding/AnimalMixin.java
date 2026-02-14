@@ -1,6 +1,8 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.animal_breeding;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -49,5 +51,13 @@ public abstract class AnimalMixin extends AgeableMob {
             return false;
         }
         return true;
+    }
+
+    @WrapOperation(
+            method = "mobInteract",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/Animal;isBaby()Z")
+    )
+    private boolean beyond_beta_tweaks$disableFeedingBabyToSpeedUpGrowth(Animal instance, Operation<Boolean> original) {
+        return false;
     }
 }

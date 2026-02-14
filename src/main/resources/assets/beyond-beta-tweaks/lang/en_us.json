@@ -103,6 +103,8 @@
   "beyond-beta-tweaks.midnightconfig.chickenShedFeathersWaitBaseTimeInSeconds": "Chicken Shed Feathers Wait Base Time In Seconds",
   "beyond-beta-tweaks.midnightconfig.chickenShedFeathersWaitMaxAdditionalTimeInSeconds": "Chicken Shed Feathers Wait Max Additional Time In Seconds",
   "beyond-beta-tweaks.midnightconfig.chickenFromEggChance": "Chicken From Egg Chance",
-  "beyond-beta-tweaks.midnightconfig.pigLitterSizing": "Pig Litter Sizing"
+  "beyond-beta-tweaks.midnightconfig.pigLitterSizing": "Pig Litter Sizing",
+  "beyond-beta-tweaks.midnightconfig.shrinkBabyHoglinHead": "Shrink Baby Hoglin Head"
+
 
 }

@@ -220,4 +220,6 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static String pigLitterSizing = "50:1,30:2,20:3";
 
+    @Entry
+    public static boolean shrinkBabyHoglinHead = true;
 }
