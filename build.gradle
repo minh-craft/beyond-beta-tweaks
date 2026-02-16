@@ -137,6 +137,13 @@ dependencies {
 	modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 //	modRuntimeOnly "maven.modrinth:mru:$project.mru_version"
 
+	// Map Atlases Compatibility
+	modImplementation "maven.modrinth:map-atlases:$project.map_atlases_version"
+	// Cardinal Components
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:$project.cardinal_components_version")
+	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-item:$project.cardinal_components_version")
+
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

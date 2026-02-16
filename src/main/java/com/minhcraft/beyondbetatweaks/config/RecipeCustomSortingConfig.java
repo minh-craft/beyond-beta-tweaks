@@ -8,9 +8,6 @@ import java.util.Map;
 public class RecipeCustomSortingConfig {
     @SerializedName("recipeCustomSorting")
     private final Map<String, Integer> recipeCustomSorting = new HashMap<>();
-//
-//    @SerializedName("giantMaxHealth")
-//    private final double giantMaxHealth;
 
     // Default values
     public RecipeCustomSortingConfig() {
@@ -29,15 +26,9 @@ public class RecipeCustomSortingConfig {
         recipeCustomSorting.put("minecraft:arrow", -10);
         recipeCustomSorting.put("minecraft:bow", -10);
         recipeCustomSorting.put("minecraft:crossbow", -10);
-//
-//        giantMaxHealth = 45;
     }
 
     public Map<String, Integer> getRecipeCustomSorting() {
         return recipeCustomSorting;
     }
-
-//    public double getGiantMaxHealth() {
-//        return giantMaxHealth;
-//    }
 }

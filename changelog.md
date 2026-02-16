@@ -1,3 +1,12 @@
+## v0.62.0
+
+### Added
+- Add config for defining innate enchantments on items
+- Update path for recipe custom sorting config
+- Map Atlases' (https://github.com/Pepperoni-Jabroni/MapAtlases) atlas crafting recipe is now visible in the recipe book
+
+---
+
 ## v0.61.0
 
 ### Added

@@ -12,7 +12,7 @@ import java.nio.file.Path;
 public class RecipeCustomSortingConfigLoader {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path RECIPE_CUSTOM_SORTING_CONFIG_PATH =
-            FabricLoader.getInstance().getConfigDir().resolve(BeyondBetaTweaks.MOD_ID + "/recipeCustomSorting.json");
+            FabricLoader.getInstance().getConfigDir().resolve(BeyondBetaTweaks.MOD_ID + "/recipe_custom_sorting.json");
     private static RecipeCustomSortingConfig config;
 
     public static void loadConfig() {

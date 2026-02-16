@@ -1,5 +1,6 @@
 package com.minhcraft.beyondbetatweaks;
 
+import com.minhcraft.beyondbetatweaks.config.InnateEnchantmentConfig;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import com.minhcraft.beyondbetatweaks.config.RecipeCustomSortingConfigLoader;
 import com.minhcraft.beyondbetatweaks.network.ModNetworking;
@@ -43,6 +44,7 @@ public class BeyondBetaTweaks implements ModInitializer {
 
 		ModNetworking.registerServerReceivers();
 		RecipeCustomSortingConfigLoader.loadConfig();
+		InnateEnchantmentConfig.loadConfig();
 		MidnightConfig.init(MOD_ID, ModConfig.class);
 	}
 
