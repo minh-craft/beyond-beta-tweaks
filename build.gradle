@@ -143,6 +143,8 @@ dependencies {
 	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:$project.cardinal_components_version")
 	modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-item:$project.cardinal_components_version")
 
+	// Embeddium Compatibility
+	modCompileOnly "maven.modrinth:embeddium:$project.embeddium_version"
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")

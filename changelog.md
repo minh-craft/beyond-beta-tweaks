@@ -1,3 +1,13 @@
+## v0.63.0
+
+### Added
+- Added config option to enable combining flat lighting with ambient occlusion block shadows. Requires embeddium's smooth lighting to be enabled.
+  - Config option to use either average lighting or max lighting for calculating flat lighting.
+- Added config options for alternate method of brightening maximum night brightness. Less visual weirdness compared to reducing skylight level drop at nighttime.
+  - Remove old method of brightening night light level.
+
+---
+
 ## v0.62.0
 
 ### Added

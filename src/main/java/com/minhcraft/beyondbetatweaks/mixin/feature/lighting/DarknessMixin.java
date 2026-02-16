@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.compat_true_darkness;
+package com.minhcraft.beyondbetatweaks.mixin.feature.lighting;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;

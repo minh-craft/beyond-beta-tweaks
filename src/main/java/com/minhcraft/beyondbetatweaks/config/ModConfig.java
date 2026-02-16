@@ -79,11 +79,32 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=0.0F, max=0.2F, precision = 1000)
     public static float trueDarknessMinimumLightLevel = 0.03F;
 
-    @Entry(isSlider = true, min=0, max=11)
-    public static int roundRobinMaximumDeductedLightLevel = 8;
-
-    @Entry(isSlider = true, min=1.0F, max=4.0F)
+    @Entry(isSlider = true, min=1.0F, max=5.0F)
     public static float scaleTrueDarknessGamma = 3.0F;
+
+    @Entry
+    public static boolean enableNightSkylightLightTextureBoost = true;
+
+    @Entry(isSlider = true, min = 0.0F, max=10.0F)
+    public static float boostNightBrightnessFactor = 1.15F;
+
+    @Entry(isSlider = true, min = 0.0F, max=200.0F)
+    public static float maxPossibleBoostedNightBrightness = 120.0F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float fullMoonBrightnessBoost = 1.0F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float threeQuartersMoonBrightnessBoost = 0.86F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float halfMoonBrightnessBoost = 0.58F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float oneQuarterMoonBrightnessBoost = 0.31F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float newMoonBrightnessBoost = 0.0F;
 
     @Entry
     public static boolean enableDynamicLightBrightnessAffectBlockLight = true;
@@ -222,4 +243,11 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static boolean shrinkBabyHoglinHead = true;
+
+    @Entry
+    public static boolean enableFlatLightingWithAmbientOcclusion = true;
+
+    @Entry
+    public static boolean useAverageLightInsteadOfMaxLightForFlatLight = true;
+
 }

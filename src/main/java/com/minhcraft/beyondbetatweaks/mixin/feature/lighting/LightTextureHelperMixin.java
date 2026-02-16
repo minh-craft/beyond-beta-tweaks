@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.compat_nostalgic_tweaks;
+package com.minhcraft.beyondbetatweaks.mixin.feature.lighting;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
