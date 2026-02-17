@@ -250,4 +250,7 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static boolean useAverageLightInsteadOfMaxLightForFlatLight = true;
 
+    @Entry
+    public static boolean enableAlphaGrassColoring = true;
+
 }
