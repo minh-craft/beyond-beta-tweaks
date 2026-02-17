@@ -1,3 +1,10 @@
+## v0.64.0
+
+### Changed
+- Updated canyon flooding logic to prevent underground canyons underneath bodies of water from being flooded
+
+---
+
 ## v0.63.0
 
 ### Added

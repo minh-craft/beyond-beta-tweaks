@@ -28,25 +28,43 @@ public class CanyonWorldCarverMixin {
     private static final ThreadLocal<Boolean> IS_EXPOSED = ThreadLocal.withInitial(() -> false);
 
     @Unique
-    private static boolean isExposedToAir(ChunkAccess chunk, BlockPos pos, CarvingContext context) {
+    private static boolean isDirectlyBeneathWater(ChunkAccess chunk, BlockPos pos, CarvingContext context) {
+        // Check this column AND immediate neighbors
+        // If any nearby column has a direct water connection, this block should flood too
         BlockPos.MutableBlockPos checkPos = new BlockPos.MutableBlockPos();
         int maxY = context.getMinGenY() + context.getGenDepth() - 1;
 
-        for (int y = pos.getY() + 1; y <= maxY; y++) {
-            checkPos.set(pos.getX(), y, pos.getZ());
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dz = -1; dz <= 1; dz++) {
+                if (checkColumnHasWater(chunk, pos.getX() + dx, pos.getY(), pos.getZ() + dz, maxY, checkPos)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Unique
+    private static boolean checkColumnHasWater(ChunkAccess chunk, int x, int startY, int z, int maxY, BlockPos.MutableBlockPos checkPos) {
+        // If the neighbor is outside this chunk, skip it
+        if ((x >> 4) != (chunk.getPos().x) || (z >> 4) != (chunk.getPos().z)) {
+            return false;
+        }
+
+        for (int y = startY + 1; y <= maxY; y++) {
+            checkPos.set(x, y, z);
             BlockState state = chunk.getBlockState(checkPos);
 
-            if (state.isAir()) {
+            if (state.is(Blocks.WATER)) {
                 return true;
             }
-            if (state.is(Blocks.WATER)) {
+            if (!state.isAir() && !state.is(Blocks.CAVE_AIR)) {
                 return false;
             }
         }
-        return true;
+        return false;
     }
 
-    @SuppressWarnings("ConstantValue")
     @Inject(method = "carveBlock", at = @At("HEAD"), cancellable = true)
     private void beyond_beta_tweaks$onlyDryIfExposed(CarvingContext context, CarverConfiguration config, ChunkAccess chunk,
                                                      Function<BlockPos, Holder<Biome>> biomeGetter, CarvingMask carvingMask,
@@ -58,22 +76,27 @@ public class CanyonWorldCarverMixin {
             return;
         }
 
-        boolean exposed = isExposedToAir(chunk, pos, context);
-        IS_EXPOSED.set(exposed);
-
-        if (!exposed) {
-            return;
-        }
-
-        BlockState currentState = chunk.getBlockState(pos);
-        if (currentState.is(Blocks.WATER)) {
-            cir.setReturnValue(false);
-        }
+        boolean directlyBeneathWater = isDirectlyBeneathWater(chunk, pos, context);
+        // "exposed" = NOT buried under solid rock with water above
+        // We want to force dry for anything that ISN'T directly breached into water
+        IS_EXPOSED.set(!directlyBeneathWater);
 
         // don't carve below y=2
         if (pos.getY() < 3) {
             cir.setReturnValue(false);
             return;
+        }
+
+        // If directly beneath water (river intersection or in the ocean or in a lake), let vanilla handle it
+        // so water flows in naturally at the overlap
+        if (directlyBeneathWater) {
+            return;
+        }
+
+        // Otherwise, prevent water carving
+        BlockState currentState = chunk.getBlockState(pos);
+        if (currentState.is(Blocks.WATER)) {
+            cir.setReturnValue(false);
         }
     }
 
