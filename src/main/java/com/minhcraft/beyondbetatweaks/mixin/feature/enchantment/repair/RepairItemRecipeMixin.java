@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.item;
+package com.minhcraft.beyondbetatweaks.mixin.feature.enchantment.repair;
 
 import net.minecraft.world.item.crafting.RepairItemRecipe;
 import org.spongepowered.asm.mixin.Mixin;

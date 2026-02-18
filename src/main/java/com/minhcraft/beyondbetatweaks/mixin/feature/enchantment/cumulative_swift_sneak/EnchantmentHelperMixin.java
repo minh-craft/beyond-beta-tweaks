@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.item;
+package com.minhcraft.beyondbetatweaks.mixin.feature.enchantment.cumulative_swift_sneak;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -19,17 +19,13 @@ public abstract class EnchantmentHelperMixin {
     @Unique
     private static int getEnchantmentLevelCumulative(Enchantment enchantment, LivingEntity entity) {
         Iterable<ItemStack> iterable = enchantment.getSlotItems(entity).values();
-        if (iterable == null) {
-            return 0;
-        } else {
-            int cumulativeEnchantLevel = 0;
+        int cumulativeEnchantLevel = 0;
 
-            for (ItemStack itemStack : iterable) {
-                cumulativeEnchantLevel += getItemEnchantmentLevel(enchantment, itemStack);
-            }
-
-            return cumulativeEnchantLevel;
+        for (ItemStack itemStack : iterable) {
+            cumulativeEnchantLevel += getItemEnchantmentLevel(enchantment, itemStack);
         }
+
+        return cumulativeEnchantLevel;
     }
 
     @Inject(

@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.innate_enchantments;
+package com.minhcraft.beyondbetatweaks.mixin.feature.enchantment.innate_enchantments;
 
 import com.minhcraft.beyondbetatweaks.config.InnateEnchantmentConfig;
 import net.minecraft.world.item.CreativeModeTab;

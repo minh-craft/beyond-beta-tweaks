@@ -1,3 +1,17 @@
+## v0.65.0
+
+### Added
+- Rebalanced armor protection enchantment values
+  - Fire Protection I now gives 20% damage reduction instead of 8%
+  - Blast Protection I now gives 16% damage reduction instead of 8%
+  - Feather Falling I now gives 16% damage reduction instead of 12%
+- Updated enchantment tooltip display
+  - Enchanted items don't have their display rarity changed
+  - Certain enchantments are displayed with custom colors
+
+---
+
+
 ## v0.64.0
 
 ### Changed

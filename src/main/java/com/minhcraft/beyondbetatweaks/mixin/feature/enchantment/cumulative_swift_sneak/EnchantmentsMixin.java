@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.item;
+package com.minhcraft.beyondbetatweaks.mixin.feature.enchantment.cumulative_swift_sneak;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
