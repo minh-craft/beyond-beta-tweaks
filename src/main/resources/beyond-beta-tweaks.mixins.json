@@ -12,6 +12,7 @@
     "block.MudBlockMixin",
     "block.PointedDripstoneBlockMixin",
     "block.TallGrassBlockMixin",
+    "compat_archery_exp.BowItemMixinSquared",
     "compat_better_climbing.LivingEntityMixinSquared",
     "compat_better_recipe_book.BetterRecipeBookMixin",
     "compat_better_recipe_book.MouseScrollHandlerMixinSquared",

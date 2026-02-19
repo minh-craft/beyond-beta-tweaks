@@ -1,3 +1,13 @@
+## v0.66.0
+
+### Added
+- Disabled archery expansion recoil to prevent resetting momentum if jumping while shooting a bow. Setting recoil to 0 for a bow doesn't fix this, the mixin method has be disabled.
+
+### Changed
+- Updated responsive knockback code injection point to reduce visual weirdness with arrows hitting entities
+
+---
+
 ## v0.65.0
 
 ### Added
