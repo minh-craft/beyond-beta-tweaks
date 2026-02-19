@@ -1,3 +1,16 @@
+## v0.67.0
+
+### Added
+- Added slot indicators to Trinkets mod https://modrinth.com/mod/trinkets
+  - Armor slots will show an icon if a trinket slot is available, and another icon if a trinket has been equipped in one of those slots
+
+### Changed
+- Changed Fire Protection to give 15% damage reduction instead of 16%
+- Changed Feather Falling to give 15% damage reduction instead of 16%
+- Changed armor enchantment tooltip to display "+X% Enchantment" instead of "Enchantment I"
+
+---
+
 ## v0.66.0
 
 ### Added

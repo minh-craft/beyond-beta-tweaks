@@ -60,6 +60,7 @@
     "feature.enchantment.glint.ItemMixin",
     "feature.enchantment.innate_enchantments.CreativeModeTabMixin",
     "feature.enchantment.innate_enchantments.ItemStackMixin",
+    "feature.enchantment.protection_rebalance.LivingEntityMixin",
     "feature.enchantment.protection_rebalance.ProtectionEnchantmentMixin",
     "feature.enchantment.repair.RepairItemRecipeMixin",
     "feature.enchantment.tooltip.EnchantmentMixin",
@@ -127,6 +128,7 @@
     "compat_scholar.SpreadBookEditScreenMixin",
     "feature.lighting.DarknessMixin",
     "feature.lighting.LightTextureMixin",
-    "feature.moon_phase_affect_cloud_color.LevelRendererMixin"
+    "feature.moon_phase_affect_cloud_color.LevelRendererMixin",
+    "feature.trinket_slot_indicator.InventoryScreenMixin"
   ]
 }

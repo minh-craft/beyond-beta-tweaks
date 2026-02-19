@@ -19,8 +19,6 @@ public abstract class EnchantmentMixin {
 
     @Shadow public abstract boolean isCurse();
 
-    @Shadow public abstract int getMaxLevel();
-
     @Inject(method = "getFullname", at = @At("HEAD"), cancellable = true)
     private void beyond_beta_tweaks$modifyEnchantTooltip(int level, CallbackInfoReturnable<Component> cir) {
         MutableComponent mutableComponent = Component.translatable(this.getDescriptionId());
@@ -29,22 +27,28 @@ public abstract class EnchantmentMixin {
         } else {
             if ((Object) this instanceof ProtectionEnchantment) {
                 switch (((ProtectionEnchantment)(Object)this).type) {
-                    case FALL -> mutableComponent.withStyle(ChatFormatting.YELLOW);
-                    case FIRE -> mutableComponent.withStyle(ChatFormatting.RED);
-                    case EXPLOSION -> mutableComponent.withStyle(ChatFormatting.GOLD);
+                    case FALL -> {
+                        mutableComponent = Component.literal("+15% ").append(mutableComponent);
+                        mutableComponent.withStyle(ChatFormatting.YELLOW);
+                    }
+                    case FIRE -> {
+                        mutableComponent = Component.literal("+20% ").append(mutableComponent);
+                        mutableComponent.withStyle(ChatFormatting.RED);
+                    }
+                    case EXPLOSION -> {
+                        mutableComponent = Component.literal("+15% ").append(mutableComponent);
+                        mutableComponent.withStyle(ChatFormatting.GOLD);
+                    }
                 }
             } else if ((Object) this instanceof SwiftSneakEnchantment) {
-                  mutableComponent.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xA0522D)));
+                mutableComponent = Component.literal("+15% ").append(mutableComponent);
+                mutableComponent.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xA0522D)));
 
             } else if ((Object) this instanceof UntouchingEnchantment) {
                 mutableComponent.withStyle(ChatFormatting.LIGHT_PURPLE);
             } else {
                 mutableComponent.withStyle(ChatFormatting.GRAY);
             }
-        }
-
-        if (level != 1 || this.getMaxLevel() != 1) {
-            mutableComponent.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + level));
         }
 
         cir.setReturnValue(mutableComponent);

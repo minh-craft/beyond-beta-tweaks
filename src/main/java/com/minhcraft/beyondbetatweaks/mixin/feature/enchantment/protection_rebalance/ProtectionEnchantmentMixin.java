@@ -1,40 +1,34 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.enchantment.protection_rebalance;
 
+import com.minhcraft.beyondbetatweaks.interfaces.IFractionalProtectionEnchantment;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.item.enchantment.ProtectionEnchantment;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.Constant;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(ProtectionEnchantment.class)
-public abstract class ProtectionEnchantmentMixin {
+public abstract class ProtectionEnchantmentMixin implements IFractionalProtectionEnchantment {
 
-    @ModifyConstant(
-            method = "getDamageProtection",
-            constant = @Constant(intValue = 2, ordinal = 0)
-    )
-    private int beyond_beta_tweaks$modifyFireProtectionLevel(int constant) {
-        // Update Fire Protection I so that it provides 5 damage protection levels or 20% damage reduction
-        // so that 4 pieces of Fire Protection I armor provide the max 80% damage reduction
-        return 5;
-    }
+    @Shadow @Final public ProtectionEnchantment.Type type;
 
-    @ModifyConstant(
-            method = "getDamageProtection",
-            constant = @Constant(intValue = 2, ordinal = 1)
-    )
-    private int beyond_beta_tweaks$modifyBlastProtectionLevel(int constant) {
-        // Update Blast Protection I so that it provides 4 damage protection levels or 16% damage reduction
-        // so that 4 pieces of Blast Protection I armor provide 64% damage reduction
-        return 4;
-    }
-
-    @ModifyConstant(
-            method = "getDamageProtection",
-            constant = @Constant(intValue = 3, ordinal = 0)
-    )
-    private int beyond_beta_tweaks$modifyFeatherFallingProtectionLevel(int constant) {
-        // Update Feather Falling I so that it provides 4 damage protection levels or 16% damage reduction
-        // so that 4 pieces of Feather Falling I armor provide 64% damage reduction
-        return 4;
+    @Override
+    @Unique
+    public float beyond_beta_tweaks$getFloatDamageProtection(int level, DamageSource source) {
+        if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            return 0;
+        } else if (this.type == ProtectionEnchantment.Type.ALL) {
+            return level;
+        } else if (this.type == ProtectionEnchantment.Type.FIRE && source.is(DamageTypeTags.IS_FIRE)) {
+            return level * 5; // original is 2
+        } else if (this.type == ProtectionEnchantment.Type.FALL && source.is(DamageTypeTags.IS_FALL)) {
+            return level * 3.75F; // original is 3
+        } else if (this.type == ProtectionEnchantment.Type.EXPLOSION && source.is(DamageTypeTags.IS_EXPLOSION)) {
+            return level * 3.75F; // original is 2
+        } else {
+            return this.type == ProtectionEnchantment.Type.PROJECTILE && source.is(DamageTypeTags.IS_PROJECTILE) ? level * 2 : 0;
+        }
     }
 }

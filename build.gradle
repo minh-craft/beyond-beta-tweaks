@@ -146,6 +146,9 @@ dependencies {
 	// Embeddium Compatibility
 	modCompileOnly "maven.modrinth:embeddium:$project.embeddium_version"
 
+	// Trinkets Compatibility
+	modImplementation "maven.modrinth:trinkets:$project.trinkets_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 
