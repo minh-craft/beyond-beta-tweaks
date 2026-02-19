@@ -1,6 +1,5 @@
-package com.minhcraft.beyondbetatweaks.mixin.world;
+package com.minhcraft.beyondbetatweaks.mixin.feature.end_dimension;
 
-import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.core.BlockPos;
@@ -20,6 +19,11 @@ import java.util.List;
 @Mixin(EndDragonFight.class)
 public abstract class EndDragonFightMixin {
 
+    @Shadow private boolean dragonKilled;
+    @Shadow private boolean previouslyKilled;
+
+    @Shadow protected abstract void spawnExitPortal(boolean previouslyKilled);
+
     @Unique
     final List<BlockPos> GATEWAY_POSITIONS = new ArrayList<>(Arrays.asList(
             new BlockPos(0, ModConfig.endGatewayHeight, -ModConfig.endGatewayRadius),
@@ -32,17 +36,28 @@ public abstract class EndDragonFightMixin {
     @Shadow
     private ObjectArrayList<Integer> gateways;
 
-    @Inject(method = "spawnNewGateway()V", at=@At("HEAD"), cancellable = true)
-    private void beyond_beta_tweaks$spawnOnlyFourGateways(CallbackInfo ci){
-
-        //BeyondBetaTweaks.LOGGER.info("spawnOnlyFourGateways called");
+    @Unique
+    private void spawnFourGateways(){
         EndDragonFight self = (EndDragonFight) (Object) this; //self-cast to access members and methods. IDE may not like this, but it works
         if (!gateways.isEmpty()) {
             for(BlockPos pos : GATEWAY_POSITIONS){
-                BeyondBetaTweaks.LOGGER.info("Spawning gateway at: " + pos);
+//                BeyondBetaTweaks.LOGGER.info("Spawning gateway at: {}", pos);
                 self.spawnNewGateway(pos);
             }
         }
-        ci.cancel(); //cancel the rest of the method
+    }
+
+    // Ender Dragon removal code adapted from https://github.com/quat1024/apathy by [quat1024](https://github.com/quat1024)
+    @Inject(method = "scanState", at = @At("RETURN"))
+    void beyond_beta_tweaks$finishScanningState(CallbackInfo ci) {
+        //scanState is called ONCE, EVER, the very first time any player loads the End.
+        //It is never called again (the `needsStateScanning` variable makes sure of that).
+        //So this is a good time to do "first-run" tasks.
+
+        dragonKilled = true;
+        previouslyKilled = true;
+
+        spawnExitPortal(true);
+        spawnFourGateways();
     }
 }

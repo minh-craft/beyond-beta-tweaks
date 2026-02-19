@@ -1,3 +1,12 @@
+## v0.68.0
+
+### Added
+- Added Ender Dragon removal code adapted from https://github.com/quat1024/apathy by [quat1024](https://github.com/quat1024)
+- Add fire at the top of each obsidian spike in the end
+- Replace bedrock blocks in end gateways with obsidian blocks, except the bedrock block directly beneath the portal block 
+
+---
+
 ## v0.67.0
 
 ### Added

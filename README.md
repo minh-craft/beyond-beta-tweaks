@@ -42,4 +42,5 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Animal breeding cooldown and baby grow up time code adapted from https://github.com/antio789/customspeed by [@antio789](https://github.com/antio789)
 - Spawn eggs instead of chicken code adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
+- Ender Dragon removal code adapted from https://github.com/quat1024/apathy by [quat1024](https://github.com/quat1024)
 

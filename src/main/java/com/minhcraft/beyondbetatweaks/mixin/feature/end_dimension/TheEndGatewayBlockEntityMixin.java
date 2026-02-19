@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.world;
+package com.minhcraft.beyondbetatweaks.mixin.feature.end_dimension;
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import net.minecraft.world.level.block.entity.TheEndGatewayBlockEntity;
