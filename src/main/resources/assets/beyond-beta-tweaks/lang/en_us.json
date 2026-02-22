@@ -60,6 +60,14 @@
   "beyond-beta-tweaks.midnightconfig.trueDarknessMinimumLightLevel": "True Darkness Minimum Light Level",
   "beyond-beta-tweaks.midnightconfig.roundRobinMaximumDeductedLightLevel": "Round Robin Maximum Deducted Light Level",
   "beyond-beta-tweaks.midnightconfig.scaleTrueDarknessGamma": "Scale True Darkness Gamma",
+  "beyond-beta-tweaks.midnightconfig.enableNightSkylightLightTextureBoost": "Enable Night Skylight Light Texture Boost",
+  "beyond-beta-tweaks.midnightconfig.boostNightBrightnessFactor": "Boost Night Brightness Factor",
+  "beyond-beta-tweaks.midnightconfig.maxPossibleBoostedNightBrightness": "Max Possible Boosted Night Brightness",
+  "beyond-beta-tweaks.midnightconfig.fullMoonBrightnessBoost": "Full Moon Brightness Boost",
+  "beyond-beta-tweaks.midnightconfig.threeQuartersMoonBrightnessBoost": "Three Quarters Moon Brightness Boost",
+  "beyond-beta-tweaks.midnightconfig.halfMoonBrightnessBoost": "Half Moon Brightness Boost",
+  "beyond-beta-tweaks.midnightconfig.oneQuarterMoonBrightnessBoost": "One Quarter Moon Brightness Boost",
+  "beyond-beta-tweaks.midnightconfig.newMoonBrightnessBoost": "New Moon Brightness Boost",
   "beyond-beta-tweaks.midnightconfig.enableDynamicLightBrightnessAffectBlockLight": "Enable Dynamic Light Brightness Affect Block Light",
   "beyond-beta-tweaks.midnightconfig.dynamicLightBrightnessBlockLightGammaReductionSquared": "Dynamic Light Brightness Block Light Gamma Reduction Squared",
   "beyond-beta-tweaks.midnightconfig.dynamicLightBrightnessBlockLightScale": "Dynamic Light Brightness Block Light Scale",
@@ -73,6 +81,9 @@
   "beyond-beta-tweaks.midnightconfig.screamingGoatMinimumRamWaitTimeSeconds": "Screaming Goat Minimum Ram Wait Time in Seconds",
   "beyond-beta-tweaks.midnightconfig.screamingGoatMaximumRamWaitTimeSeconds": "Screaming Goat Maximum Ram Wait Time in Seconds",
   "beyond-beta-tweaks.midnightconfig.boatMaxGroundSlipperiness": "Boat Max Ground Slipperiness",
+  "beyond-beta-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness",
+  "beyond-beta-tweaks.midnightconfig.lavaBoatMaxYawVelocity": "Lava Boat Max Yaw Velocity",
+  "beyond-beta-tweaks.midnightconfig.lavaBoatMaxHorizontalSpeed": "Lava Boat Max Horizontal Speed",
   "beyond-beta-tweaks.midnightconfig.enderpearlTeleportDamage": "Enderpearl Teleport Damage",
   "beyond-beta-tweaks.midnightconfig.ambientWaterMobCap": "Ambient Water Mob Cap",
   "beyond-beta-tweaks.midnightconfig.monsterMobCapOverworld": "Monster Mob Cap Overworld",
@@ -81,7 +92,6 @@
   "beyond-beta-tweaks.midnightconfig.donkeyMovementSpeed": "Donkey Movement Speed",
   "beyond-beta-tweaks.midnightconfig.horseMovementSpeed": "Horse Movement Speed",
   "beyond-beta-tweaks.midnightconfig.endGatewayTeleportDistance": "End Gateway Teleport Distance",
-  "beyond-beta-tweaks.midnightconfig.boatWaterSlipperiness": "Boat Water Slipperiness",
   "beyond-beta-tweaks.midnightconfig.enableScaffoldingLikeLadderPlacement": "Enable Scaffolding-Like Ladder Placement",
   "beyond-beta-tweaks.midnightconfig.ladderScaffoldingMaxDistance": "Ladder Scaffolding Max Distance",
   "beyond-beta-tweaks.midnightconfig.alwaysShowScholarFormattingToolbar": "Always Show Scholar Formatting Toolbar",
@@ -105,7 +115,8 @@
   "beyond-beta-tweaks.midnightconfig.chickenShedFeathersWaitMaxAdditionalTimeInSeconds": "Chicken Shed Feathers Wait Max Additional Time In Seconds",
   "beyond-beta-tweaks.midnightconfig.chickenFromEggChance": "Chicken From Egg Chance",
   "beyond-beta-tweaks.midnightconfig.pigLitterSizing": "Pig Litter Sizing",
-  "beyond-beta-tweaks.midnightconfig.shrinkBabyHoglinHead": "Shrink Baby Hoglin Head"
-
+  "beyond-beta-tweaks.midnightconfig.shrinkBabyHoglinHead": "Shrink Baby Hoglin Head",
+  "beyond-beta-tweaks.midnightconfig.enableFlatLightingWithAmbientOcclusion": "Enable Flat Lighting With Ambient Occlusion",
+  "beyond-beta-tweaks.midnightconfig.useAverageLightInsteadOfMaxLightForFlatLight": "Use Average Light Instead Of Max Light For Flat Light"
 
 }

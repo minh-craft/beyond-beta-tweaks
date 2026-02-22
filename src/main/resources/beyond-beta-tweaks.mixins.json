@@ -69,6 +69,8 @@
     "feature.end_dimension.EndGatewayFeatureMixin",
     "feature.end_dimension.SpikeFeatureMixin",
     "feature.end_dimension.TheEndGatewayBlockEntityMixin",
+    "feature.extra_boats_visibility_range.EntityTypeMixin",
+    "feature.extra_boats_visibility_range.ExtraBoatEntityMixin",
     "feature.flat_lighting_with_ao.SmoothLightPipelineMixin",
     "feature.lighting.LightTextureHelperMixin",
     "feature.map_atlas_recipe_book.FilledMapItemMixin",

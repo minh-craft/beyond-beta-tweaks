@@ -149,6 +149,9 @@ dependencies {
 	// Trinkets Compatibility
 	modImplementation "maven.modrinth:trinkets:$project.trinkets_version"
 
+	// Extra Boats Compatibility
+	modImplementation "maven.modrinth:extra-boats:$project.extra_boats_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

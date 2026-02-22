@@ -1,3 +1,15 @@
+## v0.69.0
+
+### Added
+- Tweaks to https://github.com/Anxietie/Extra-Boats
+  - Fixed view distance being 10 blocks instead of 10 chunks like vanilla boats
+  - Added config options to tweak the turn speed and forward speed of lava boats.
+
+### Changed
+- Added missing lang entries for several config options
+
+---
+
 ## v0.68.0
 
 ### Added

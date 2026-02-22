@@ -148,6 +148,12 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=0.0F, max=0.9F, precision = 1000)
     public static float boatWaterSlipperiness = 0.9F;
 
+    @Entry(isSlider = true, min=0.0F, max=5.0F)
+    public static float lavaBoatMaxYawVelocity = 1.85F;
+
+    @Entry(isSlider = true, min=0.0F, max=0.5F)
+    public static float lavaBoatMaxHorizontalSpeed = 0.16F;
+
     @Entry(min=0.0F, max=5.0)
     public static float enderpearlTeleportDamage = 2.0F;
 
