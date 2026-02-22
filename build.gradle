@@ -152,6 +152,9 @@ dependencies {
 	// Extra Boats Compatibility
 	modImplementation "maven.modrinth:extra-boats:$project.extra_boats_version"
 
+	// Charm Forked Compatibility
+	modCompileOnly "maven.modrinth:charm-forked:$project.charm_forked_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 

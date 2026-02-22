@@ -55,6 +55,7 @@
     "feature.animal_breeding.FoxBreedGoalMixin",
     "feature.animal_breeding.PigMixin",
     "feature.animal_breeding.ThrownEggMixin",
+    "feature.charm_inventory_tidying_blacklist.InventoryTidyingClientMixin",
     "feature.enchantment.cumulative_swift_sneak.EnchantmentHelperMixin",
     "feature.enchantment.cumulative_swift_sneak.EnchantmentsMixin",
     "feature.enchantment.glint.ItemMixin",

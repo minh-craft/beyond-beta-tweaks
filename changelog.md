@@ -1,3 +1,10 @@
+## v0.70.0
+
+### Added
+- Removed Charm Forked's sort button from player inventory and from Create's Train Schedule
+
+---
+
 ## v0.69.0
 
 ### Added
