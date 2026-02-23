@@ -1,3 +1,10 @@
+## v0.70.3
+
+### Changed
+- Fixed crash around hoglin shrinking head feature not working for zoglins
+
+---
+
 ## v0.70.2
 
 ### Changed
