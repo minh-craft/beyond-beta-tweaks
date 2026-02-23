@@ -1,3 +1,10 @@
+## v0.70.2
+
+### Changed
+- Hacky workaround to prevent vanilla bug where fall damage sound plays when the player logs in
+
+---
+
 ## v0.70.1
 
 ### Changed

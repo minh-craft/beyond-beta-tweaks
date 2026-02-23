@@ -256,4 +256,6 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static boolean useAverageLightInsteadOfMaxLightForFlatLight = true;
 
+    @Entry(isSlider = true, min=0, max=200)
+    public static int noFallDamageSoundLoginGracePeriodInTicks = 80;
 }

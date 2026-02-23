@@ -114,6 +114,7 @@
   "client": [
     "accessors.AbstractContainerScreenAccessor",
     "client.CartographyTableScreenMixin",
+    "feature.fix_fall_damage_sound_login_bug.LocalPlayerMixin",
     "client.ClientRecipeBookMixin",
     "client.CreateWorldScreenMixin",
     "client.GameRendererMixin",
