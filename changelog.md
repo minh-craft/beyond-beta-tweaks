@@ -1,3 +1,10 @@
+## v0.70.1
+
+### Changed
+- Fixed bug with damage when not wearing armor
+
+---
+
 ## v0.70.0
 
 ### Added
