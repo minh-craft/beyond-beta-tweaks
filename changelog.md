@@ -1,3 +1,10 @@
+## v0.71.0
+
+### Added
+- Add "Undyed" tooltip to dyeable leather items (leather armor and books with the Scholar mod)
+
+---
+
 ## v0.70.3
 
 ### Changed

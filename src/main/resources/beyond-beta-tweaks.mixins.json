@@ -55,6 +55,7 @@
     "feature.animal_breeding.FoxBreedGoalMixin",
     "feature.animal_breeding.PigMixin",
     "feature.animal_breeding.ThrownEggMixin",
+    "feature.book_tooltip_improvements.ItemStackMixin",
     "feature.charm_inventory_tidying_blacklist.InventoryTidyingClientMixin",
     "feature.enchantment.cumulative_swift_sneak.EnchantmentHelperMixin",
     "feature.enchantment.cumulative_swift_sneak.EnchantmentsMixin",
@@ -114,7 +115,6 @@
   "client": [
     "accessors.AbstractContainerScreenAccessor",
     "client.CartographyTableScreenMixin",
-    "feature.fix_fall_damage_sound_login_bug.LocalPlayerMixin",
     "client.ClientRecipeBookMixin",
     "client.CreateWorldScreenMixin",
     "client.GameRendererMixin",
@@ -131,6 +131,7 @@
     "compat_scholar.FormattingToolbarMixin",
     "compat_scholar.SpreadBookEditScreenAccessor",
     "compat_scholar.SpreadBookEditScreenMixin",
+    "feature.fix_fall_damage_sound_login_bug.LocalPlayerMixin",
     "feature.lighting.DarknessMixin",
     "feature.lighting.LightTextureMixin",
     "feature.moon_phase_affect_cloud_color.LevelRendererMixin",
