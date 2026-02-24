@@ -1,3 +1,10 @@
+## v0.71.1
+
+### Added
+- Add Written Book author to Chiseled Bookshelf Visualizer display
+
+---
+
 ## v0.71.0
 
 ### Added

@@ -131,6 +131,7 @@
     "compat_scholar.FormattingToolbarMixin",
     "compat_scholar.SpreadBookEditScreenAccessor",
     "compat_scholar.SpreadBookEditScreenMixin",
+    "feature.book_tooltip_improvements.PlayerLookHelperMixin",
     "feature.fix_fall_damage_sound_login_bug.LocalPlayerMixin",
     "feature.lighting.DarknessMixin",
     "feature.lighting.LightTextureMixin",

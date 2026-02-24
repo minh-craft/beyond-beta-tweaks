@@ -155,6 +155,9 @@ dependencies {
 	// Charm Forked Compatibility
 	modCompileOnly "maven.modrinth:charm-forked:$project.charm_forked_version"
 
+	// Chiseled Bookshelf Visualizer Compatibility
+	modCompileOnly "maven.modrinth:chiseled-bookshelf-visualizer:$project.chiseled_bookshelf_visualizer_version"
+
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
 
