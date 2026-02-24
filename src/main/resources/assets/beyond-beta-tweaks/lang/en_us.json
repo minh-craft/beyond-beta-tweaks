@@ -119,6 +119,7 @@
   "beyond-beta-tweaks.midnightconfig.shrinkBabyHoglinHead": "Shrink Baby Hoglin Head",
   "beyond-beta-tweaks.midnightconfig.enableFlatLightingWithAmbientOcclusion": "Enable Flat Lighting With Ambient Occlusion",
   "beyond-beta-tweaks.midnightconfig.useAverageLightInsteadOfMaxLightForFlatLight": "Use Average Light Instead Of Max Light For Flat Light",
-  "beyond-beta-tweaks.midnightconfig.noFallDamageSoundLoginGracePeriodInTicks": "No Fall Damage Sound Login Grace Period In Ticks"
+  "beyond-beta-tweaks.midnightconfig.noFallDamageSoundLoginGracePeriodInTicks": "No Fall Damage Sound Login Grace Period In Ticks",
+  "beyond-beta-tweaks.midnightconfig.oldSmoothLightingMinimumShadeDarkness": "Old Smooth Lighting Minimum Shade Darkness"
 
 }

@@ -258,4 +258,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0, max=200)
     public static int noFallDamageSoundLoginGracePeriodInTicks = 80;
+
+    @Entry(isSlider = true, min=0.0F, max=0.2F)
+    public static float oldSmoothLightingMinimumShadeDarkness = 0.07F;
 }

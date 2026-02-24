@@ -1,3 +1,12 @@
+## v0.72.0
+
+### Added
+- Allow negative discard_chance_on_air_exposure for Ore Configured Features
+  - This allows ore to have a chance to be discarded if the ore is NOT exposed to air
+- Add config value for adjusting Nostalgic Tweaks old smooth lighting feature - can adjust the minimum shade darkness of block shadows between modern and beta levels
+
+---
+
 ## v0.71.1
 
 ### Added
