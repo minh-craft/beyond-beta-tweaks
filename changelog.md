@@ -1,3 +1,10 @@
+## v0.73.0
+
+### Added
+- Replaced all lava generated in lush caves with water
+
+---
+
 ## v0.72.0
 
 ### Added

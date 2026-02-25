@@ -78,6 +78,8 @@
     "feature.flat_lighting_with_ao.SmoothLightPipelineMixin",
     "feature.lighting.BlockBehaviorMixinSquared",
     "feature.lighting.LightTextureHelperMixin",
+    "feature.lush_caves_no_lava.NoiseBasedChunkGeneratorMixin",
+    "feature.lush_caves_no_lava.ProtoChunkMixin",
     "feature.map_atlas_recipe_book.FilledMapItemMixin",
     "feature.map_atlas_recipe_book.InventoryMixin",
     "feature.map_atlas_recipe_book.MapAtlasCreateRecipeMixin",
