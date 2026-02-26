@@ -25,8 +25,9 @@ public abstract class LevelRendererMixin {
     @Shadow private ClientLevel level;
     @Shadow private int ticks;
 
-    @Unique private VertexBuffer endStarBuffer;
-    @Unique private boolean endStarsBuilt = false;
+    // Pre-computed star data: {unitX, unitY, unitZ, size, sinRotation, cosRotation}
+    @Unique private float[][] endStarData;
+    @Unique private boolean endStarDataBuilt = false;
 
     @Unique private static final float END_SKY_R;
     @Unique private static final float END_SKY_G;
@@ -62,12 +63,11 @@ public abstract class LevelRendererMixin {
         // Run fog setup first like vanilla does
         fogSetup.run();
 
-        renderEndSky(poseStack, projectionMatrix, partialTick, camera, fogSetup);
+        renderEndSky(poseStack, partialTick, fogSetup);
     }
 
     @Unique
-    private void renderEndSky(PoseStack poseStack, Matrix4f projectionMatrix,
-                              float partialTick, Camera camera, Runnable fogSetup) {
+    private void renderEndSky(PoseStack poseStack, float partialTick, Runnable fogSetup) {
         RenderSystem.depthMask(false);
 
         Tesselator tesselator = Tesselator.getInstance();
@@ -107,7 +107,7 @@ public abstract class LevelRendererMixin {
         // ── Step 2: Stars (drawn BEFORE the horizon gradient so the gradient fades them out) ──
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
-        renderEndStars(poseStack, projectionMatrix, partialTick, fogSetup);
+        beyond_beta_tweaks$renderEndStars(poseStack, partialTick, fogSetup);
 
         // ── Step 3: Horizon gradient ──
         // Drawn AFTER stars so it overlays on top, naturally hiding stars near the horizon
@@ -177,7 +177,7 @@ public abstract class LevelRendererMixin {
                 float cosA = Mth.cos(angle);
                 float sinA = Mth.sin(angle);
 
-                // Overlay SKY color (lighter) instead of fog color
+                // Overlay SKY color instead of fog color
                 builder.vertex(matrix, cosA * rBot, yBot, sinA * rBot)
                         .color(END_SKY_R, END_SKY_G, END_SKY_B, alphaBot).endVertex();
                 builder.vertex(matrix, cosA * rTop, yTop, sinA * rTop)
@@ -190,61 +190,130 @@ public abstract class LevelRendererMixin {
 
     // ─── STARS ───────────────────────────────────────────────────────────
 
+    /**
+     * Renders stars using immediate mode. Each frame, the rotation is applied
+     * to each star's center position to determine its current elevation.
+     * Stars below the fade threshold are made transparent based on their
+     * ROTATED position, so fading works correctly with rotation.
+     */
     @Unique
-    private void renderEndStars(PoseStack poseStack, Matrix4f projectionMatrix,
-                                float partialTick, Runnable fogSetup) {
-        if (!endStarsBuilt) {
-            buildEndStars();
-            endStarsBuilt = true;
+    private void beyond_beta_tweaks$renderEndStars(PoseStack poseStack, float partialTick, Runnable fogSetup) {
+        if (!endStarDataBuilt) {
+            beyond_beta_tweaks$buildStarData();
+            endStarDataBuilt = true;
         }
-        if (endStarBuffer == null) return;
+        if (endStarData == null) return;
 
-        // Disable fog so stars render crisply
         FogRenderer.setupNoFog();
 
+        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
+        RenderSystem.setShader(GameRenderer::getPositionColorShader);
+
+        // Calculate rotation angles
+        float time = (this.ticks + partialTick) * 0.001f;
+        float xRotDeg = time * 12.0f; // rotation speed - adjust here
+        float zRotDeg = time * 2.0f;
+
+        // Build rotation matrix (X then Z) to transform star centers
+        double xRotRad = Math.toRadians(xRotDeg);
+        double zRotRad = Math.toRadians(zRotDeg);
+        double cosXR = Math.cos(xRotRad), sinXR = Math.sin(xRotRad);
+        double cosZR = Math.cos(zRotRad), sinZR = Math.sin(zRotRad);
+
+        // Combined rotation matrix R = Rz * Rx
+        // We only need the second row to get rotated Y:
+        // rotatedY = m10*x + m11*y + m12*z
+        double m10 = sinZR * cosXR;
+        double m11 = cosZR * cosXR;
+        double m12 = -sinXR;
+
+        // Fade thresholds
+        // 0 = horizon
+        double fadeTopY = Math.sin(Math.toRadians(5.0));
+        double fadeBotY = Math.sin(Math.toRadians(-5.0));
         float starBrightness = 0.8f;
-        RenderSystem.setShaderColor(starBrightness, starBrightness, starBrightness, starBrightness);
-        RenderSystem.setShader(GameRenderer::getPositionShader);
 
         poseStack.pushPose();
-        float time = (this.ticks + partialTick) * 0.001f;
-        poseStack.mulPose(Axis.YP.rotationDegrees(time * 5.0f)); // horizontal star rotation
-//        poseStack.mulPose(Axis.XP.rotationDegrees(time * 5.0f)); // vertical star rotation
-//        poseStack.mulPose(Axis.ZP.rotationDegrees(time * 2.0f)); // tilt star rotation
+        poseStack.mulPose(Axis.XP.rotationDegrees(xRotDeg)); // vertical star rotation
+        poseStack.mulPose(Axis.ZP.rotationDegrees(zRotDeg)); // tilt star rotation
 
-        this.endStarBuffer.bind();
-        this.endStarBuffer.drawWithShader(poseStack.last().pose(), projectionMatrix, RenderSystem.getShader());
-        VertexBuffer.unbind();
+        Matrix4f matrix = poseStack.last().pose();
+        Tesselator tesselator = Tesselator.getInstance();
+        BufferBuilder builder = tesselator.getBuilder();
+        builder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+
+        for (float[] star : endStarData) {
+            float cx = star[0];
+            float cy = star[1];
+            float cz = star[2];
+            float size = star[3];
+            float sinR = star[4];
+            float cosR = star[5];
+
+            // Calculate rotated Y to determine current elevation
+            double rotatedY = m10 * cx + m11 * cy + m12 * cz;
+
+            // Determine alpha based on rotated elevation
+            float alpha;
+            if (rotatedY >= fadeTopY) {
+                alpha = starBrightness;
+            } else if (rotatedY <= fadeBotY) {
+                continue; // fully invisible, skip
+            } else {
+                alpha = starBrightness * (float) ((rotatedY - fadeBotY) / (fadeTopY - fadeBotY));
+            }
+
+            // Build quad at this star's (unrotated) position
+            // The poseStack rotation will transform it to the correct rotated position
+            double farDist = 100.0;
+            double sx = cx * farDist;
+            double sy = cy * farDist;
+            double sz = cz * farDist;
+
+            double yAngle = Math.atan2(cx, cz);
+            double sinYA = Math.sin(yAngle);
+            double cosYA = Math.cos(yAngle);
+
+            double xzDist = Math.sqrt(cx * cx + cz * cz);
+            double xAngle = Math.atan2(xzDist, cy);
+            double sinXA = Math.sin(xAngle);
+            double cosXA = Math.cos(xAngle);
+
+            for (int v = 0; v < 4; v++) {
+                double vx = ((v & 2) - 1) * size;
+                double vy = (((v + 1) & 2) - 1) * size;
+
+                double rotX = vx * cosR - vy * sinR;
+                double rotY = vy * cosR + vx * sinR;
+
+                double finalY = rotX * sinXA;
+                double tempX = -rotX * cosXA;
+
+                double finalX = tempX * sinYA - rotY * cosYA;
+                double finalZ = rotY * sinYA + tempX * cosYA;
+
+                builder.vertex(matrix, (float) (sx + finalX), (float) (sy + finalY), (float) (sz + finalZ))
+                        .color(starBrightness, starBrightness, starBrightness, alpha)
+                        .endVertex();
+            }
+        }
+
+        BufferUploader.drawWithShader(builder.end());
 
         poseStack.popPose();
 
         RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
-
-        // Restore fog
         fogSetup.run();
     }
 
+    /**
+     * Pre-compute star positions once. Stored as arrays of
+     * {unitX, unitY, unitZ, size, sinRotation, cosRotation}.
+     */
     @Unique
-    private void buildEndStars() {
-        Tesselator tesselator = Tesselator.getInstance();
-        BufferBuilder bufferBuilder = tesselator.getBuilder();
-        RenderSystem.setShader(GameRenderer::getPositionShader);
-
-        if (this.endStarBuffer != null) {
-            this.endStarBuffer.close();
-        }
-
-        this.endStarBuffer = new VertexBuffer(VertexBuffer.Usage.STATIC);
-        BufferBuilder.RenderedBuffer renderedBuffer = buildStarGeometry(bufferBuilder);
-        this.endStarBuffer.bind();
-        this.endStarBuffer.upload(renderedBuffer);
-        VertexBuffer.unbind();
-    }
-
-    @Unique
-    private BufferBuilder.RenderedBuffer buildStarGeometry(BufferBuilder builder) {
+    private void beyond_beta_tweaks$buildStarData() {
         java.util.Random random = new java.util.Random(10842L);
-        builder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION);
+        java.util.List<float[]> stars = new java.util.ArrayList<>();
 
         int starCount = 1500;
 
@@ -252,7 +321,7 @@ public abstract class LevelRendererMixin {
             double x = random.nextFloat() * 2.0f - 1.0f;
             double y = random.nextFloat() * 2.0f - 1.0f;
             double z = random.nextFloat() * 2.0f - 1.0f;
-            double size = ModConfig.endDimensionStarSize + random.nextFloat() * 0.1f;
+            double size = ModConfig.endDimensionBaseStarSize + random.nextFloat() * ModConfig.endDimensionStarSizeVariation;
             double distSq = x * x + y * y + z * z;
 
             if (distSq < 1.0 && distSq > 0.01) {
@@ -261,47 +330,17 @@ public abstract class LevelRendererMixin {
                 y *= dist;
                 z *= dist;
 
-                // Skip stars below -10 degrees elevation
-                // y on the unit sphere = sin(elevation), sin(-10°) ≈ -0.174
-                if (y < -0.174) continue;
-
-                double farDist = 100.0;
-                double sx = x * farDist;
-                double sy = y * farDist;
-                double sz = z * farDist;
-
-                double yAngle = Math.atan2(x, z);
-                double sinY = Math.sin(yAngle);
-                double cosY = Math.cos(yAngle);
-
-                double xzDist = Math.sqrt(x * x + z * z);
-                double xAngle = Math.atan2(xzDist, y);
-                double sinX = Math.sin(xAngle);
-                double cosX = Math.cos(xAngle);
-
                 double rotation = random.nextDouble() * Math.PI * 2.0;
-                double sinR = Math.sin(rotation);
-                double cosR = Math.cos(rotation);
 
-                for (int v = 0; v < 4; v++) {
-                    double vx = ((v & 2) - 1) * size;
-                    double vy = (((v + 1) & 2) - 1) * size;
-
-                    double rotX = vx * cosR - vy * sinR;
-                    double rotY = vy * cosR + vx * sinR;
-
-                    double finalY = rotX * sinX;
-                    double tempX = -rotX * cosX;
-
-                    double finalX = tempX * sinY - rotY * cosY;
-                    double finalZ = rotY * sinY + tempX * cosY;
-
-                    builder.vertex((float) (sx + finalX), (float) (sy + finalY), (float) (sz + finalZ)).endVertex();
-                }
+                stars.add(new float[]{
+                        (float) x, (float) y, (float) z,
+                        (float) size,
+                        (float) Math.sin(rotation), (float) Math.cos(rotation)
+                });
             }
         }
 
-        return builder.end();
+        endStarData = stars.toArray(new float[0][]);
     }
 
     // ─── FOG COLOR ──────────────────────────────────────────────────────

@@ -124,7 +124,8 @@
   "beyond-beta-tweaks.midnightconfig.noFallDamageSoundLoginGracePeriodInTicks": "No Fall Damage Sound Login Grace Period In Ticks",
   "beyond-beta-tweaks.midnightconfig.oldSmoothLightingMinimumShadeDarkness": "Old Smooth Lighting Minimum Shade Darkness",
   "beyond-beta-tweaks.midnightconfig.bannerWaviness": "Banner Waviness",
-  "beyond-beta-tweaks.midnightconfig.endDimensionStarSize": "End Dimension Star Size",
+  "beyond-beta-tweaks.midnightconfig.endDimensionBaseStarSize": "End Dimension Base Star Size",
+  "beyond-beta-tweaks.midnightconfig.endDimensionStarSizeVariation": "End Dimension Star Size Variation",
   "beyond-beta-tweaks.midnightconfig.endDimensionSkyColor": "End Dimension Sky Color",
   "beyond-beta-tweaks.midnightconfig.endDimensionFogColor": "End Dimension Fog Color"
 

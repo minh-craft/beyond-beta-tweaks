@@ -1,3 +1,11 @@
+## v0.75.1
+
+### Changed
+- Update stars to rotate vertically in the same way overworld night sky stars do
+- Make star size variance configurable
+
+---
+
 ## v0.75.0
 
 ### Added

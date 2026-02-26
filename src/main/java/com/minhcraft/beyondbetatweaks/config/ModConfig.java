@@ -272,7 +272,10 @@ public class ModConfig extends MidnightConfig {
     public static float bannerWaviness = 0.25F;
 
     @Entry(isSlider = true, min=0.0F, max=0.5F)
-    public static float endDimensionStarSize = 0.25F;
+    public static float endDimensionBaseStarSize = 0.22F;
+
+    @Entry(isSlider = true, min=0.0F, max=0.5F)
+    public static float endDimensionStarSizeVariation = 0.2F;
 
     @Entry
     public static String endDimensionSkyColor = "#040408";
