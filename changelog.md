@@ -1,3 +1,12 @@
+## v0.75.0
+
+### Added
+- Added config option to adjust true darkness level for the End
+- Fix lightmap in the end not being a linear gradient from light to dark
+- Remove old config option for end lighting that never worked
+
+---
+
 ## v0.74.0
 
 ### Added

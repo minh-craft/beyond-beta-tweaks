@@ -124,7 +124,6 @@
     "client.CreateWorldScreenMixin",
     "client.GameRendererMixin",
     "client.HoglinModelMixin",
-    "client.LightTextureMixin",
     "client.RecipeBookCategoriesAccessor",
     "client.RecipeBookCategoriesMixin",
     "client.RecipeBookComponentMixin",

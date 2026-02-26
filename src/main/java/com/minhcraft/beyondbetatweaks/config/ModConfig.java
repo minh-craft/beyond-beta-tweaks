@@ -73,8 +73,14 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=0.0F, max=1.0F)
     public static float nightVisionModifier = 0.25F;
 
-    @Entry(isSlider = true, min=0.0F, max=2.0F)
-    public static float endDimensionLightMapBrightnessModifier = 0.5F;
+    @Entry(isSlider = true, min=1.0F, max=6.0F)
+    public static float endDimensionTrueDarknessBrightnessScaling = 1.0F;
+
+    @Entry
+    public static boolean enableEndDimensionLightmapGradientFix = true;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float endDimensionLightmapGradientSmoothingFactor = 0.75F;
 
     @Entry(isSlider = true, min=0.0F, max=0.2F, precision = 1000)
     public static float trueDarknessMinimumLightLevel = 0.03F;
