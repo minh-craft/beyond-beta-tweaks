@@ -261,4 +261,16 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0.0F, max=0.2F)
     public static float oldSmoothLightingMinimumShadeDarkness = 0.07F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float bannerWaviness = 0.25F;
+
+    @Entry(isSlider = true, min=0.0F, max=0.5F)
+    public static float endDimensionStarSize = 0.25F;
+
+    @Entry
+    public static String endDimensionSkyColor = "#040408";
+
+    @Entry
+    public static String endDimensionFogColor = "#12121f";
 }

@@ -1,3 +1,14 @@
+## v0.74.0
+
+### Added
+- Reworked end sky rendering to look like a space sky dimension (inspired by @PoeticRainbow's Golden Day's alternate end rendering settings, which was inspired by the Aether)
+  - Enable clouds to be rendered in the End (Cloud Layers mod needed to actually render clouds)
+  - Remove the static skybox and render end-specific sky and fog colors instead
+  - Add stars to the End sky
+- Added config option to reduce waviness of banners
+
+---
+
 ## v0.73.0
 
 ### Added

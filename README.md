@@ -44,3 +44,6 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
 - Ender Dragon removal code adapted from https://github.com/quat1024/apathy by [quat1024](https://github.com/quat1024)
 
+### Inspiration
+- End space/sky-dimension rendering of clouds, stars, sky and fog inspired by alternate End option from https://modrinth.com/resourcepack/golden-days by [@PoeticRainbow](https://github.com/PoeticRainbow)
+
