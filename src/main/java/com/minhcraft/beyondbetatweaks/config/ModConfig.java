@@ -282,4 +282,16 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static String endDimensionFogColor = "#12121f";
+
+    @Entry(isSlider = true, min=-20.0, max=20.0, precision = 1)
+    public static double endDimensionStarFadeTopAngle = 3;
+
+    @Entry(isSlider = true, min=-20.0, max=20.0)
+    public static double endDimensionStarFadeBottomAngle = -7;
+
+    @Entry(min=0L, max=24000L)
+    public static long firstTimeEndExitPortalFastForwardToTargetTime = 23500L;
+
+    @Entry(isSlider = true, min=0, max=50)
+    public static int bedrockEggVegetationClearingHeight = 30;
 }

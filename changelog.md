@@ -1,3 +1,12 @@
+## v0.76.0
+
+### Added
+- Generate a bedrock egg in the overworld at x,z=(0,0)
+  - Opens up to reveal an exit portal that goes to the end when the End exit portal is first used
+- Add config option to adjust the end sky star fade out angle 
+
+---
+
 ## v0.75.1
 
 ### Changed

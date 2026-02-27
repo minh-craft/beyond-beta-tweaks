@@ -127,7 +127,11 @@
   "beyond-beta-tweaks.midnightconfig.endDimensionBaseStarSize": "End Dimension Base Star Size",
   "beyond-beta-tweaks.midnightconfig.endDimensionStarSizeVariation": "End Dimension Star Size Variation",
   "beyond-beta-tweaks.midnightconfig.endDimensionSkyColor": "End Dimension Sky Color",
-  "beyond-beta-tweaks.midnightconfig.endDimensionFogColor": "End Dimension Fog Color"
+  "beyond-beta-tweaks.midnightconfig.endDimensionFogColor": "End Dimension Fog Color",
+  "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeTopAngle": "End Dimension Star Fade Top Angle",
+  "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeBottomAngle": "End Dimension Star Fade Bottom Angle",
+  "beyond-beta-tweaks.midnightconfig.firstTimeEndExitPortalFastForwardToTargetTime": "First Time End Exit Portal Fast Forward To Target Time",
+  "beyond-beta-tweaks.midnightconfig.bedrockEggVegetationClearingHeight": "Bedrock Egg Vegetation Clearing Height"
 
 
 }

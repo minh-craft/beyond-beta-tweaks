@@ -229,8 +229,8 @@ public abstract class LevelRendererMixin {
 
         // Fade thresholds
         // 0 = horizon
-        double fadeTopY = Math.sin(Math.toRadians(5.0));
-        double fadeBotY = Math.sin(Math.toRadians(-5.0));
+        double fadeTopY = Math.sin(Math.toRadians(ModConfig.endDimensionStarFadeTopAngle));
+        double fadeBotY = Math.sin(Math.toRadians(ModConfig.endDimensionStarFadeBottomAngle));
         float starBrightness = 0.8f;
 
         poseStack.pushPose();
