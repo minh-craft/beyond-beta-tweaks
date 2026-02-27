@@ -289,9 +289,16 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=-20.0, max=20.0)
     public static double endDimensionStarFadeBottomAngle = -7;
 
-    @Entry(min=0L, max=24000L)
-    public static long firstTimeEndExitPortalFastForwardToTargetTime = 23500L;
+    @Entry(min=0L, max=24000)
+    public static int firstTimeEndExitPortalFastForwardToTargetTime = 23500;
 
     @Entry(isSlider = true, min=0, max=50)
     public static int bedrockEggVegetationClearingHeight = 30;
+
+    @Entry(isSlider = true, min=0, max=3)
+    public static int bedrockEggHeightScanningRadius = 1;
+
+    @Entry
+    public static boolean allowVanillaCloudsToCoexistWithCloudLayersClouds = true;
+
 }

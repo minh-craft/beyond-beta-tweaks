@@ -140,6 +140,7 @@
     "compat_scholar.SpreadBookEditScreenAccessor",
     "compat_scholar.SpreadBookEditScreenMixin",
     "feature.book_tooltip_improvements.PlayerLookHelperMixin",
+    "feature.cloud_layers_with_vanilla_clouds.WorldRendererMixinSquared",
     "feature.fix_fall_damage_sound_login_bug.LocalPlayerMixin",
     "feature.less_wavy_banners.BannerRendererMixin",
     "feature.lighting.DarknessMixin",

@@ -1,3 +1,12 @@
+## v0.77.0
+
+### Added
+- Add config option to allow vanilla clouds to co-exist with Cloud Layers clouds
+  - Because Cloud Layers vanilla-esque clouds don't look as good. Movement is glitchier and individual cloud blocks have visible boundary lines when not 100% opaque.
+- Make bedrock egg height level scan range configurable
+
+---
+
 ## v0.76.0
 
 ### Added

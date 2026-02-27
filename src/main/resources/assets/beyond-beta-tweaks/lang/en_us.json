@@ -131,7 +131,9 @@
   "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeTopAngle": "End Dimension Star Fade Top Angle",
   "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeBottomAngle": "End Dimension Star Fade Bottom Angle",
   "beyond-beta-tweaks.midnightconfig.firstTimeEndExitPortalFastForwardToTargetTime": "First Time End Exit Portal Fast Forward To Target Time",
-  "beyond-beta-tweaks.midnightconfig.bedrockEggVegetationClearingHeight": "Bedrock Egg Vegetation Clearing Height"
+  "beyond-beta-tweaks.midnightconfig.bedrockEggVegetationClearingHeight": "Bedrock Egg Vegetation Clearing Height",
+  "beyond-beta-tweaks.midnightconfig.bedrockEggHeightScanningRadius": "Bedrock Egg Height Scanning Radius",
+  "beyond-beta-tweaks.midnightconfig.allowVanillaCloudsToCoexistWithCloudLayersClouds": "Allow Vanilla Clouds To Coexist With Cloud Layers Clouds"
 
 
 }

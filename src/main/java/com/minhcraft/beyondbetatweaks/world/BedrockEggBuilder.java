@@ -13,7 +13,7 @@ public class BedrockEggBuilder {
 
     public static int calculateEggY(ServerLevel level) {
         int maxHeight = Integer.MIN_VALUE;
-        int eggYScanRadius = 2; // find the highest point within a 2 block radius of 0,0
+        int eggYScanRadius = ModConfig.bedrockEggHeightScanningRadius; // find the highest point within a radius of 0,0
         for (int dx = -eggYScanRadius; dx <= eggYScanRadius; dx++) {
             for (int dz = -eggYScanRadius; dz <= eggYScanRadius; dz++) {
                 int height = getGroundHeight(level, dx, dz);
@@ -113,7 +113,7 @@ public class BedrockEggBuilder {
                 }
 
                 // Cap layer 4 at baseY+4: just the very top
-                if (distSq <= 1.0 * 1.0) {
+                if (distSq <= 1.0) {
                     level.setBlockAndUpdate(new BlockPos(dx, baseY + 4, dz), Blocks.BEDROCK.defaultBlockState());
                 }
             }
@@ -176,7 +176,7 @@ public class BedrockEggBuilder {
                     level.setBlockAndUpdate(new BlockPos(dx, baseY + 3, dz), Blocks.AIR.defaultBlockState());
                 }
 
-                if (distSq <= 1.0 * 1.0) {
+                if (distSq <= 1.0) {
                     level.setBlockAndUpdate(new BlockPos(dx, baseY + 4, dz), Blocks.AIR.defaultBlockState());
                 }
             }
