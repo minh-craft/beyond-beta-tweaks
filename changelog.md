@@ -1,3 +1,10 @@
+## v0.77.1
+
+### Changed
+- Increase max config value for End Dimension True Darkness Brightness Scaling 
+
+---
+
 ## v0.77.0
 
 ### Added
