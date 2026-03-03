@@ -59,6 +59,7 @@
     "feature.bedrock_egg.EndPortalBlockMixin",
     "feature.bedrock_egg.PlayerListMixin",
     "feature.bedrock_egg.ServerLevelMixin",
+    "feature.bedrock_egg.ServerPlayerMixin",
     "feature.book_tooltip_improvements.ItemStackMixin",
     "feature.charm_inventory_tidying_blacklist.InventoryTidyingClientMixin",
     "feature.discard_ore_not_exposed_to_air.OreConfigurationMixin",

@@ -1,7 +1,7 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.animal_breeding;
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaSounds;
+import com.minhcraft.beyondbetatweaks.register.BeyondBetaTweaksSounds;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Chicken;
@@ -38,7 +38,7 @@ public abstract class ChickenMixin extends Animal {
          cancellable = true
     )
     private void beyond_beta_tweaks$chickensShedFeathersInsteadOfLayEggs(CallbackInfo ci) {
-        this.playSound(BeyondBetaSounds.CHICKEN_SHED_FEATHERS, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
+        this.playSound(BeyondBetaTweaksSounds.CHICKEN_SHED_FEATHERS, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
         this.spawnAtLocation(new ItemStack(Items.FEATHER, this.random.nextIntBetweenInclusive(1, ModConfig.maxFeathersPerShed)));
         this.gameEvent(GameEvent.ENTITY_PLACE);
         this.eggTime = this.random.nextInt(ModConfig.chickenShedFeathersWaitBaseTimeInSeconds*20) + ModConfig.chickenShedFeathersWaitMaxAdditionalTimeInSeconds*20;

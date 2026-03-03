@@ -5,7 +5,7 @@ import com.bawnorton.mixinsquared.api.MixinCanceller;
 import java.util.List;
 import java.util.Set;
 
-public class BeyondBetaMixinCanceller implements MixinCanceller {
+public class BeyondBetaTweaksMixinCanceller implements MixinCanceller {
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
         return Set.of(

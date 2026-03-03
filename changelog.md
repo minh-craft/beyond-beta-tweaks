@@ -1,3 +1,15 @@
+## v0.78.0
+
+### Added
+- New messy spruce foliage placer - can define a chance to randomly remove leaf blocks from the widest foliage ring
+
+### Changed
+- Fixed bedrock egg generation 
+  - Check that all the necessary chunks are loaded before generating the egg.
+  - Force client sync of bedrock egg chunks after generation.
+
+---
+
 ## v0.77.1
 
 ### Changed

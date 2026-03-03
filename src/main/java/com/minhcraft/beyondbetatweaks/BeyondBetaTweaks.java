@@ -4,10 +4,7 @@ import com.minhcraft.beyondbetatweaks.config.InnateEnchantmentConfig;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import com.minhcraft.beyondbetatweaks.config.RecipeCustomSortingConfigLoader;
 import com.minhcraft.beyondbetatweaks.network.ModNetworking;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaItems;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaRegistry;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaSounds;
-import com.minhcraft.beyondbetatweaks.world.BeyondBetaCarvers;
+import com.minhcraft.beyondbetatweaks.register.*;
 import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 
@@ -37,10 +34,11 @@ public class BeyondBetaTweaks implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing Beyond Beta Tweaks");
-		BeyondBetaSounds.init();
-		BeyondBetaItems.init();
-		BeyondBetaRegistry.init();
-		BeyondBetaCarvers.register();
+		BeyondBetaTweaksSounds.init();
+		BeyondBetaTweaksItems.init();
+		BeyondBetaTweaksRegistry.init();
+		BeyondBetaTweaksFoliagePlacers.init();
+		BeyondBetaTweaksCarvers.register();
 
 		ModNetworking.registerServerReceivers();
 		RecipeCustomSortingConfigLoader.loadConfig();

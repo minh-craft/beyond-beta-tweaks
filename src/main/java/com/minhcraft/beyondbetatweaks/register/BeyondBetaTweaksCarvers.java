@@ -1,12 +1,14 @@
-package com.minhcraft.beyondbetatweaks.world;
+package com.minhcraft.beyondbetatweaks.register;
 
 import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
+import com.minhcraft.beyondbetatweaks.world.BetaCaveCarverConfiguration;
+import com.minhcraft.beyondbetatweaks.world.BetaCaveWorldCarver;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.carver.WorldCarver;
 
-public class BeyondBetaCarvers {
+public class BeyondBetaTweaksCarvers {
 
     // All beta cave code here is from https://codeberg.org/Nostalgica-Reverie/moderner-beta by @icanttellyou and @b3spectacled and @BlueStaggo
 
