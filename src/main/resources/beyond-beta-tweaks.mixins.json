@@ -49,6 +49,8 @@
     "entity.ThrownEnderpearlMixin",
     "entity.ZombieAttackGoalMixin",
     "entity.ZombieMixin",
+    "feature.biome_alpha_tinting.EmbeddiumBlockRendererMixin",
+    "feature.biome_alpha_tinting.WorldSliceMixin",
     "feature.animal_breeding.AgeableMobMixin",
     "feature.animal_breeding.AnimalMixin",
     "feature.animal_breeding.ChickenMixin",

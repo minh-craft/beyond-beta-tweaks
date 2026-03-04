@@ -1,3 +1,12 @@
+## v0.79.0
+
+### Added
+- Add alpha style biome tinting - overlays biome tint color instead multiplying to allow for brighter grass and foliage colors
+  - Config file for configuring which biomes and blocks have alpha style biome tinting
+  - Requires Embeddium and https://modrinth.com/mod/sodium-shader-support to work 
+
+---
+
 ## v0.78.0
 
 ### Added

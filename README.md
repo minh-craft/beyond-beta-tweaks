@@ -3,6 +3,22 @@
 Various tweaks for the Beyond Beta modpack.
 See [changelog](changelog.md) for full list of features.
 
+Biome alpha tinting feature requires Embeddium and https://modrinth.com/mod/sodium-shader-support to work. 
+For compatibility with Embeddium, Sodium Shader Support's fabric loader dependency on sodium needs to be overridden. 
+- `config/fabric_loader_dependencies.json`
+```
+{
+  "version": 1,
+  "overrides": {
+    "sodiumss": {
+      "-depends": {
+        "sodium": "IGNORED"
+      }
+    }
+  }
+}
+```
+
 ### Dev note:
 When running the mod in the IDE, time doesn't pass for some reason. This isn't a problem when the mod is compiled. I've narrowed this down to including the owo lib dependency in build.gradle, needed for True Darkness compatibility. I don't really know why though or how to fix it. 
 
