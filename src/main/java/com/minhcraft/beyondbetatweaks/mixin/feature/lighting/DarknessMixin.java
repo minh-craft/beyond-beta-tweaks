@@ -1,11 +1,14 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.lighting;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import grondag.darkness.Darkness;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.dimension.DimensionType;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -17,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(Darkness.class)
+@Mixin(value = Darkness.class, priority = 1500)
 public abstract class DarknessMixin {
 
     @Shadow @Final private static float[][] LUMINANCE;
@@ -40,6 +43,18 @@ public abstract class DarknessMixin {
             index = 1)
     private static float beyond_beta_tweaks$overrideBrightnessPercentage(float brightnessPercentage, @Local(argsOnly = true) Level world) {
         return CUSTOM_MOON_BRIGHTNESS_BY_PHASE[world.getMoonPhase()];
+    }
+
+    // Make sure that true darkness still applies in the End, even if skylight is enabled in the End for End flash lighting calculations
+    @WrapOperation(
+            method = "skyFactor",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/dimension/DimensionType;hasSkyLight()Z")
+    )
+    private static boolean test(DimensionType instance, Operation<Boolean> original, Level world) {
+        if (world.dimension() == Level.END) {
+            return false;
+        }
+        return original.call(instance);
     }
 
     @Inject(

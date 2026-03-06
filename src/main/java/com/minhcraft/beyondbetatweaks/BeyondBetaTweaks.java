@@ -45,7 +45,7 @@ public class BeyondBetaTweaks implements ModInitializer {
 		RecipeCustomSortingConfigLoader.loadConfig();
 		InnateEnchantmentConfig.loadConfig();
 		BiomeAlphaTintingConfigLoader.loadConfig();
-		BiomeAlphaTintingReloadListener.register();
+		BeyondBetaTweaksReloadListener.register();
 		MidnightConfig.init(MOD_ID, ModConfig.class);
 
 		FabricLoader

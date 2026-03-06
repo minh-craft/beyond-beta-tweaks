@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.space_dimension_end;
+package com.minhcraft.beyondbetatweaks.mixin.feature.end_dimension_space_sky;
 
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import org.spongepowered.asm.mixin.Mixin;

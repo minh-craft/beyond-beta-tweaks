@@ -59,6 +59,7 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Spawn eggs instead of chicken code adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
 - Ender Dragon removal code adapted from https://github.com/quat1024/apathy by [quat1024](https://github.com/quat1024)
+- End flash backport code adapted from https://github.com/Smallinger/Copper-Age-Backport by [Smallinger](https://github.com/Smallinger)
 
 ### Inspiration
 - End space/sky-dimension rendering of clouds, stars, sky and fog inspired by alternate End option from https://modrinth.com/resourcepack/golden-days by [@PoeticRainbow](https://github.com/PoeticRainbow)

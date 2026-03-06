@@ -1,3 +1,15 @@
+## v0.80.0
+
+### Added
+- End flash backport from https://github.com/Smallinger/Copper-Age-Backport by [Smallinger](https://github.com/Smallinger)
+  - Add skylight to the End for end flash lighting calculations
+  - End flash terrain lighting only affected by blocks visible to the sky
+- Add end terrain fog
+  - Make fog affect end gateway portal blocks
+- Added missing alpha biome shaders
+
+---
+
 ## v0.79.0
 
 ### Added

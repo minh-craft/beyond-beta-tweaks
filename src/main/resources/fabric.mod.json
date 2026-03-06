@@ -33,8 +33,19 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"midnightlib": "*"
+		"midnightlib": "*",
+		"archeryexp": "*",
+		"better_climbing": "*",
+		"brb": "*",
+		"cloud-layers": "*",
+		"nostalgic_tweaks": "*",
+		"supplementaries": "*"
 	},
 	"suggests": {
+	},
+	"custom": {
+		"patched": {
+			"format_version": 1
+		}
 	}
 }

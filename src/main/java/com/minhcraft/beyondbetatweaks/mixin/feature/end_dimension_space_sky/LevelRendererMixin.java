@@ -1,7 +1,9 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.space_dimension_end;
+package com.minhcraft.beyondbetatweaks.mixin.feature.end_dimension_space_sky;
 
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
+import com.minhcraft.beyondbetatweaks.util.EndFlashRenderer;
+import com.minhcraft.beyondbetatweaks.util.EndSkyColors;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Axis;
@@ -29,25 +31,25 @@ public abstract class LevelRendererMixin {
     @Unique private float[][] endStarData;
     @Unique private boolean endStarDataBuilt = false;
 
-    @Unique private static final float END_SKY_R;
-    @Unique private static final float END_SKY_G;
-    @Unique private static final float END_SKY_B;
+//    @Unique private static final float END_SKY_R;
+//    @Unique private static final float END_SKY_G;
+//    @Unique private static final float END_SKY_B;
+//
+//    @Unique private static final float END_FOG_R;
+//    @Unique private static final float END_FOG_G;
+//    @Unique private static final float END_FOG_B;
 
-    @Unique private static final float END_FOG_R;
-    @Unique private static final float END_FOG_G;
-    @Unique private static final float END_FOG_B;
-
-    static {
-        int skyColor = Integer.parseInt(ModConfig.endDimensionSkyColor.replace("#", ""), 16);
-        END_SKY_R = ((skyColor >> 16) & 0xFF) / 255.0f;
-        END_SKY_G = ((skyColor >> 8) & 0xFF) / 255.0f;
-        END_SKY_B = (skyColor & 0xFF) / 255.0f;
-
-        int fogColor = Integer.parseInt(ModConfig.endDimensionFogColor.replace("#", ""), 16);
-        END_FOG_R = ((fogColor >> 16) & 0xFF) / 255.0f;
-        END_FOG_G = ((fogColor >> 8) & 0xFF) / 255.0f;
-        END_FOG_B = (fogColor & 0xFF) / 255.0f;
-    }
+//    static {
+//        int skyColor = Integer.parseInt(ModConfig.endDimensionSkyColor.replace("#", ""), 16);
+//        END_SKY_R = ((skyColor >> 16) & 0xFF) / 255.0f;
+//        END_SKY_G = ((skyColor >> 8) & 0xFF) / 255.0f;
+//        END_SKY_B = (skyColor & 0xFF) / 255.0f;
+//
+//        int fogColor = Integer.parseInt(ModConfig.endDimensionFogColor.replace("#", ""), 16);
+//        END_FOG_R = ((fogColor >> 16) & 0xFF) / 255.0f;
+//        END_FOG_G = ((fogColor >> 8) & 0xFF) / 255.0f;
+//        END_FOG_B = (fogColor & 0xFF) / 255.0f;
+//    }
 
 
     // ─── SKY RENDERING ──────────────────────────────────────────────────
@@ -79,7 +81,7 @@ public abstract class LevelRendererMixin {
 
         // Lower hemisphere first (drawn behind): sky color
         // Extends up to y=+2 (slightly above horizon)
-        RenderSystem.setShaderColor(END_SKY_R, END_SKY_G, END_SKY_B, 1.0f);
+        RenderSystem.setShaderColor(EndSkyColors.SKY_R, EndSkyColors.SKY_G, EndSkyColors.SKY_B, 1.0f);
         RenderSystem.setShader(GameRenderer::getPositionShader);
 
         builder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION);
@@ -92,7 +94,7 @@ public abstract class LevelRendererMixin {
 
         // Upper hemisphere (drawn on top, overlapping): fog color
         // Extends down to y=-2 (slightly below horizon)
-        RenderSystem.setShaderColor(END_FOG_R, END_FOG_G, END_FOG_B, 1.0f);
+        RenderSystem.setShaderColor(EndSkyColors.FOG_UPPER_R, EndSkyColors.FOG_UPPER_G, EndSkyColors.FOG_UPPER_B, 1.0f);
 
         builder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION);
         builder.vertex(matrix, 0.0f, 48.0f, 0.0f).endVertex();
@@ -112,6 +114,9 @@ public abstract class LevelRendererMixin {
         // ── Step 3: Horizon gradient ──
         // Drawn AFTER stars so it overlays on top, naturally hiding stars near the horizon
         beyond_beta_tweaks$renderHorizonGradient(poseStack);
+
+        // ── Step 4: End Flash ──
+        EndFlashRenderer.render(poseStack);
 
         RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
         RenderSystem.depthMask(true);
@@ -179,9 +184,9 @@ public abstract class LevelRendererMixin {
 
                 // Overlay SKY color instead of fog color
                 builder.vertex(matrix, cosA * rBot, yBot, sinA * rBot)
-                        .color(END_SKY_R, END_SKY_G, END_SKY_B, alphaBot).endVertex();
+                        .color(EndSkyColors.SKY_R, EndSkyColors.SKY_G, EndSkyColors.SKY_B, alphaBot).endVertex();
                 builder.vertex(matrix, cosA * rTop, yTop, sinA * rTop)
-                        .color(END_SKY_R, END_SKY_G, END_SKY_B, alphaTop).endVertex();
+                        .color(EndSkyColors.SKY_R, EndSkyColors.SKY_G, EndSkyColors.SKY_B, alphaTop).endVertex();
             }
 
             BufferUploader.drawWithShader(builder.end());
@@ -351,7 +356,7 @@ public abstract class LevelRendererMixin {
                                   GameRenderer gameRenderer, LightTexture lightTexture,
                                   Matrix4f projectionMatrix, CallbackInfo ci) {
         if (this.level != null && this.level.dimension() == Level.END) {
-            RenderSystem.setShaderFogColor(END_FOG_R, END_FOG_G, END_FOG_B, 1.0f);
+            RenderSystem.setShaderFogColor(EndSkyColors.FOG_R, EndSkyColors.FOG_G, EndSkyColors.FOG_B, 1.0f);
         }
     }
 

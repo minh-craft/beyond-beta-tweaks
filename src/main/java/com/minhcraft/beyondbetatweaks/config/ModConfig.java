@@ -283,6 +283,9 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static String endDimensionFogColor = "#12121f";
 
+    @Entry
+    public static String endDimensionFogUpperColor = "#1c1626";
+
     @Entry(isSlider = true, min=-20.0, max=20.0, precision = 1)
     public static double endDimensionStarFadeTopAngle = 3;
 
@@ -301,4 +304,36 @@ public class ModConfig extends MidnightConfig {
     @Entry
     public static boolean allowVanillaCloudsToCoexistWithCloudLayersClouds = true;
 
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float endFlashLightingIntensity = 0.4F;
+
+    @Entry(min=0, max=255)
+    public static int endFlashLightRed = 43;
+
+    @Entry(min=0, max=255)
+    public static int endFlashLightGreen = 32;
+
+    @Entry(min=0, max=255)
+    public static int endFlashLightBlue = 46;
+
+    @Entry(min=0)
+    public static int endFlashMinimumDelayInTicks = 100;
+
+    @Entry(min=0)
+    public static int endFlashMaximumDelayInTicks = 600;
+
+    @Entry(isSlider = true, min = -90, max = 90)
+    public static int endFlashMinimumElevationAngle = -90;
+
+    @Entry(isSlider = true, min = -90, max = 90)
+    public static int endFlashMaximumElevationAngle = -70;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float endFlashVolume = 1.0F;
+
+    @Entry
+    public static boolean enableEndFog = true;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float endTerrainFogStart = 0.4F;
 }

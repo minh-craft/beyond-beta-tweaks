@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/has_skylight",
+    "value": true
+  },
+  {
+    "op": "replace",
+    "path": "/fixed_time",
+    "value": 6000
+  }
+ ]

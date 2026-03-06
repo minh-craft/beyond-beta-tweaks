@@ -1,7 +1,9 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.space_dimension_end;
+package com.minhcraft.beyondbetatweaks.mixin.feature.end_dimension_space_sky;
 
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
+import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.Camera;
 import org.spongepowered.asm.mixin.Mixin;
@@ -42,6 +44,23 @@ public abstract class FogRendererMixin {
             fogRed = END_FOG_R;
             fogGreen = END_FOG_G;
             fogBlue = END_FOG_B;
+        }
+    }
+
+    @Inject(method = "setupFog", at = @At("TAIL"))
+    private static void beyond_beta_tweaks$setupEndFog(Camera camera, FogRenderer.FogMode fogMode,
+                                           float renderDistance, boolean isFoggy,
+                                           float partialTick, CallbackInfo ci) {
+        if (!ModConfig.enableEndFog) return;
+
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.level.dimension() != Level.END) return;
+
+        if (fogMode == FogRenderer.FogMode.FOG_TERRAIN) {
+            float fogStart = renderDistance * ModConfig.endTerrainFogStart;
+            float fogEnd = renderDistance;
+            RenderSystem.setShaderFogStart(fogStart);
+            RenderSystem.setShaderFogEnd(fogEnd);
         }
     }
 }

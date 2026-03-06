@@ -4,6 +4,7 @@
   "subtitles.entity.giant.death": "Giant dies",
   "subtitles.entity.giant.hurt": "Giant hurts",
   "subtitles.entity.chicken.shed_feathers": "Chicken sheds feathers",
+  "subtitles.weather.end_flash": "End flashes",
   "painting.beyond-beta-tweaks.artist_and_kebab.author": "Kristoffer Zetterstrand",
   "painting.beyond-beta-tweaks.artist_and_kebab.title": "Artist and Kebab",
   "painting.beyond-beta-tweaks.cactus_bird.author": "Kristoffer Zetterstrand",
@@ -128,12 +129,22 @@
   "beyond-beta-tweaks.midnightconfig.endDimensionStarSizeVariation": "End Dimension Star Size Variation",
   "beyond-beta-tweaks.midnightconfig.endDimensionSkyColor": "End Dimension Sky Color",
   "beyond-beta-tweaks.midnightconfig.endDimensionFogColor": "End Dimension Fog Color",
+  "beyond-beta-tweaks.midnightconfig.endDimensionFogUpperColor": "End Dimension Fog Upper Color",
   "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeTopAngle": "End Dimension Star Fade Top Angle",
   "beyond-beta-tweaks.midnightconfig.endDimensionStarFadeBottomAngle": "End Dimension Star Fade Bottom Angle",
   "beyond-beta-tweaks.midnightconfig.firstTimeEndExitPortalFastForwardToTargetTime": "First Time End Exit Portal Fast Forward To Target Time",
   "beyond-beta-tweaks.midnightconfig.bedrockEggVegetationClearingHeight": "Bedrock Egg Vegetation Clearing Height",
   "beyond-beta-tweaks.midnightconfig.bedrockEggHeightScanningRadius": "Bedrock Egg Height Scanning Radius",
-  "beyond-beta-tweaks.midnightconfig.allowVanillaCloudsToCoexistWithCloudLayersClouds": "Allow Vanilla Clouds To Coexist With Cloud Layers Clouds"
-
-
+  "beyond-beta-tweaks.midnightconfig.allowVanillaCloudsToCoexistWithCloudLayersClouds": "Allow Vanilla Clouds To Coexist With Cloud Layers Clouds",
+  "beyond-beta-tweaks.midnightconfig.endFlashLightingIntensity": "End Flash Lighting Intensity",
+  "beyond-beta-tweaks.midnightconfig.endFlashLightRed": "End Flash Light Red",
+  "beyond-beta-tweaks.midnightconfig.endFlashLightGreen": "End Flash Light Green",
+  "beyond-beta-tweaks.midnightconfig.endFlashLightBlue": "End Flash Light Blue",
+  "beyond-beta-tweaks.midnightconfig.endFlashMinimumDelayInTicks": "End Flash Minimum Delay In Ticks",
+  "beyond-beta-tweaks.midnightconfig.endFlashMaximumDelayInTicks": "End Flash Maximum Delay In Ticks",
+  "beyond-beta-tweaks.midnightconfig.endFlashMinimumElevationAngle": "End Flash Minimum Elevation Angle",
+  "beyond-beta-tweaks.midnightconfig.endFlashMaximumElevationAngle": "End Flash Maximum Elevation Angle",
+  "beyond-beta-tweaks.midnightconfig.endFlashVolume": "End Flash Volume",
+  "beyond-beta-tweaks.midnightconfig.enableEndFog": "Enable End Fog",
+  "beyond-beta-tweaks.midnightconfig.endTerrainFogStart": "End Terrain Fog Start"
 }

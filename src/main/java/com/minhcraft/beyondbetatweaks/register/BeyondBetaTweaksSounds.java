@@ -11,6 +11,7 @@ public class BeyondBetaTweaksSounds {
     public static SoundEvent GIANT_HURT = register("entity.giant.hurt");
     public static SoundEvent GIANT_AMBIENT = register("entity.giant.ambient");
     public static SoundEvent CHICKEN_SHED_FEATHERS = register("entity.chicken.shed_feathers");
+    public static SoundEvent WEATHER_END_FLASH = register("weather.end_flash");
 
     public static void init() {
     }
