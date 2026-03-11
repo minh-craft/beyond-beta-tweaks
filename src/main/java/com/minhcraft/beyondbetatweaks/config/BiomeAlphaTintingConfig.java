@@ -8,7 +8,7 @@ import java.util.Map;
 public final class BiomeAlphaTintingConfig {
 
     @SerializedName("defaultBiomeAlphaTintingFactor")
-    private final float defaultBiomeAlphaTintingFactor = 0.0f;
+    private float defaultBiomeAlphaTintingFactor = 0.0f;
 
     @SerializedName("biomeAlphaTintingFactor")
     private final Map<String, Float> biomeAlphaTintingFactor = new LinkedHashMap<>();
@@ -17,7 +17,7 @@ public final class BiomeAlphaTintingConfig {
     private final Map<String, Float> blockAlphaTintingFactor = new LinkedHashMap<>();
 
     @SerializedName("defaultBlockAlphaTintingFactor")
-    private final float defaultBlockAlphaTintingFactor = 0.0f;
+    private float defaultBlockAlphaTintingFactor = 0.0f;
 
     public BiomeAlphaTintingConfig() {
         // Default biome configuration

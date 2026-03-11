@@ -1,3 +1,10 @@
+## v0.82.0
+
+### Added
+- Add config options to reduce the level of ambient occlusion applied to leaves
+
+---
+
 ## v0.81.0
 
 ### Added

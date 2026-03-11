@@ -345,4 +345,7 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0.0F, max=1.0F)
     public static float netherLightmapSmoothingFactor = 0.5F;
+
+    @Entry
+    public static boolean enableReducedLeavesAmbientOcclusion = true;
 }

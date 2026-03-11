@@ -22,8 +22,9 @@ public class BeyondBetaTweaksReloadListener implements SimpleSynchronousResource
 
     @Override
     public void onResourceManagerReload(@NotNull ResourceManager resourceManager) {
-        BeyondBetaTweaks.LOGGER.info("Reloading biome alpha tinting config and end sky colors...");
+        BeyondBetaTweaks.LOGGER.info("Reloading biome alpha tinting, leaves ambient occlusion, and end sky colors...");
         BiomeAlphaTintingConfigLoader.loadConfig();
+        LeavesAmbientOcclusionConfigLoader.loadConfig();
         EndSkyColors.reload();
 
         // Force all chunks to re-mesh with the new config
