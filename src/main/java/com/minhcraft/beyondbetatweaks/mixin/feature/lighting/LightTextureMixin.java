@@ -142,5 +142,59 @@ public abstract class LightTextureMixin {
                 }
             }
         }
+        // Nether dimension lightmap fix and true darkness scaling
+        else if (level.dimension() == Level.NETHER && ModConfig.enableTrueDarknessNetherLightingAdjustments) {
+            for (int sky = 0; sky < 16; sky++) {
+                int darkPixel = this.lightPixels.getPixelRGBA(0, sky);
+                int brightPixel = this.lightPixels.getPixelRGBA(15, sky);
+
+                int darkR = darkPixel & 0xFF;
+                int darkG = (darkPixel >> 8) & 0xFF;
+                int darkB = (darkPixel >> 16) & 0xFF;
+
+                int brightR = brightPixel & 0xFF;
+                int brightG = (brightPixel >> 8) & 0xFF;
+                int brightB = (brightPixel >> 16) & 0xFF;
+
+                int ambientLevel = Math.round(ModConfig.netherDimensionTrueDarknessLevel * 40.0f);
+                darkR = Math.max(darkR, ambientLevel);
+                darkG = Math.max(darkG, ambientLevel);
+                darkB = Math.max(darkB, ambientLevel);
+
+                this.lightPixels.setPixelRGBA(0, sky,
+                        0xFF000000 | (darkB << 16) | (darkG << 8) | darkR);
+
+                for (int block = 1; block < 15; block++) {
+                    int curr = this.lightPixels.getPixelRGBA(block, sky);
+                    int currR = curr & 0xFF;
+                    int currG = (curr >> 8) & 0xFF;
+                    int currB = (curr >> 16) & 0xFF;
+
+                    if (ModConfig.netherLightmapSmoothingFactor > 0.0f) {
+                        float t = block / 15.0f;
+                        t = t * t;
+
+                        int lerpR = (int)(darkR + (brightR - darkR) * t);
+                        int lerpG = (int)(darkG + (brightG - darkG) * t);
+                        int lerpB = (int)(darkB + (brightB - darkB) * t);
+
+                        currR = Math.round(currR * (1 - ModConfig.netherLightmapSmoothingFactor) + lerpR * ModConfig.netherLightmapSmoothingFactor);
+                        currG = Math.round(currG * (1 - ModConfig.netherLightmapSmoothingFactor) + lerpG * ModConfig.netherLightmapSmoothingFactor);
+                        currB = Math.round(currB * (1 - ModConfig.netherLightmapSmoothingFactor) + lerpB * ModConfig.netherLightmapSmoothingFactor);
+                    }
+
+                    currR = Math.max(currR, darkR);
+                    currG = Math.max(currG, darkG);
+                    currB = Math.max(currB, darkB);
+
+                    currR = Mth.clamp(currR, 0, 255);
+                    currG = Mth.clamp(currG, 0, 255);
+                    currB = Mth.clamp(currB, 0, 255);
+
+                    this.lightPixels.setPixelRGBA(block, sky,
+                            0xFF000000 | (currB << 16) | (currG << 8) | currR);
+                }
+            }
+        }
     }
 }

@@ -1,3 +1,10 @@
+## v0.81.0
+
+### Added
+- Add config options to adjust nether lighting true darkness level and to make the lightmap a clear gradient
+
+---
+
 ## v0.80.0
 
 ### Added

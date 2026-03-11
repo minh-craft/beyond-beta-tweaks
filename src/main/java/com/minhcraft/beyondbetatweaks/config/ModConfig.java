@@ -336,4 +336,13 @@ public class ModConfig extends MidnightConfig {
 
     @Entry(isSlider = true, min=0.0F, max=1.0F)
     public static float endTerrainFogStart = 0.4F;
+
+    @Entry
+    public static boolean enableTrueDarknessNetherLightingAdjustments = true;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float netherDimensionTrueDarknessLevel = 1.0F;
+
+    @Entry(isSlider = true, min=0.0F, max=1.0F)
+    public static float netherLightmapSmoothingFactor = 0.5F;
 }

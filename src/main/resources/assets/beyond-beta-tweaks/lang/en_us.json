@@ -146,5 +146,8 @@
   "beyond-beta-tweaks.midnightconfig.endFlashMaximumElevationAngle": "End Flash Maximum Elevation Angle",
   "beyond-beta-tweaks.midnightconfig.endFlashVolume": "End Flash Volume",
   "beyond-beta-tweaks.midnightconfig.enableEndFog": "Enable End Fog",
-  "beyond-beta-tweaks.midnightconfig.endTerrainFogStart": "End Terrain Fog Start"
+  "beyond-beta-tweaks.midnightconfig.endTerrainFogStart": "End Terrain Fog Start",
+  "beyond-beta-tweaks.midnightconfig.enableTrueDarknessNetherLightingAdjustments": "Enable True Darkness Nether Lighting Adjustments",
+  "beyond-beta-tweaks.midnightconfig.netherDimensionTrueDarknessLevel": "Nether Dimension True Darkness Level",
+  "beyond-beta-tweaks.midnightconfig.netherLightmapSmoothingFactor": "Nether Lightmap Smoothing Factor"
 }
