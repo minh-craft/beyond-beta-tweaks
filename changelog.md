@@ -1,3 +1,10 @@
+## v0.83.0
+
+### Changed
+- Updated ravine fluid logic to fix underwater air bubbles and caves carving through lava ravines 
+
+---
+
 ## v0.82.0
 
 ### Added
