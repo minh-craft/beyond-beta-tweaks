@@ -1,5 +1,6 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.lush_caves_no_lava;
+package com.minhcraft.beyondbetatweaks.mixin.feature.cave_biomes_no_lava;
 
+import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.QuartPos;
@@ -21,7 +22,7 @@ public abstract class ProtoChunkMixin {
             ordinal = 0,
             argsOnly = true
     )
-    private BlockState beyond_beta_tweaks$replaceLushCavesLavaWithWater(BlockState state, BlockPos pos) {
+    private BlockState beyond_beta_tweaks$replaceCaveBiomeLavaWithWater(BlockState state, BlockPos pos) {
         if (state.is(Blocks.LAVA)) {
             try {
                 ProtoChunk self = (ProtoChunk) (Object) this;
@@ -30,7 +31,12 @@ public abstract class ProtoChunkMixin {
                         QuartPos.fromBlock(pos.getY()),
                         QuartPos.fromBlock(pos.getZ())
                 );
-                if (biome.is(Biomes.LUSH_CAVES)) {
+
+                boolean isLushCaves = biome.is(Biomes.LUSH_CAVES);
+                boolean isDripstoneCaves = biome.is(Biomes.DRIPSTONE_CAVES)
+                        && pos.getY() <= ModConfig.overworldLavaLevel; // only replace deep lava lakes with water in dripstone caves, instead of replacing all lava
+
+                if (isLushCaves || isDripstoneCaves) {
                     // Preserve fluid level if it's flowing lava
                     if (state.getFluidState().isSource()) {
                         return Blocks.WATER.defaultBlockState();

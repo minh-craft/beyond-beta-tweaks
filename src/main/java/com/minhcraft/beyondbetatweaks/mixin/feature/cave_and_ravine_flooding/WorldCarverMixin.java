@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.world;
+package com.minhcraft.beyondbetatweaks.mixin.feature.cave_and_ravine_flooding;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Blocks;

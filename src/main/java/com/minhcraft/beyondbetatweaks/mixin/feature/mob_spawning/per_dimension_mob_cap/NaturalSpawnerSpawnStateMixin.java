@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.world;
+package com.minhcraft.beyondbetatweaks.mixin.feature.mob_spawning.per_dimension_mob_cap;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

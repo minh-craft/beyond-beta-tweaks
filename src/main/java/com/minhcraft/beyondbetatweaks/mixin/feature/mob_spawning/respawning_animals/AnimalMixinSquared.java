@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.respawning_animals;
+package com.minhcraft.beyondbetatweaks.mixin.feature.mob_spawning.respawning_animals;
 
 import com.bawnorton.mixinsquared.TargetHandler;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;

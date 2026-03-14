@@ -1,3 +1,16 @@
+## v0.84.0
+
+### Added
+- Replace deep lava lakes in dripstone caves with water
+- Added config to adjust overworld lava level (cave carver lava level need to be updated separately)
+  - By default, lava level moved to -53 instead of -54
+- Add config option to adjust glow lichen light level - both when exposed to air and when waterlogged
+
+### Changed
+- Update cave biome lava-to-water replacement logic to have block-level biome granularity instead of chunk-level
+
+---
+
 ## v0.83.0
 
 ### Changed

@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.ravine_flooding;
+package com.minhcraft.beyondbetatweaks.mixin.feature.cave_and_ravine_flooding;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;

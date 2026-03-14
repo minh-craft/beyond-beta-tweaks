@@ -1,8 +1,8 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.lush_caves_no_lava;
+package com.minhcraft.beyondbetatweaks.mixin.feature.cave_biomes_no_lava;
 
+import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.QuartPos;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.StructureManager;
@@ -32,7 +32,7 @@ import java.util.Set;
 public abstract class NoiseBasedChunkGeneratorMixin {
 
     @Unique
-    private static void processChunkReplaceLavaWithWater(ChunkAccess chunk) {
+    private static void processChunkReplaceLavaWithWater(ChunkAccess chunk, BiomeManager biomeManager) {
         ChunkPos chunkPos = chunk.getPos();
         int chunkMinX = chunkPos.getMinBlockX();
         int chunkMinZ = chunkPos.getMinBlockZ();
@@ -41,7 +41,7 @@ public abstract class NoiseBasedChunkGeneratorMixin {
         int worldMinY = chunk.getMinBuildHeight();
         int worldMaxY = chunk.getMaxBuildHeight() - 1;
 
-        // ── Pass 1: Replace all lava in lush caves with water ──
+        // ── Pass 1: Replace all lava in lush caves and dripstone caves with water ──
 
         Set<Long> replacedPositions = new HashSet<>();
 
@@ -61,13 +61,13 @@ public abstract class NoiseBasedChunkGeneratorMixin {
                         int wy = baseY + ly;
                         int wz = chunkMinZ + lz;
 
-                        Holder<Biome> biome = chunk.getNoiseBiome(
-                                QuartPos.fromBlock(wx),
-                                QuartPos.fromBlock(wy),
-                                QuartPos.fromBlock(wz)
-                        );
+                        Holder<Biome> biome = biomeManager.getBiome(new BlockPos(wx, wy, wz));
 
-                        if (biome.is(Biomes.LUSH_CAVES)) {
+                        boolean isLushCaves = biome.is(Biomes.LUSH_CAVES);
+                        boolean isDripstoneCaves = biome.is(Biomes.DRIPSTONE_CAVES)
+                                && wy <= ModConfig.overworldLavaLevel; // only replace deep lava lakes with water in dripstone caves, instead of replacing all lava
+
+                        if (isLushCaves || isDripstoneCaves) {
                             if (state.getFluidState().isSource()) {
                                 section.setBlockState(lx, ly, lz,
                                         Blocks.WATER.defaultBlockState(), false);
@@ -197,6 +197,6 @@ public abstract class NoiseBasedChunkGeneratorMixin {
             Blender blender,
             CallbackInfo ci
     ) {
-        processChunkReplaceLavaWithWater(chunk);
+        processChunkReplaceLavaWithWater(chunk, biomeManager);
     }
 }

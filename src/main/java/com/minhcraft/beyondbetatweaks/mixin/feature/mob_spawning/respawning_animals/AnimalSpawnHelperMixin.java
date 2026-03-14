@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.mixin.feature.respawning_animals;
+package com.minhcraft.beyondbetatweaks.mixin.feature.mob_spawning.respawning_animals;
 
 import com.minhcraft.beyondbetatweaks.config.ModConfig;
 import mod.adrenix.nostalgic.helper.gameplay.AnimalSpawnHelper;

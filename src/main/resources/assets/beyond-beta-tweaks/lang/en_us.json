@@ -150,6 +150,9 @@
   "beyond-beta-tweaks.midnightconfig.enableTrueDarknessNetherLightingAdjustments": "Enable True Darkness Nether Lighting Adjustments",
   "beyond-beta-tweaks.midnightconfig.netherDimensionTrueDarknessLevel": "Nether Dimension True Darkness Level",
   "beyond-beta-tweaks.midnightconfig.netherLightmapSmoothingFactor": "Nether Lightmap Smoothing Factor",
-  "beyond-beta-tweaks.midnightconfig.enableReducedLeavesAmbientOcclusion": "Enable Reduced Leaves Ambient Occlusion"
+  "beyond-beta-tweaks.midnightconfig.enableReducedLeavesAmbientOcclusion": "Enable Reduced Leaves Ambient Occlusion",
+  "beyond-beta-tweaks.midnightconfig.overworldLavaLevel": "overworldLavaLevel",
+  "beyond-beta-tweaks.midnightconfig.glowLichenAirExposedLight": "glowLichenAirExposedLight",
+  "beyond-beta-tweaks.midnightconfig.glowLichenUnderwaterLight": "glowLichenUnderwaterLight"
 
 }

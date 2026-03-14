@@ -348,4 +348,13 @@ public class ModConfig extends MidnightConfig {
 
     @Entry
     public static boolean enableReducedLeavesAmbientOcclusion = true;
+
+    @Entry(isSlider = true, min = -64, max = -40)
+    public static int overworldLavaLevel = -53;
+
+    @Entry(isSlider = true, min = 0, max = 15)
+    public static int glowLichenAirExposedLight = 7;
+
+    @Entry(isSlider = true, min = 0, max = 15)
+    public static int glowLichenUnderwaterLight = 12;
 }
