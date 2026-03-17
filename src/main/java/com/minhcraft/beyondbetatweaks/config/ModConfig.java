@@ -181,7 +181,7 @@ public class ModConfig extends MidnightConfig {
     @Entry(isSlider = true, min=0d, max=0.3375d, precision = 1000)
     public static double horseMovementSpeed = 0.16;
 
-    @Entry(isSlider = true, min=512.0, max=1024.0, precision = 1)
+    @Entry(isSlider = true, min=200.0, max=1024.0, precision = 1)
     public static double endGatewayTeleportDistance = 1024.0;
 
     @Entry

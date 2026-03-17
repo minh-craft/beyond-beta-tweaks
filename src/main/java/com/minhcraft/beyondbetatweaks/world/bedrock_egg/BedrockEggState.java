@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.world;
+package com.minhcraft.beyondbetatweaks.world.bedrock_egg;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;

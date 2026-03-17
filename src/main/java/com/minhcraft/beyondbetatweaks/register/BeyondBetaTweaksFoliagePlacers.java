@@ -1,7 +1,7 @@
 package com.minhcraft.beyondbetatweaks.register;
 
 import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
-import com.minhcraft.beyondbetatweaks.world.MessySpruceFoliagePlacer;
+import com.minhcraft.beyondbetatweaks.world.tree.MessySpruceFoliagePlacer;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

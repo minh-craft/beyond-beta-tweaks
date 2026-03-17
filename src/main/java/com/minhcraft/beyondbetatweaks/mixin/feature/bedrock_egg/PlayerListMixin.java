@@ -1,6 +1,6 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.bedrock_egg;
 
-import com.minhcraft.beyondbetatweaks.world.BedrockEggState;
+import com.minhcraft.beyondbetatweaks.world.bedrock_egg.BedrockEggState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;

@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.world;
+package com.minhcraft.beyondbetatweaks.world.bedrock_egg;
 
 import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
 import com.minhcraft.beyondbetatweaks.config.ModConfig;

@@ -55,6 +55,7 @@
     "feature.animal_breeding.FoxBreedGoalMixin",
     "feature.animal_breeding.PigMixin",
     "feature.animal_breeding.ThrownEggMixin",
+    "feature.baobab_tree.AcaciaTreeGrowerMixin",
     "feature.bedrock_egg.EndPodiumFeatureMixin",
     "feature.bedrock_egg.EndPortalBlockMixin",
     "feature.bedrock_egg.PlayerListMixin",

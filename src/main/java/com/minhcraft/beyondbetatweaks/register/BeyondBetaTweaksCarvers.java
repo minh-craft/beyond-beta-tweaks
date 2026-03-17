@@ -1,8 +1,8 @@
 package com.minhcraft.beyondbetatweaks.register;
 
 import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
-import com.minhcraft.beyondbetatweaks.world.BetaCaveCarverConfiguration;
-import com.minhcraft.beyondbetatweaks.world.BetaCaveWorldCarver;
+import com.minhcraft.beyondbetatweaks.world.cave.BetaCaveCarverConfiguration;
+import com.minhcraft.beyondbetatweaks.world.cave.BetaCaveWorldCarver;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;

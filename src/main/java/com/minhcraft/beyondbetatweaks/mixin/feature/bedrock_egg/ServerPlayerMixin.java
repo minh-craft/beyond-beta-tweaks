@@ -1,6 +1,6 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.bedrock_egg;
 
-import com.minhcraft.beyondbetatweaks.world.BedrockEggBuilder;
+import com.minhcraft.beyondbetatweaks.world.bedrock_egg.BedrockEggBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,7 +21,7 @@ public abstract class ServerPlayerMixin {
         double pz = self.getZ();
 
         // Check if the player is within the egg's footprint
-        int eggRadius = BedrockEggBuilder.SCAN_RADIUS + 1; // +1 for safety margin
+        int eggRadius = BedrockEggBuilder.SCAN_RADIUS + 2; // +2 so the player doesn't spawn in leaves that might be destroyed by the egg
         if (Math.abs(px) > eggRadius || Math.abs(pz) > eggRadius) {
             return; // Already outside the egg area
         }

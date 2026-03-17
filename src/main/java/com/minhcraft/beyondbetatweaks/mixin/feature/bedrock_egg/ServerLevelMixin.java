@@ -1,8 +1,8 @@
 package com.minhcraft.beyondbetatweaks.mixin.feature.bedrock_egg;
 
 import com.minhcraft.beyondbetatweaks.BeyondBetaTweaks;
-import com.minhcraft.beyondbetatweaks.world.BedrockEggBuilder;
-import com.minhcraft.beyondbetatweaks.world.BedrockEggState;
+import com.minhcraft.beyondbetatweaks.world.bedrock_egg.BedrockEggBuilder;
+import com.minhcraft.beyondbetatweaks.world.bedrock_egg.BedrockEggState;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;

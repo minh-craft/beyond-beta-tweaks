@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.world;
+package com.minhcraft.beyondbetatweaks.world.cave;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;

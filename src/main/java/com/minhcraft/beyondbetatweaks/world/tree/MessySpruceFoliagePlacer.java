@@ -1,4 +1,4 @@
-package com.minhcraft.beyondbetatweaks.world;
+package com.minhcraft.beyondbetatweaks.world.tree;
 
 import com.minhcraft.beyondbetatweaks.register.BeyondBetaTweaksFoliagePlacers;
 import com.mojang.serialization.Codec;

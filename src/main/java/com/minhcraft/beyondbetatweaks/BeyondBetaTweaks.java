@@ -39,6 +39,7 @@ public class BeyondBetaTweaks implements ModInitializer {
 		BeyondBetaTweaksItems.init();
 		BeyondBetaTweaksRegistry.init();
 		BeyondBetaTweaksFoliagePlacers.init();
+		BeyondBetaTweaksTrunkPlacerTypes.init();
 		BeyondBetaTweaksCarvers.register();
 
 		ModNetworking.registerServerReceivers();
