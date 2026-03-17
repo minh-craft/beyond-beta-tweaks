@@ -1,3 +1,14 @@
+## v0.85.0
+
+### Added
+- Add boabab tree trunk placer. 2x2 acacia saplings grow into a giant baobab tree
+- Add straight branched tree trunk placer. Straight tree trunk with one-block long horizontal branches placed a random distance below the top log
+
+### Changed
+- Increased player no-spawn radius around the bedrock egg. To make sure the player doesn't spawn on leaves that might be destroyed near the bedrock egg 
+
+---
+
 ## v0.84.0
 
 ### Added
