@@ -1,3 +1,10 @@
+## v0.85.1
+
+### Added
+- Removed boss fog to fix first moments entering the End where the dragon hasn't despawned yet and fog appears
+
+---
+
 ## v0.85.0
 
 ### Added

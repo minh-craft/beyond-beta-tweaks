@@ -152,6 +152,7 @@
     "compat_scholar.SpreadBookEditScreenMixin",
     "feature.book_tooltip_improvements.PlayerLookHelperMixin",
     "feature.cloud_layers_with_vanilla_clouds.WorldRendererMixinSquared",
+    "feature.end_dimension.BossHealthOverlayMixin",
     "feature.end_dimension_space_sky.ClientLevelMixin",
     "feature.end_dimension_space_sky.EndEffectsMixin",
     "feature.end_dimension_space_sky.FogRendererMixin",
