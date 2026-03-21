@@ -68,6 +68,7 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 
 #### Datapack
 - Rabbits don't take fall damage tweak from https://modrinth.com/datapack/rabbits-dont-take-fall-damage (CC-BY-4.0) by @dragon3025
+- Patches of nether wart that spawn on soul sand patches from https://modrinth.com/datapack/legacy-nether-extended (CC-BY-SA-4.0) by [@Pigzone00](https://codeberg.org/Pigzone00) and @Soupio777
 
 ### Inspiration
 - End space/sky-dimension themed rendering of clouds, stars, sky and fog inspired by alternate End option from https://modrinth.com/resourcepack/golden-days by [@PoeticRainbow](https://github.com/PoeticRainbow)

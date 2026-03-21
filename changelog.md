@@ -1,3 +1,10 @@
+## v0.88.0
+
+### Added
+- Added patches of nether wart that spawn on soul sand patches from https://modrinth.com/datapack/legacy-nether-extended by @Pigzone00 and @Soupio777
+
+---
+
 ## v0.87.0
 
 ### Changed

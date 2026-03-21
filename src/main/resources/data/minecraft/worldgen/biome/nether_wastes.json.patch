@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/features/7/-",
+    "value": "minecraft:patch_nether_wart"
+  }
+]
