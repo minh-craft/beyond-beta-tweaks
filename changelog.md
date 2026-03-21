@@ -1,3 +1,10 @@
+## v0.87.0
+
+### Changed
+- Updated mod license to LGPL-3.0 and CC-BY-NC-SA-4.0 to properly comply with open source code that was used from other mods
+
+---
+
 ## v0.86.0
 
 ### Added
