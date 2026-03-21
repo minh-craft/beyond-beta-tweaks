@@ -1,16 +1,14 @@
 package com.minhcraft.beyondbetatweaks;
 
-import com.minhcraft.beyondbetatweaks.config.InnateEnchantmentConfig;
-import com.minhcraft.beyondbetatweaks.config.ModConfig;
-import com.minhcraft.beyondbetatweaks.config.RecipeCustomSortingConfigLoader;
+import com.minhcraft.beyondbetatweaks.config.*;
 import com.minhcraft.beyondbetatweaks.network.ModNetworking;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaItems;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaRegistry;
-import com.minhcraft.beyondbetatweaks.register.BeyondBetaSounds;
-import com.minhcraft.beyondbetatweaks.world.BeyondBetaCarvers;
+import com.minhcraft.beyondbetatweaks.register.*;
 import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,15 +35,27 @@ public class BeyondBetaTweaks implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing Beyond Beta Tweaks");
-		BeyondBetaSounds.init();
-		BeyondBetaItems.init();
-		BeyondBetaRegistry.init();
-		BeyondBetaCarvers.register();
+		BeyondBetaTweaksSounds.init();
+		BeyondBetaTweaksItems.init();
+		BeyondBetaTweaksRegistry.init();
+		BeyondBetaTweaksFoliagePlacers.init();
+		BeyondBetaTweaksTrunkPlacerTypes.init();
+		BeyondBetaTweaksCarvers.register();
 
 		ModNetworking.registerServerReceivers();
 		RecipeCustomSortingConfigLoader.loadConfig();
 		InnateEnchantmentConfig.loadConfig();
+		BiomeAlphaTintingConfigLoader.loadConfig();
+		BeyondBetaTweaksReloadListener.register();
 		MidnightConfig.init(MOD_ID, ModConfig.class);
+
+		FabricLoader
+				.getInstance()
+				.getModContainer(MOD_ID)
+				.ifPresent(
+						modContainer ->
+								ResourceManagerHelper.registerBuiltinResourcePack(BeyondBetaTweaks.id(MOD_ID), modContainer, ResourcePackActivationType.ALWAYS_ENABLED));
+
 	}
 
 	public static ResourceLocation id(String id) {

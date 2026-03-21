@@ -134,7 +134,7 @@ dependencies {
 
 	// Fog Compatibility
 	modCompileOnly "maven.modrinth:fog:$project.fog_version"
-	modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
+	modCompileOnly "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 //	modRuntimeOnly "maven.modrinth:mru:$project.mru_version"
 
 	// Map Atlases Compatibility
@@ -145,9 +145,20 @@ dependencies {
 
 	// Embeddium Compatibility
 	modCompileOnly "maven.modrinth:embeddium:$project.embeddium_version"
+	// Sodium Shader Support - needed for alpha grass tinting, requires fabric_loader_dependencies.json override to work with Embeddium
+//	modRuntimeOnly "maven.modrinth:sodium-shader-support:$project.sodium_shader_support_version"
 
 	// Trinkets Compatibility
 	modImplementation "maven.modrinth:trinkets:$project.trinkets_version"
+
+	// Extra Boats Compatibility
+	modImplementation "maven.modrinth:extra-boats:$project.extra_boats_version"
+
+	// Charm Forked Compatibility
+	modCompileOnly "maven.modrinth:charm-forked:$project.charm_forked_version"
+
+	// Chiseled Bookshelf Visualizer Compatibility
+	modCompileOnly "maven.modrinth:chiseled-bookshelf-visualizer:$project.chiseled_bookshelf_visualizer_version"
 
 	// Reach Entity Attributes - for adjusting entity attack range
 	include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
@@ -156,11 +167,19 @@ dependencies {
 	modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version}")
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
+	// Supplementaries compatibility
     modImplementation "curse.maven:supplementaries-412082:7431872"
     modImplementation "curse.maven:selene-499980:7494448"
 
+	// Scholar compatibility
     modImplementation "curse.maven:scholar-961802:7396149"
     modImplementation "curse.maven:forge-config-api-port-547434:7260491"
+
+	// Patched compatibility
+	modImplementation "maven.modrinth:patched:${project.patched_version}"
+
+	// For local testing //////////////////////////
+	modRuntimeOnly "maven.modrinth:cubes-without-borders:3.0.0+1.20"
 }
 
 processResources {

@@ -30,5 +30,18 @@
       "minecraft:mob/parrot/fly4"
     ],
     "subtitle": "subtitles.entity.chicken.shed_feathers"
+  },
+  "weather.end_flash": {
+    "subtitle": "subtitles.weather.end_flash",
+    "sounds": [
+      "beyond-beta-tweaks:ambient/weather/end_flash1",
+      "beyond-beta-tweaks:ambient/weather/end_flash2",
+      "beyond-beta-tweaks:ambient/weather/end_flash3",
+      "beyond-beta-tweaks:ambient/weather/end_flash4",
+      "beyond-beta-tweaks:ambient/weather/end_flash5",
+      "beyond-beta-tweaks:ambient/weather/end_flash6",
+      "beyond-beta-tweaks:ambient/weather/end_flash7",
+      "beyond-beta-tweaks:ambient/weather/end_flash8"
+    ]
   }
 }

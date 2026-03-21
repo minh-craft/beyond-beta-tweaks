@@ -40,7 +40,7 @@
       }
     },
     "lava_level": {
-      "above_bottom": 9
+      "above_bottom": 10
     },
     "probability": 0.15,
     "replaceable": "#beyond-beta-tweaks:overworld_carver_replaceables",

@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(LightTextureHelper.class)
+@Mixin(value = LightTextureHelper.class, priority = 1500)
 public abstract class LightTextureHelperMixin {
 
     @Shadow

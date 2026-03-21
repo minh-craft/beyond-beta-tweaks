@@ -3,8 +3,24 @@
 Various tweaks for the Beyond Beta modpack.
 See [changelog](changelog.md) for full list of features.
 
+Biome alpha tinting feature requires Embeddium and https://modrinth.com/mod/sodium-shader-support to work. 
+For compatibility with Embeddium, Sodium Shader Support's fabric loader dependency on sodium needs to be overridden. 
+- `config/fabric_loader_dependencies.json`
+```
+{
+  "version": 1,
+  "overrides": {
+    "sodiumss": {
+      "-depends": {
+        "sodium": "IGNORED"
+      }
+    }
+  }
+}
+```
+
 ### Dev note:
-When running the mod in the IDE, time doesn't pass for some reason. This isn't a problem when the mod is compiled. I've narrowed this down to including the owo lib dependency in build.gradle, needed for True Darkness compatibility. I don't really know why though or how to fix it.
+When running the mod in the IDE, time doesn't pass for some reason. This isn't a problem when the mod is compiled. I've narrowed this down to including the owo lib dependency in build.gradle, needed for True Darkness compatibility. I don't really know why though or how to fix it. 
 
 ---
 
@@ -46,8 +62,15 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Spawn eggs instead of chicken code adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ (MIT) by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters (MPL 2.0) by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
 - Ender Dragon removal code adapted from https://github.com/quat1024/apathy (LGPL-3.0) by [quat1024](https://github.com/quat1024)
+- End flash backport code adapted from https://github.com/Smallinger/Copper-Age-Backport by [Smallinger](https://github.com/Smallinger)
+- Noise based chunk generator optimization code adapted from https://github.com/RelativityMC/C2ME-fabric by [@ishland](https://github.com/ishland)
+
+
 #### Datapack
 - Rabbits don't take fall damage tweak from https://modrinth.com/datapack/rabbits-dont-take-fall-damage (CC-BY-4.0) by @dragon3025
+
+### Inspiration
+- End space/sky-dimension themed rendering of clouds, stars, sky and fog inspired by alternate End option from https://modrinth.com/resourcepack/golden-days by [@PoeticRainbow](https://github.com/PoeticRainbow)
 
 ---
 ## License

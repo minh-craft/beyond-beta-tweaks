@@ -1,3 +1,223 @@
+## v0.86.0
+
+### Added
+- Added alternate flat lighting mode - minimum light. Calculates flat light using minimum light instead of average or maximum for darker shadows
+- Added overworld lightmap smoothing options
+- Organized mod settings screen into categories
+
+### Changed
+- Increased range of ambient occlusion level settings
+
+---
+
+## v0.85.1
+
+### Added
+- Removed boss fog to fix first moments entering the End where the dragon hasn't despawned yet and fog appears
+
+---
+
+## v0.85.0
+
+### Added
+- Add boabab tree trunk placer. 2x2 acacia saplings grow into a giant baobab tree
+- Add straight branched tree trunk placer. Straight tree trunk with one-block long horizontal branches placed a random distance below the top log
+
+### Changed
+- Increased player no-spawn radius around the bedrock egg. To make sure the player doesn't spawn on leaves that might be destroyed near the bedrock egg 
+
+---
+
+## v0.84.0
+
+### Added
+- Replace deep lava lakes in dripstone caves with water
+- Added config to adjust overworld lava level (cave carver lava level need to be updated separately)
+  - By default, lava level moved to -53 instead of -54
+- Add config option to adjust glow lichen light level - both when exposed to air and when waterlogged
+
+### Changed
+- Update cave biome lava-to-water replacement logic to have block-level biome granularity instead of chunk-level
+
+---
+
+## v0.83.0
+
+### Changed
+- Updated ravine fluid logic to fix underwater air bubbles and caves carving through lava ravines 
+
+---
+
+## v0.82.0
+
+### Added
+- Add config options to reduce the level of ambient occlusion applied to leaves
+
+---
+
+## v0.81.0
+
+### Added
+- Add config options to adjust nether lighting true darkness level and to make the lightmap a clear gradient
+
+---
+
+## v0.80.0
+
+### Added
+- End flash backport from https://github.com/Smallinger/Copper-Age-Backport by [Smallinger](https://github.com/Smallinger)
+  - Add skylight to the End for end flash lighting calculations
+  - End flash terrain lighting only affected by blocks visible to the sky
+- Add end terrain fog
+  - Make fog affect end gateway portal blocks
+- Added missing alpha biome shaders
+
+---
+
+## v0.79.0
+
+### Added
+- Add alpha style biome tinting - overlays biome tint color instead multiplying to allow for brighter grass and foliage colors
+  - Config file for configuring which biomes and blocks have alpha style biome tinting
+  - Requires Embeddium and https://modrinth.com/mod/sodium-shader-support to work 
+
+---
+
+## v0.78.0
+
+### Added
+- New messy spruce foliage placer - can define a chance to randomly remove leaf blocks from the widest foliage ring
+
+### Changed
+- Fixed bedrock egg generation 
+  - Check that all the necessary chunks are loaded before generating the egg.
+  - Force client sync of bedrock egg chunks after generation.
+
+---
+
+## v0.77.1
+
+### Changed
+- Increase max config value for End Dimension True Darkness Brightness Scaling 
+
+---
+
+## v0.77.0
+
+### Added
+- Add config option to allow vanilla clouds to co-exist with Cloud Layers clouds
+  - Because Cloud Layers vanilla-esque clouds don't look as good. Movement is glitchier and individual cloud blocks have visible boundary lines when not 100% opaque.
+- Make bedrock egg height level scan range configurable
+
+---
+
+## v0.76.0
+
+### Added
+- Generate a bedrock egg in the overworld at x,z=(0,0)
+  - Opens up to reveal an exit portal that goes to the end when the End exit portal is first used
+- Add config option to adjust the end sky star fade out angle 
+
+---
+
+## v0.75.1
+
+### Changed
+- Update stars to rotate vertically in the same way overworld night sky stars do
+- Make star size variance configurable
+
+---
+
+## v0.75.0
+
+### Added
+- Added config option to adjust true darkness level for the End
+- Fix lightmap in the end not being a linear gradient from light to dark
+- Remove old config option for end lighting that never worked
+
+---
+
+## v0.74.0
+
+### Added
+- Reworked end sky rendering to look like a space sky dimension (inspired by @PoeticRainbow's Golden Day's alternate end rendering settings, which was inspired by the Aether)
+  - Enable clouds to be rendered in the End (Cloud Layers mod needed to actually render clouds)
+  - Remove the static skybox and render end-specific sky and fog colors instead
+  - Add stars to the End sky
+- Added config option to reduce waviness of banners
+
+---
+
+## v0.73.0
+
+### Added
+- Replaced all lava generated in lush caves with water
+
+---
+
+## v0.72.0
+
+### Added
+- Allow negative discard_chance_on_air_exposure for Ore Configured Features
+  - This allows ore to have a chance to be discarded if the ore is NOT exposed to air
+- Add config value for adjusting Nostalgic Tweaks old smooth lighting feature - can adjust the minimum shade darkness of block shadows between modern and beta levels
+
+---
+
+## v0.71.1
+
+### Added
+- Add Written Book author to Chiseled Bookshelf Visualizer display
+
+---
+
+## v0.71.0
+
+### Added
+- Add "Undyed" tooltip to dyeable leather items (leather armor and books with the Scholar mod)
+
+---
+
+## v0.70.3
+
+### Changed
+- Fixed crash around hoglin shrinking head feature not working for zoglins
+
+---
+
+## v0.70.2
+
+### Changed
+- Hacky workaround to prevent vanilla bug where fall damage sound plays when the player logs in
+
+---
+
+## v0.70.1
+
+### Changed
+- Fixed bug with damage when not wearing armor
+
+---
+
+## v0.70.0
+
+### Added
+- Removed Charm Forked's sort button from player inventory and from Create's Train Schedule
+
+---
+
+## v0.69.0
+
+### Added
+- Tweaks to https://github.com/Anxietie/Extra-Boats
+  - Fixed view distance being 10 blocks instead of 10 chunks like vanilla boats
+  - Added config options to tweak the turn speed and forward speed of lava boats.
+
+### Changed
+- Added missing lang entries for several config options
+
+---
+
 ## v0.68.0
 
 ### Added
