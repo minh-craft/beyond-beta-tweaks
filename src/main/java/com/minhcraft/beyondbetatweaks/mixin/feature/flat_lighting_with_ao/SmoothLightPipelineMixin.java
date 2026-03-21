@@ -45,7 +45,7 @@ public abstract class SmoothLightPipelineMixin {
         }
 
         if (ModConfig.enableFlatLightingWithAmbientOcclusion) {
-            if (ModConfig.useAverageLightInsteadOfMaxLightForFlatLight) {
+            if (ModConfig.flatLightingMode == ModConfig.FlatLightingMode.AVERAGE) {
                 // Average all 4 vertex light values for a flat per-face result
                 int totalSky = 0;
                 int totalBlock = 0;
@@ -61,10 +61,27 @@ public abstract class SmoothLightPipelineMixin {
                 for (int i = 0; i < 4; i++) {
                     out.lm[i] = flatLm;
                 }
+            } else if (ModConfig.flatLightingMode == ModConfig.FlatLightingMode.MINIMUM) {
+                // Find the minimum light value among the 4 vertices.
+                int minSky = 0xFF;
+                int minBlock = 0xFF;
+                for (int i = 0; i < 4; i++) {
+                    int lm = out.lm[i];
+                    // Compare sky light (upper 16 bits) and block light (lower 16 bits) separately
+                    int sky = (lm >> 16) & 0xFF;
+                    int block = lm & 0xFF;
+                    minSky = Math.min(sky, minSky);
+                    minBlock = Math.min(block, minBlock);
+                }
+
+                int flatLm = (minSky << 16) | minBlock;
+
+                // Set all vertices to the same flat light value
+                for (int i = 0; i < 4; i++) {
+                    out.lm[i] = flatLm;
+                }
             } else {
                 // Find the maximum light value among the 4 vertices.
-                // Using max preserves the brightest light on the face,
-                // which matches how flat lighting selects the neighbor's light level.
                 int maxLm = 0;
                 for (int i = 0; i < 4; i++) {
                     int lm = out.lm[i];

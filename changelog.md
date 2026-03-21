@@ -1,3 +1,15 @@
+## v0.86.0
+
+### Added
+- Added alternate flat lighting mode - minimum light. Calculates flat light using minimum light instead of average or maximum for darker shadows
+- Added overworld lightmap smoothing options
+- Organized mod settings screen into categories
+
+### Changed
+- Increased range of ambient occlusion level settings
+
+---
+
 ## v0.85.1
 
 ### Added

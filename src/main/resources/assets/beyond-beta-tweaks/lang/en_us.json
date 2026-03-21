@@ -35,6 +35,9 @@
   "item.beyond-beta-tweaks.rotten_leather.tooltip": "Requires smelting",
   "tooltip.beyond-beta-tweaks.ghost_map.description": "Use any filled Map",
   "beyond-beta-tweaks.midnightconfig.title": "Beyond Beta Tweaks Config",
+  "beyond-beta-tweaks.midnightconfig.category.gameplay": "Gameplay",
+  "beyond-beta-tweaks.midnightconfig.category.lighting": "Lighting",
+  "beyond-beta-tweaks.midnightconfig.category.aesthetics": "Aesthetics",
   "beyond-beta-tweaks.midnightconfig.giantMaxHealth": "Giant Max Health",
   "beyond-beta-tweaks.midnightconfig.giantSpeedModifier": "Giant Speed Modifier",
   "beyond-beta-tweaks.midnightconfig.giantAttackDamage": "Giant Attack Damage",
@@ -121,6 +124,7 @@
   "beyond-beta-tweaks.midnightconfig.pigLitterSizing": "Pig Litter Sizing",
   "beyond-beta-tweaks.midnightconfig.shrinkBabyHoglinHead": "Shrink Baby Hoglin Head",
   "beyond-beta-tweaks.midnightconfig.enableFlatLightingWithAmbientOcclusion": "Enable Flat Lighting With Ambient Occlusion",
+  "beyond-beta-tweaks.midnightconfig.flatLightingMode": "Flat Lighting Mode",
   "beyond-beta-tweaks.midnightconfig.useAverageLightInsteadOfMaxLightForFlatLight": "Use Average Light Instead Of Max Light For Flat Light",
   "beyond-beta-tweaks.midnightconfig.noFallDamageSoundLoginGracePeriodInTicks": "No Fall Damage Sound Login Grace Period In Ticks",
   "beyond-beta-tweaks.midnightconfig.oldSmoothLightingMinimumShadeDarkness": "Old Smooth Lighting Minimum Shade Darkness",
@@ -151,8 +155,10 @@
   "beyond-beta-tweaks.midnightconfig.netherDimensionTrueDarknessLevel": "Nether Dimension True Darkness Level",
   "beyond-beta-tweaks.midnightconfig.netherLightmapSmoothingFactor": "Nether Lightmap Smoothing Factor",
   "beyond-beta-tweaks.midnightconfig.enableReducedLeavesAmbientOcclusion": "Enable Reduced Leaves Ambient Occlusion",
-  "beyond-beta-tweaks.midnightconfig.overworldLavaLevel": "overworldLavaLevel",
-  "beyond-beta-tweaks.midnightconfig.glowLichenAirExposedLight": "glowLichenAirExposedLight",
-  "beyond-beta-tweaks.midnightconfig.glowLichenUnderwaterLight": "glowLichenUnderwaterLight"
+  "beyond-beta-tweaks.midnightconfig.overworldLavaLevel": "Overworld Lava Level",
+  "beyond-beta-tweaks.midnightconfig.glowLichenAirExposedLight": "Glow Lichen Air Exposed Light Level",
+  "beyond-beta-tweaks.midnightconfig.glowLichenUnderwaterLight": "Glow Lichen Underwater Light Level",
+  "beyond-beta-tweaks.midnightconfig.enableOverworldLightmapSmoothing": "Enable Overworld Lightmap Smoothing",
+  "beyond-beta-tweaks.midnightconfig.overworldLightmapGradientSmoothingFactor": "Overworld Lightmap Gradient Smoothing Factor"
 
 }

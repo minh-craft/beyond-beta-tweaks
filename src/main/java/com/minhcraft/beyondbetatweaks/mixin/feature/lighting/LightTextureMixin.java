@@ -88,8 +88,49 @@ public abstract class LightTextureMixin {
                 }
             }
 
+            // --- Overworld lightmap smoothing ---
+            if (ModConfig.enableOverworldLightmapSmoothing) {
+                for (int sky = 0; sky < 16; sky++) {
+                    int darkPixel = this.lightPixels.getPixelRGBA(0, sky);
+                    int brightPixel = this.lightPixels.getPixelRGBA(15, sky);
+
+                    int darkR = darkPixel & 0xFF;
+                    int darkG = (darkPixel >> 8) & 0xFF;
+                    int darkB = (darkPixel >> 16) & 0xFF;
+
+                    int brightR = brightPixel & 0xFF;
+                    int brightG = (brightPixel >> 8) & 0xFF;
+                    int brightB = (brightPixel >> 16) & 0xFF;
+
+                    for (int block = 1; block < 15; block++) {
+                        int curr = this.lightPixels.getPixelRGBA(block, sky);
+                        int currR = curr & 0xFF;
+                        int currG = (curr >> 8) & 0xFF;
+                        int currB = (curr >> 16) & 0xFF;
+
+                        float t = block / 15.0f;
+                        t = t * t;
+
+                        int lerpR = (int)(darkR + (brightR - darkR) * t);
+                        int lerpG = (int)(darkG + (brightG - darkG) * t);
+                        int lerpB = (int)(darkB + (brightB - darkB) * t);
+
+                        int newR = Math.round(currR * (1 - ModConfig.overworldLightmapGradientSmoothingFactor) + lerpR * ModConfig.overworldLightmapGradientSmoothingFactor);
+                        int newG = Math.round(currG * (1 - ModConfig.overworldLightmapGradientSmoothingFactor) + lerpG * ModConfig.overworldLightmapGradientSmoothingFactor);
+                        int newB = Math.round(currB * (1 - ModConfig.overworldLightmapGradientSmoothingFactor) + lerpB * ModConfig.overworldLightmapGradientSmoothingFactor);
+
+                        newR = Mth.clamp(newR, 0, 255);
+                        newG = Mth.clamp(newG, 0, 255);
+                        newB = Mth.clamp(newB, 0, 255);
+
+                        this.lightPixels.setPixelRGBA(block, sky,
+                                0xFF000000 | (newB << 16) | (newG << 8) | newR);
+                    }
+                }
+            }
+
         }
-        // End dimension lightmap fix ---
+        // End dimension lightmap smoothing fix ---
         else if (level.dimension() == Level.END && ModConfig.enableEndDimensionLightmapGradientFix) {
             // The End has a constant ambient sky light that TD darkens.
             // The interaction with NT's grayscale creates a flat band at mid block light.
@@ -125,12 +166,10 @@ public abstract class LightTextureMixin {
                     int lerpB = (int) (darkB + (brightB - darkB) * t);
 
                     // Blend between the original pixel and the smooth gradient
-                    // 0.0 = all original (ring preserved), 1.0 = all smooth (ring gone)
-                    float smoothing = ModConfig.endDimensionLightmapGradientSmoothingFactor;
-
-                    int newR = Math.round(currR * (1 - smoothing) + lerpR * smoothing);
-                    int newG = Math.round(currG * (1 - smoothing) + lerpG * smoothing);
-                    int newB = Math.round(currB * (1 - smoothing) + lerpB * smoothing);
+                    // 0.0 = all original, 1.0 = all smoothed
+                    int newR = Math.round(currR * (1 - ModConfig.endDimensionLightmapGradientSmoothingFactor) + lerpR * ModConfig.endDimensionLightmapGradientSmoothingFactor);
+                    int newG = Math.round(currG * (1 - ModConfig.endDimensionLightmapGradientSmoothingFactor) + lerpG * ModConfig.endDimensionLightmapGradientSmoothingFactor);
+                    int newB = Math.round(currB * (1 - ModConfig.endDimensionLightmapGradientSmoothingFactor) + lerpB * ModConfig.endDimensionLightmapGradientSmoothingFactor);
 
                     // Never go below zero or above 255
                     newR = Mth.clamp(newR, 0, 255);
