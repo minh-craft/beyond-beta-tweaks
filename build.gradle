@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
+	id 'com.github.breadmoirai.github-release' version "${github_release_version}"
 }
 
 version = project.mod_version
@@ -232,4 +233,19 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+githubRelease {
+	token = System.getenv('GITHUB_TOKEN_BBT') ?: ''
+	owner = 'minh-craft'
+	repo = 'beyond-beta-tweaks'
+	tagName = "v${project.version}"
+	releaseName = "v${project.version}"
+	targetCommitish = 'master' // change if your default branch is different
+	generateReleaseNotes = true // uses GitHub's auto-generated release notes
+	releaseAssets = remapJar.outputs.files
+}
+
+tasks.named('githubRelease') {
+	dependsOn remapJar
 }
