@@ -49,7 +49,7 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 ### Code
 #### Source Code
 - Ocelot taming into cat code from https://github.com/Partonetrain/trains_tweaks (MIT) by [@Partonetrain](https://github.com/Partonetrain/)
-- From https://github.com/Nostalgica-Reverie/Nostalgic-Tweaks (LGPL-3.0)by [@Adrenix](https://github.com/Adrenix/)
+- From https://github.com/Nostalgica-Reverie/Nostalgic-Tweaks (LGPL-3.0) by [@Adrenix](https://github.com/Adrenix/)
   - Mob equipment drop removal code
   - Ambient water mob cap code
 - Boat slipperiness cap code adapted from https://modrinth.com/mod/ice-boat-nerf (MIT) by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
@@ -62,8 +62,8 @@ When running the mod in the IDE, time doesn't pass for some reason. This isn't a
 - Spawn eggs instead of chicken code adapted from https://gitlab.com/supersaiyansubtlety/chicken_nerf/ (MIT) by [@supersaiyansubtlety](https://gitlab.com/supersaiyansubtlety)
 - Pigs have litters code adapted from https://github.com/Pepperoni-Jabroni/PigsHaveLitters (MPL 2.0) by [@Pepperoni-Jabroni](https://github.com/Pepperoni-Jabroni)
 - Ender Dragon removal code adapted from https://github.com/quat1024/apathy (LGPL-3.0) by [quat1024](https://github.com/quat1024)
-- End flash backport code adapted from https://github.com/Smallinger/Copper-Age-Backport by [Smallinger](https://github.com/Smallinger)
-- Noise based chunk generator optimization code adapted from https://github.com/RelativityMC/C2ME-fabric by [@ishland](https://github.com/ishland)
+- End flash backport code adapted from https://github.com/Smallinger/Copper-Age-Backport (CC0-1.0) by [Smallinger](https://github.com/Smallinger)
+- Noise based chunk generator optimization code adapted from https://github.com/RelativityMC/C2ME-fabric (MIT) by [@ishland](https://github.com/ishland)
 
 
 #### Datapack
